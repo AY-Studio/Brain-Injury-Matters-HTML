@@ -1,0 +1,46 @@
+@use "../mixins" as *;
+
+.partners {
+
+  .section-intro--row {
+    display: block;
+    > div:last-child {
+      // max-width: 500px;
+    }
+    h2, h3, h4, h5 {
+      line-height: 120%
+    }
+    p:not(.eyebrow) {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 4rem;
+  gap: 7px;
+  // border-top: 1px solid rgba(1, 61, 158, 0.18);
+  // border-left: 1px solid rgba(1, 61, 158, 0.18);
+
+  img {
+    width: 100%;
+    height: 90px;
+    padding: 14px;
+    background: #fff;
+    object-fit: contain;
+  }
+}
+
+@include lg-down {
+  .partner-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@include sm-down {
+  .partner-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

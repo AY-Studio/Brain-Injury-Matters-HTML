@@ -1,0 +1,79 @@
+@use "../mixins" as *;
+
+.feature-section {
+  position: relative;
+  overflow: hidden;
+  background: var(--bim-pale-pink);
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    content: "";
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 0;
+    height: clamp(18px, 2.103vw, 30.278px);
+    background-image: url("/assets/images/design/sections/feature-section-wave-top.svg");
+  }
+
+  &::after {
+    bottom: 0;
+    height: clamp(25px, 2.917vw, 42px);
+    background-image: url("/assets/images/design/sections/feature-section-wave-bottom.svg");
+  }
+
+  > .container-fluid {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__visual {
+    position: relative;
+    padding: 2rem 0 0 2rem;
+
+    span {
+      position: absolute;
+      inset: 0 2.5rem 2.5rem 0;
+      background: var(--bim-yellow);
+      border-radius: 0 16px;
+    }
+
+    img {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1.04;
+      object-fit: cover;
+      border-radius: 0 16px;
+    }
+  }
+
+  &__copy {
+    > p:not(.eyebrow) {
+      margin-top: 1.75rem;
+      font-size: 1.25rem;
+    }
+    > li {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@include lg-down {
+  .feature-section {
+    &__visual {
+      order: 2;
+    }
+
+    &__copy {
+      order: 1;
+    }
+  }
+}

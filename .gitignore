@@ -32,6 +32,10 @@ wp-config.php
 # Log files
 *.log
 
+# Local dependencies and operating-system files
+node_modules/
+.DS_Store
+
 # htaccess
 /.htaccess
 

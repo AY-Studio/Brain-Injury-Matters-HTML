@@ -1,0 +1,86 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 43px;
+  // padding: 0.75rem 1.35rem;
+  padding: 6px 16px;
+  border-width: 2px;
+  // font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+  border-radius: 3px 12px;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  img {
+    width: 18px;
+    max-height: 18px;
+    object-fit: contain;
+  }
+
+  &-primary {
+    color: #fff;
+
+    &:hover,
+    &:focus-visible {
+      color: #fff;
+      background: var(--bim-navy);
+      border-color: var(--bim-navy);
+    }
+  }
+
+  &-outline-primary {
+
+    svg {
+
+        path {
+
+          fill: var(--bim-navy);
+          // stroke: var(--bim-navy);
+
+        }
+
+      }
+
+    &:hover,
+    &:focus-visible {
+      color: #fff;
+      background: var(--bim-blue);
+
+      svg {
+
+        path {
+
+          fill: #fff;
+          stroke: #fff;
+
+        }
+
+      }
+
+    }
+  }
+
+  &-secondary {
+    color: var(--bim-navy);
+    border-color: var(--bim-yellow);
+    background: var(--bim-yellow);
+
+    &:hover,
+    &:focus-visible {
+      color: #fff;
+      border-color: var(--bim-navy);
+      background: var(--bim-navy);
+    }
+  }
+
+  &-outline-light:hover {
+    color: var(--bim-blue);
+  }
+}

@@ -1,0 +1,30 @@
+@use "bootstrap/bootstrap" with (
+  $primary: #013d9e,
+  $secondary: #ffb600,
+  $body-color: #000069,
+  $body-bg: #f7f9ed,
+  $font-family-sans-serif: ("Montserrat", sans-serif),
+  $border-radius: 0,
+  $border-radius-sm: 0,
+  $border-radius-lg: 0
+);
+
+@use "mixins" as *;
+@use "vendor/swiper";
+@use "base";
+
+@use "components/buttons";
+@use "sections/header";
+@use "sections/hero";
+@use "sections/finder";
+@use "sections/support";
+@use "sections/who-we-are";
+@use "sections/services";
+@use "sections/testimonial";
+@use "sections/events";
+@use "sections/campaigns";
+@use "sections/fundraising";
+@use "sections/gallery";
+@use "sections/partners";
+@use "sections/newsletter";
+@use "sections/footer";

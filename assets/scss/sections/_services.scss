@@ -1,0 +1,315 @@
+@use "../mixins" as *;
+
+.services {
+  background: var(--bim-cream);
+
+  .site-container {
+    max-width: 1408px;
+  }
+
+  .section-intro {
+    max-width: 768px;
+    margin-right: auto;
+    margin-bottom: 80px;
+    margin-left: auto;
+
+    .eyebrow {
+      margin-bottom: 32px;
+      color: var(--bim-blue);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 1.5;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(2.5rem, 3.34vw, 3rem);
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
+
+    > p:last-child {
+      margin: 24px 0 0;
+      font-size: clamp(1.125rem, 1.39vw, 1.25rem);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 19fr) minmax(0, 20fr);
+    align-items: stretch;
+    gap: 32px;
+
+    &__column {
+      display: grid;
+      grid-template-rows: auto 420px;
+      gap: 32px;
+    }
+
+    &__compact-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px;
+    }
+  }
+
+  .section-cta {
+    margin-top: 80px;
+
+    .btn {
+      padding: 12px 24px;
+      border-width: 1.5px;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 1.5;
+    }
+  }
+}
+
+.service-tile {
+  display: flex;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--bim-navy);
+  background: var(--bim-white);
+  border-radius: 8px;
+
+  &__body {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__image-wrap {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    object-fit: contain;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--bim-blue);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+
+    img {
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      transition: transform 0.25s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: var(--bim-blue);
+
+      img {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  .eyebrow {
+    margin: 0;
+    padding: 4px 12px;
+    color: var(--bim-navy);
+    background: var(--bim-pale-blue);
+    border-radius: 0 4px 0 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.5;
+  }
+
+  h3 {
+    margin: 0;
+    color: var(--bim-blue);
+    letter-spacing: 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  &--main {
+    height: 100%;
+    flex-direction: column;
+
+    > .service-tile__image {
+      width: 100%;
+      height: 360px;
+      flex: 0 0 360px;
+    }
+
+    .service-tile__body {
+      flex: 1 1 auto;
+      justify-content: center;
+      padding: 48px;
+    }
+
+    h3 {
+      margin-top: 8px;
+      font-size: 2rem;
+      line-height: 1.3;
+    }
+
+    h3 + p {
+      margin-top: 24px;
+    }
+
+    .service-tile__link {
+      margin-top: 32px;
+    }
+  }
+
+  &--compact {
+    min-height: 0;
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+
+    .service-tile__body {
+      width: 100%;
+      flex: 1 1 auto;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+
+    h3 + p {
+      margin-top: 8px;
+    }
+
+    .service-tile__link {
+      margin-top: auto;
+      padding-top: 24px;
+    }
+  }
+
+  &--community {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    .service-tile__body {
+      justify-content: center;
+      padding: 24px;
+    }
+
+    h3 {
+      margin-top: 8px;
+      font-size: 2rem;
+      line-height: 1.3;
+    }
+
+    h3 + p {
+      margin-top: 8px;
+    }
+
+    .service-tile__link {
+      margin-top: 24px;
+    }
+  }
+}
+
+@include xl-down {
+  .services {
+    &-grid {
+      grid-template-columns: 1fr;
+
+      &__column {
+        grid-template-rows: auto 380px;
+      }
+    }
+  }
+
+  .service-tile {
+    &--main {
+      min-height: 680px;
+    }
+  }
+}
+
+@include md-down {
+  .services {
+    .section-intro {
+      margin-bottom: 48px;
+    }
+
+    &-grid {
+      gap: 24px;
+
+      &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      &__compact-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    .section-cta {
+      margin-top: 48px;
+    }
+  }
+
+  .service-tile {
+    &--main {
+      min-height: 0;
+
+      > .service-tile__image {
+        height: clamp(240px, 70vw, 360px);
+        flex-basis: clamp(240px, 70vw, 360px);
+      }
+
+      .service-tile__body {
+        padding: 32px 24px;
+      }
+    }
+
+    &--compact {
+      min-height: 280px;
+    }
+
+    &--community {
+      grid-template-columns: 1fr;
+
+      .service-tile__image-wrap {
+        height: 280px;
+      }
+
+      .service-tile__body {
+        padding: 32px 24px;
+      }
+    }
+  }
+}

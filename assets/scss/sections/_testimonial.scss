@@ -1,0 +1,133 @@
+.testimonial {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background: var(--bim-blue);
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    object-fit: cover;
+  }
+
+  .site-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  blockquote {
+    max-width: 700px;
+    margin: 0 0 2.5rem;
+    font-size: clamp(2rem, 3.7vw, 3rem);
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.12;
+  }
+
+  &__name {
+    margin-bottom: 0.2rem;
+    font-weight: 800;
+    color: var(--bim-pink);
+    font-size: 1.5rem;
+
+    + p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.video-card {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0 0 2rem;
+  overflow: visible;
+  border: 0;
+  background: none;
+
+  > img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 76/81;
+    object-fit: cover;
+    border-radius: 0 16px;
+  }
+
+  &__background {
+    position: absolute;
+    inset: 0 2.5rem 2.5rem 0;
+    background: var(--bim-yellow);
+    pointer-events: none;
+    border-radius: 0 16px;
+  }
+
+  &__play {
+    position: absolute;
+    z-index: 2;
+    top: calc(50% + 1rem);
+    left: calc(50% + 1rem);
+    display: grid;
+    width: 84px;
+    height: 84px;
+    place-items: center;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.25s ease;
+
+    img {
+      width: 26px;
+    }
+  }
+
+  &:hover &__play {
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+.video-modal {
+  --bs-modal-width: 1200px;
+
+  .modal-dialog {
+    width: calc(100% - 2rem);
+    max-width: var(--bs-modal-width);
+    margin-inline: auto;
+  }
+
+  .modal-content {
+    overflow: hidden;
+    border: 0;
+    border-radius: 4px 16px;
+    background: #000;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  }
+
+  &__close {
+    position: absolute;
+    z-index: 2;
+    top: 16px;
+    right: 16px;
+    width: 22px;
+    height: 22px;
+    padding: 13px;
+    border-radius: 0 8px;
+    background-color: var(--bim-pink);
+    transition: .5s;
+    opacity: 1;
+    color: var(--bim-white);
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--bim-light-pink);
+      opacity: 1;
+    }
+  }
+
+  &__iframe {
+    border: 0;
+  }
+}

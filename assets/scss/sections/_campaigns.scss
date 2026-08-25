@@ -1,0 +1,20 @@
+@use "../mixins" as *;
+
+.campaigns {
+  background: var(--bim-pale-pink);
+
+  .feature-section__visual {
+    // span {
+    //   inset: 2rem 0 0 2rem;
+    //   background: var(--bim-blue);
+    // }
+  }
+}
+
+@include lg-down {
+  .campaigns {
+    .feature-section__visual {
+      order: 2;
+    }
+  }
+}
