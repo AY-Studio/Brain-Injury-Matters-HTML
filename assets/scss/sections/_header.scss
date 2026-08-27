@@ -3,7 +3,7 @@
 .site-header {
   position: relative;
   z-index: 100;
-  border-bottom: 1px solid rgba(1, 61, 158, 0.25);
+  // border-bottom: 1px solid rgba(1, 61, 158, 0.25);
   background: var(--bim-cream);
 
   &.has-sticky-navbar {
@@ -188,6 +188,11 @@
 }
 
 .mega-trigger {
+  &:hover,
+  &:focus-visible,
+  &[aria-expanded="true"] {
+    color: var(--bim-green);
+  }
 
   // &::before {
   //   float: right;

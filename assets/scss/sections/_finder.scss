@@ -92,7 +92,7 @@
     width: min(100%);
     grid-template-columns: 1fr 2fr 1fr;
     // align-items: end;
-    gap: 0.75rem;
+    gap: 1.5rem;
 
     label {
       align-self: center;
@@ -106,6 +106,7 @@
       color: #fff;
       border: 1.5px solid var(--Color-White, #FFF);
       font-weight: 600;
+      font-size: 24px;
 
       &#support-type {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
@@ -122,7 +123,7 @@
   }
 
   .form-select {
-    min-height: 50px;
+    min-height: 70px;
   }
 
 }

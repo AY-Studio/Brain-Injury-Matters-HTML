@@ -1,0 +1,330 @@
+@use "../mixins" as *;
+
+.page-header {
+  position: relative;
+  display: flex;
+  min-height: 700px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 112px 1.25rem 80px;
+  overflow: hidden;
+  background: var(--bim-cream);
+  text-align: center;
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    max-width: 768px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__eyebrow {
+    margin: 0 0 80px;
+    color: var(--bim-navy);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  h1 {
+    width: 100%;
+    margin: 0;
+    color: var(--bim-green);
+    font-size: clamp(2.75rem, 3.89vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: capitalize;
+  }
+
+  &__intro {
+    width: 100%;
+    margin: 24px 0 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 24px;
+
+    .btn {
+      min-height: 48px;
+      padding: 11px 24px;
+      gap: 12px;
+      border-width: 1px;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 1.5;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      max-height: none;
+      flex: 0 0 24px;
+    }
+
+    .btn-outline-primary:hover img,
+    .btn-outline-primary:focus-visible img {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  &__shape {
+    position: absolute;
+    display: block;
+    max-width: none;
+    pointer-events: none;
+    user-select: none;
+    will-change: translate, rotate;
+
+    &--yellow {
+      top: 177px;
+      left: -518px;
+      width: 525px;
+      height: 779px;
+      animation: page-header-float-yellow 11s ease-in-out infinite;
+      rotate: 66.95deg;
+    }
+
+    &--pink {
+      top: 14px;
+      right: -339px;
+      width: 477px;
+      height: 388px;
+      animation: page-header-float-pink 13s ease-in-out infinite;
+      rotate: 69.95deg;
+    }
+
+    &--green {
+      top: 0;
+      left: -247px;
+      width: 307px;
+      height: 266px;
+      animation: page-header-float-yellow 11s ease-in-out infinite;
+      rotate: 0deg;
+    }
+  }
+
+  &--with-image {
+    min-height: 896px;
+    padding: 112px clamp(1.25rem, 4vw, 4rem);
+    text-align: left;
+
+    .page-header__inner {
+      display: grid;
+      max-width: 1280px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: center;
+      gap: 80px;
+    }
+
+    .page-header__content {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .page-header__eyebrow {
+      margin-bottom: 16px;
+    }
+
+    .page-header__actions {
+      justify-content: flex-start;
+      margin-top: 32px;
+    }
+  }
+
+  &__visual {
+    position: relative;
+    width: 100%;
+    padding: 24px 0 0 24px;
+
+    span {
+      position: absolute;
+      inset: 0 24px 24px 0;
+      background: var(--bim-yellow);
+      border-radius: 0 16px;
+    }
+
+    img {
+      position: relative;
+      display: block;
+      width: 100%;
+      aspect-ratio: 600 / 640;
+      object-fit: cover;
+      border-radius: 0 16px;
+    }
+  }
+}
+
+@keyframes page-header-float-yellow {
+  0%,
+  100% {
+    rotate: 66.95deg;
+    translate: 0 80px;
+  }
+
+  25% {
+    rotate: 84deg;
+    translate: 0 -40px;
+  }
+
+  50% {
+    rotate: 72deg;
+    translate: 0 -120px;
+  }
+
+  75% {
+    rotate: 57deg;
+    translate: 0 -20px;
+  }
+}
+
+@keyframes page-header-float-pink {
+  0%,
+  100% {
+    rotate: 69.95deg;
+    translate: 0 -60px;
+  }
+
+  22% {
+    rotate: 49deg;
+    translate: 0 70px;
+  }
+
+  50% {
+    rotate: 64deg;
+    translate: 0 220px;
+  }
+
+  74% {
+    rotate: 86deg;
+    translate: 0 80px;
+  }
+}
+
+@include lg-down {
+  .page-header {
+    min-height: 640px;
+    padding-top: 80px;
+
+    &__eyebrow {
+      margin-bottom: 64px;
+    }
+
+    &__shape--yellow {
+      top: 330px;
+      left: -455px;
+      scale: 0.8;
+    }
+
+    &__shape--pink {
+      top: -60px;
+      right: -385px;
+      scale: 0.75;
+    }
+
+    &--with-image {
+      min-height: 0;
+      padding-block: 80px;
+
+      .page-header__inner {
+        max-width: 768px;
+        grid-template-columns: 1fr;
+        gap: 56px;
+      }
+
+      .page-header__eyebrow {
+        margin-bottom: 16px;
+      }
+
+      .page-header__shape--green {
+        top: -40px;
+        left: -235px;
+        scale: 0.8;
+      }
+    }
+  }
+}
+
+@include sm-down {
+  .page-header {
+    min-height: 620px;
+    padding-block: 64px;
+
+    &__eyebrow {
+      margin-bottom: 48px;
+    }
+
+    h1 {
+      font-size: clamp(2.25rem, 10vw, 2.75rem);
+    }
+
+    &__intro {
+      font-size: 1.0625rem;
+    }
+
+    &__actions {
+      width: 100%;
+      max-width: 280px;
+      align-items: stretch;
+      flex-direction: column;
+      gap: 12px;
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    &__shape--yellow {
+      top: 430px;
+      left: -470px;
+      scale: 0.65;
+    }
+
+    &__shape--pink {
+      top: -100px;
+      right: -400px;
+      scale: 0.6;
+    }
+
+    &--with-image {
+      padding-block: 64px;
+
+      .page-header__actions {
+        align-items: stretch;
+      }
+
+      .page-header__visual {
+        padding: 16px 0 0 16px;
+
+        span {
+          inset: 0 16px 16px 0;
+        }
+      }
+
+      .page-header__shape--green {
+        top: -70px;
+        left: -245px;
+        scale: 0.65;
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-header__shape {
+    animation: none;
+    translate: none;
+  }
+}

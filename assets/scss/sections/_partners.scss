@@ -1,46 +1,78 @@
 @use "../mixins" as *;
 
 .partners {
+  &__layout {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-  .section-intro--row {
-    display: block;
-    > div:last-child {
-      // max-width: 500px;
-    }
-    h2, h3, h4, h5 {
-      line-height: 120%
-    }
-    p:not(.eyebrow) {
-      font-size: 1.25rem;
-    }
+  &__intro,
+  &__intro > div:last-child {
+    display: contents;
+  }
+
+  &__intro > div:first-child {
+    order: 1;
+    width: 100%;
+    margin: 0 auto 24px !important;
+    text-align: center;
+  }
+
+  &__intro h2,
+  &__intro h3,
+  &__intro h4,
+  &__intro h5 {
+    line-height: 1.2;
+  }
+
+  &__intro p:not(.eyebrow) {
+    order: 2;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  &__intro .button-row {
+    order: 4;
+    justify-content: center;
+    margin-top: 48px;
   }
 }
 
-.partner-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 4rem;
-  gap: 7px;
-  // border-top: 1px solid rgba(1, 61, 158, 0.18);
-  // border-left: 1px solid rgba(1, 61, 158, 0.18);
+.partner-swiper {
+  order: 3;
+  width: 100%;
+  margin-top: 32px;
+  overflow: hidden;
 
-  img {
-    width: 100%;
-    height: 90px;
+  .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .swiper-slide {
+    display: block;
+    height: 100px;
     padding: 14px;
-    background: #fff;
+    background: var(--bim-white);
     object-fit: contain;
   }
 }
 
-@include lg-down {
-  .partner-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
+@include md-down {
+  .partners {
+    &__intro p:not(.eyebrow) {
+      font-size: 1.0625rem;
+    }
 
-@include sm-down {
-  .partner-grid {
-    grid-template-columns: repeat(2, 1fr);
+    &__intro .button-row {
+      margin-top: 40px;
+    }
+  }
+
+  .partner-swiper {
+    margin-top: 48px;
   }
 }

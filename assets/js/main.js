@@ -54,6 +54,40 @@ if (hero && typeof window.Swiper === "function") {
   });
 }
 
+const partnerSwipers = [...document.querySelectorAll(".partner-swiper")];
+
+if (partnerSwipers.length && typeof window.Swiper === "function") {
+  partnerSwipers.forEach((partnerSwiper) => {
+    new window.Swiper(partnerSwiper, {
+      slidesPerView: 2,
+      slidesPerGroup: 3,
+      spaceBetween: 14,
+      loop: true,
+      speed: 700,
+      grabCursor: true,
+      watchOverflow: false,
+      observer: true,
+      observeParents: true,
+      keyboard: { enabled: true },
+      a11y: {
+        enabled: true,
+        slideLabelMessage: "{{index}} of {{slidesLength}}"
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+      breakpoints: {
+        576: { slidesPerView: 3.5 },
+        768: { slidesPerView: 4.5 },
+        992: { slidesPerView: 5.5 },
+        1200: { slidesPerView: 7.5 }
+      }
+    });
+  });
+}
+
 const megaTriggers = [...document.querySelectorAll(".mega-trigger")];
 
 const closeMegaMenus = (except) => {
@@ -228,7 +262,7 @@ const initialiseScrollAnimations = () => {
       },
       {
         autoAlpha: 1,
-        duration: 1.5,
+        duration: 1,
         ease: "power2.out",
         clearProps: "opacity,visibility",
         scrollTrigger: {
