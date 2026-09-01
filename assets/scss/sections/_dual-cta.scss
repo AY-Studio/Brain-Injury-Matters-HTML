@@ -1,0 +1,122 @@
+@use "../mixins" as *;
+
+.dual-cta {
+  padding-block: clamp(3rem, 4.45vw, 4rem);
+  background: var(--bim-cream);
+
+  &__panel {
+    padding: var(--section-space) clamp(1.5rem, 4.45vw, 4rem);
+    background: var(--bim-pale-pink);
+    border-radius: 0 32px;
+  }
+
+  &__row {
+    --bs-gutter-x: 64px;
+    --bs-gutter-y: 64px;
+  }
+
+  &__item {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+  }
+
+  &__icon {
+    display: grid;
+    width: 96px;
+    height: 96px;
+    flex: 0 0 96px;
+    place-items: center;
+    background: var(--bim-yellow);
+    border-radius: 50%;
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    h2 {
+      margin: 0;
+      color: var(--bim-green);
+      font-size: clamp(2.5rem, 3.34vw, 3rem);
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.125rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: auto;
+
+    .btn {
+      min-height: 48px;
+      padding: 11px 24px;
+      border-width: 1.5px;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 1.5;
+
+      img {
+        width: 24px;
+        height: 24px;
+        max-height: none;
+        flex: 0 0 24px;
+      }
+    }
+  }
+}
+
+@include lg {
+  .dual-cta {
+    &__item {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+}
+
+@include sm-down {
+  .dual-cta {
+    &__panel {
+      padding: 3rem 1.5rem;
+      border-radius: 0 20px;
+    }
+
+    &__icon {
+      width: 80px;
+      height: 80px;
+      flex-basis: 80px;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &__actions {
+      width: 100%;
+      flex-direction: column;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

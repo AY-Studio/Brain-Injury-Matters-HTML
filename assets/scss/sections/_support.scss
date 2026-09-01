@@ -1,5 +1,20 @@
 .support {
 
+  &.feature-section {
+
+    .support-card {
+
+      h2, h3 {
+
+        color: var(--bim-green);
+        margin-bottom: 15px;
+
+      }
+
+    }
+
+  }
+
   &-card {
     display: flex;
     height: 100%;
@@ -43,6 +58,7 @@
     h3 {
       margin-bottom: 3rem;
       color: var(--bim-blue);
+      font-size: clamp(1.25rem, 1.7vw, 1.5rem);
     }
 
     p {
@@ -79,6 +95,12 @@
 
         }
 
+      > img {
+        width: 24px;
+        height: 24px;
+        transition: filter 0.5s;
+      }
+
       &:hover {
 
         background: var(--bim-blue);
@@ -93,6 +115,10 @@
 
           }
 
+        }
+
+        > img {
+          filter: brightness(0) invert(1);
         }
 
       }
@@ -111,6 +137,41 @@
         }
       }
 
+    }
+
+    &--service {
+      > div {
+        min-height: 255px;
+      }
+    }
+
+    &--process {
+      min-height: 501px;
+
+      > div {
+        min-height: 0;
+        padding: 1.5rem;
+      }
+
+      .eyebrow {
+        margin-bottom: 1rem;
+        padding: 0.5rem 0.75rem;
+        background: var(--bim-pale-pink);
+        font-size: 0.875rem;
+        font-weight: 700;
+      }
+
+      h3 {
+        margin-bottom: 1rem;
+        font-size: clamp(1.5rem, 2.23vw, 2rem);
+        line-height: 1.3;
+      }
+
+      p:last-of-type {
+        margin-bottom: 0;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
     }
   }
 }

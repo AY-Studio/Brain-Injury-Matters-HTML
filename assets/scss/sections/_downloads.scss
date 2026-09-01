@@ -1,0 +1,135 @@
+@use "../mixins" as *;
+
+.downloads {
+  background: var(--bim-cream);
+
+  &__row {
+    --bs-gutter-x: 80px;
+    --bs-gutter-y: 48px;
+  }
+
+  &__preview {
+    overflow: hidden;
+    aspect-ratio: 1;
+    border-radius: 12px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__links {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__link {
+    display: flex;
+    min-height: 130px;
+    padding: 20px 32px;
+    border-left: 1px solid transparent;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    color: var(--bim-navy);
+    background: linear-gradient(var(--bim-white) 0 0) left center / 0 100% no-repeat;
+    text-decoration: none;
+    transition: background-size 0.35s ease 0.1s, border-color 0.35s ease;
+
+    h3,
+    p {
+      margin: 0;
+      color: inherit;
+    }
+
+    h3 {
+      font-size: clamp(1.5rem, 2.23vw, 2rem);
+      line-height: 1.3;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    &.is-active,
+    &:hover,
+    &:focus-visible {
+      border-left-color: var(--bim-navy);
+      color: var(--bim-navy);
+      background-size: 100% 100%;
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--bim-yellow);
+      outline-offset: 3px;
+    }
+  }
+
+  &__links:has(&__link:hover) &__link.is-active:not(:hover),
+  &__links:has(&__link:focus-visible) &__link.is-active:not(:focus-visible) {
+    border-left-color: transparent;
+    background-size: 0 100%;
+    transition-delay: 0s;
+  }
+}
+
+@supports (anchor-name: --downloads-active-link) {
+  .downloads {
+    &__links::before {
+      position: absolute;
+      z-index: 2;
+      position-anchor: --downloads-active-link;
+      inset: anchor(top) auto anchor(bottom) anchor(left);
+      width: 2px;
+      border-radius: 999px;
+      opacity: 0.9;
+      background: var(--bim-navy);
+      content: "";
+      pointer-events: none;
+      transition: inset 0.48s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease;
+      will-change: inset;
+    }
+
+    &__link {
+      &.is-active,
+      &:hover,
+      &:focus-visible {
+        border-left-color: transparent;
+        anchor-name: --downloads-active-link;
+      }
+    }
+
+    &__links:has(&__link:hover) &__link.is-active:not(:hover),
+    &__links:has(&__link:focus-visible) &__link.is-active:not(:focus-visible) {
+      anchor-name: none;
+    }
+  }
+}
+
+@include lg-down {
+  .downloads {
+    &__links {
+      gap: 24px;
+    }
+
+    &__link {
+      min-height: 0;
+      padding: 24px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .downloads {
+    &__links::before,
+    &__link {
+      transition: none;
+    }
+  }
+}

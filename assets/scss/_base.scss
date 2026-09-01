@@ -8,6 +8,7 @@
   --bim-pale-pink: #f9edef;
   --bim-light-pink: #ffd9df;
   --bim-pale-blue: #edf2f9;
+  --bim-pale-green: #edf9f5;
   --bim-cream: #f7f9ed;
   --bim-white: #fff;
   --section-space: clamp(4.5rem, 7.8vw, 7rem);
@@ -134,7 +135,7 @@ p {
 .button-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1.25rem;
   margin-top: 2rem;
 }
 

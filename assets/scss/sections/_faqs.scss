@@ -1,0 +1,182 @@
+@use "../mixins" as *;
+
+.faq-section {
+  --faq-wave-height: clamp(18px, 2.103vw, 30.278px);
+
+  position: relative;
+  padding-block: calc(var(--section-space) + var(--faq-wave-height));
+  background-color: var(--bim-pale-blue);
+  background-image: linear-gradient(
+    to bottom,
+    var(--bim-cream) 0,
+    var(--bim-cream) var(--faq-wave-height),
+    var(--bim-pale-blue) var(--faq-wave-height),
+    var(--bim-pale-blue) calc(100% - var(--faq-wave-height)),
+    var(--bim-cream) calc(100% - var(--faq-wave-height)),
+    var(--bim-cream) 100%
+  );
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    width: 100%;
+    height: var(--faq-wave-height);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    content: "";
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 0;
+    background-image: url("/assets/images/design/sections/gallery-wave-top.svg");
+  }
+
+  &::after {
+    bottom: 0;
+    background-image: url("/assets/images/design/sections/gallery-wave-bottom.svg");
+    transform: scaleY(-1);
+  }
+
+  .site-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__inner {
+    display: flex;
+    width: 100%;
+    max-width: 1280px;
+    flex-direction: column;
+    gap: 80px;
+    margin-inline: auto;
+  }
+
+  &__intro {
+    width: 100%;
+    max-width: 768px;
+
+    h2 {
+      margin: 0 0 24px;
+      font-size: clamp(2.5rem, 3.34vw, 3rem);
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+  }
+
+  &__accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .accordion-item {
+      overflow: hidden;
+      border: 0;
+      border-radius: 12px;
+      background: var(--bim-white);
+    }
+
+    .accordion-button {
+      --bs-accordion-btn-icon: url("/assets/images/design/icons/faq-close.svg");
+      --bs-accordion-btn-active-icon: url("/assets/images/design/icons/faq-close.svg");
+      --bs-accordion-btn-icon-width: 24px;
+
+      gap: 24px;
+      padding: 20px 24px;
+      color: var(--bim-navy);
+      background: var(--bim-white);
+      box-shadow: none;
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.5;
+
+      &::after {
+        transform: rotate(45deg);
+      }
+
+      &:not(.collapsed) {
+        color: var(--bim-navy);
+        background: var(--bim-white);
+        box-shadow: none;
+
+        &::after {
+          transform: none;
+        }
+      }
+
+      &:focus-visible {
+        z-index: 2;
+        outline: 3px solid rgba(1, 61, 158, 0.25);
+        outline-offset: -3px;
+        box-shadow: none;
+      }
+    }
+
+    .accordion-body {
+      padding: 0 24px 24px;
+
+      p {
+        max-width: 768px;
+        margin: 0;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  &__cta {
+    width: 100%;
+    max-width: 560px;
+
+    h3 {
+      margin: 0 0 16px;
+      color: var(--bim-green);
+      font-size: 2rem;
+      letter-spacing: 0;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 24px;
+      color: var(--bim-blue);
+      font-size: 1.125rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+@include md-down {
+  .faq-section {
+    &__inner {
+      gap: 48px;
+    }
+
+    &__intro p {
+      font-size: 1.125rem;
+    }
+
+    &__accordion {
+      .accordion-button {
+        gap: 16px;
+        padding: 18px 20px;
+        font-size: 1rem;
+      }
+
+      .accordion-body {
+        padding: 0 20px 20px;
+      }
+    }
+
+    &__cta h3 {
+      font-size: 1.75rem;
+    }
+  }
+}
