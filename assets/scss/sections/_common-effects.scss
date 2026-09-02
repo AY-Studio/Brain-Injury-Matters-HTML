@@ -1,0 +1,134 @@
+@use "../mixins" as *;
+
+.common-effects {
+  background: var(--bim-cream);
+  margin-bottom: 112px;
+
+  &__layout {
+    --bs-gutter-x: 5rem;
+  }
+
+  &__intro {
+    display: flex;
+    max-width: 600px;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 150px;
+
+    h2 {
+      max-width: 570px;
+      margin: 1rem 0 1.5rem;
+    }
+
+    > p:not(.eyebrow) {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .button-row {
+      margin-top: 2rem;
+    }
+  }
+
+  &__cards {
+    --common-effects-stack-top: 130px;
+    display: grid;
+    grid-template-rows: repeat(var(--common-effects-card-count, 4), var(--common-effects-card-height, auto));
+    gap: 0.75rem 0;
+    
+    // margin-bottom: 50px;
+
+    @include lg {
+
+      margin-top: -25px;
+
+    }
+
+  }
+
+  &-card {
+    position: sticky;
+    top: var(--common-effects-stack-top);
+    padding-top: var(--common-effects-card-offset, 20px);
+
+    &__inner {
+      will-change: transform, filter;
+      display: flex;
+      min-height: 166px;
+      height: var(--common-effects-card-height, auto);
+      transform-origin: center top;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 2rem;
+      overflow: hidden;
+      background: var(--bim-pale-pink);
+      border-radius: 12px;
+    }
+
+    &:nth-child(1) &__inner {
+      // background: var(--bim-blue);
+    }
+
+    &:nth-child(4) &__inner {
+      // background: var(--bim-yellow);
+    }
+
+    &__icon {
+      display: block;
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+
+      &--small {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h3 {
+      color: var(--bim-blue);
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+
+    p {
+      color: var(--bim-navy);
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+  }
+}
+
+@include lg-down {
+  .common-effects {
+    &__layout {
+      --bs-gutter-x: 1.5rem;
+    }
+
+    &__intro {
+      max-width: none;
+    }
+  }
+}
+
+@include sm-down {
+  .common-effects {
+    &__intro {
+      align-items: center;
+      text-align: center;
+    }
+
+    &-card__inner {
+      padding: 1.5rem;
+    }
+  }
+}

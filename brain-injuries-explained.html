@@ -34,6 +34,7 @@
     <script src="/assets/js/vendor/gsap.min.js" defer></script>
     <script src="/assets/js/vendor/SplitText.min.js" defer></script>
     <script src="/assets/js/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="/assets/js/vendor/countUp.umd.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
   </head>
   <body>
@@ -543,34 +544,48 @@
     <main id="main-content">
 
       <!-- .page-header starts -->
-      <section class="page-header" aria-labelledby="page-header-title">
+      <section
+        class="page-header page-header--outlined-shapes align-items-center"
+        aria-labelledby="page-header-title"
+      >
         <img
-          class="page-header__shape page-header__shape--yellow"
-          src="/assets/images/design/sections/page-header-shape-yellow.svg"
+          class="page-header__shape page-header__shape--green-left"
+          src="/assets/images/design/sections/page-header-shape-green-left.svg"
           alt=""
           aria-hidden="true"
         />
         <img
-          class="page-header__shape page-header__shape--pink"
-          src="/assets/images/design/sections/page-header-shape-pink.svg"
+          class="page-header__shape page-header__shape--pink-outline-left"
+          src="/assets/images/design/sections/page-header-shape-pink-outline-left.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="page-header__shape page-header__shape--blue-right"
+          src="/assets/images/design/sections/page-header-shape-blue-right.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="page-header__shape page-header__shape--yellow-outline-right"
+          src="/assets/images/design/sections/page-header-shape-yellow-outline-right.svg"
           alt=""
           aria-hidden="true"
         />
 
         <div class="page-header__inner">
-          <p class="eyebrow page-header__eyebrow">Who We Help</p>
-          <h1 id="page-header-title">Find the Support That Fits Your Life</h1>
+          <!-- <p class="eyebrow page-header__eyebrow"></p> -->
+          <h1 id="page-header-title">Brain injuries explained</h1>
           <p class="page-header__intro">
-            A brain injury changes everything. We are here for children, adults, families and professionals navigating
-            what comes next.
+           Clear, honest information about acquired brain injury to help you understand what has happened and find a way forward.
           </p>
           <div class="page-header__actions">
             <a class="btn btn-primary" href="#referral">
               <img src="/assets/images/design/icons/page-header-repeat.svg" alt="" aria-hidden="true" />
-              Referral
+              Make a referral
             </a>
-            <a class="btn btn-outline-primary" href="/how-we-help.html">
-              How We Help
+            <a class="btn btn-outline-primary" href="#services">
+              Get In Touch
               <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
             </a>
           </div>
@@ -578,95 +593,698 @@
       </section>
       <!-- .page-header ends -->
 
-      <!-- .section-who-we-help starts -->
-      <section class="who-we-help feature-section section-space" aria-label="Who we help">
+      <section class="who-we-are feature-section section-space" id="services">
         <div class="container-fluid site-container">
-          <div class="who-we-help__grid">
-            <a class="who-we-help-card" href="/brain-injury-children.html">
-              <div class="who-we-help-card__image-wrap">
-                <img
-                  class="who-we-help-card__image"
-                  src="/assets/images/design/sections/who-we-help-children.jpeg"
-                  alt="Children spending time together beside the water"
-                />
-              </div>
-              <div class="who-we-help-card__content">
-                <h2>Children With Brain Injuries</h2>
-                <p class="who-we-help-card__description">
-                  Play, friendship and understanding help a child find their way forward. We create safe spaces for
-                  children to rebuild confidence.
-                </p>
-                <span class="who-we-help-card__link line-link">
-                  Learn More
-                  <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
-                </span>
-              </div>
-            </a>
+          <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
+            <div class="col-lg-6 feature-section__copy">
+              <p class="eyebrow">Definition</p>
+              <h2>What is an acquired brain injury?</h2>
+              <p>
+               An acquired brain injury is damage to the brain that happens after birth. It is not hereditary or caused by a degenerative condition. It changes how a person thinks, feels, and moves.
+              </p>
 
-            <a class="who-we-help-card" href="/brain-injury-adults.html">
-              <div class="who-we-help-card__image-wrap">
-                <img
-                  class="who-we-help-card__image"
-                  src="/assets/images/design/sections/who-we-help-adults.jpeg"
-                  alt="Adults taking part in a classroom session"
-                />
-              </div>
-              <div class="who-we-help-card__content">
-                <h2>Adults With Brain Injuries</h2>
-                <p class="who-we-help-card__description">
-                  Practical help and community for adults rebuilding an independent life.
-                </p>
-                <span class="who-we-help-card__link line-link">
-                  Learn More
-                  <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
-                </span>
-              </div>
-            </a>
+              <p>
+               <strong>Traumatic injury</strong>
+                This comes from a blow or jolt to the head. Falls, road accidents, and assaults are common causes.  
+              </p>
 
-            <a class="who-we-help-card" href="/brain-injury-parents-and-carers.html">
-              <div class="who-we-help-card__image-wrap">
-                <img
-                  class="who-we-help-card__image"
-                  src="/assets/images/design/sections/who-we-help-carers.jpeg"
-                  alt="A parent and child exploring outdoors together"
-                />
-              </div>
-              <div class="who-we-help-card__content">
-                <h2>Parents and carers</h2>
-                <p class="who-we-help-card__description">
-                  Guidance and respite for the people holding a family together.
-                </p>
-                <span class="who-we-help-card__link line-link">
-                  Learn More
-                  <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
-                </span>
-              </div>
-            </a>
+              <p>
+                <strong>Non-traumatic injury</strong>
+                This comes from inside the body. A stroke, a lack of oxygen, a tumour, or an infection like meningitis.
+              </p>
 
-            <a class="who-we-help-card" href="/brain-injury-professionals.html">
-              <div class="who-we-help-card__image-wrap">
-                <img
-                  class="who-we-help-card__image"
-                  src="/assets/images/design/sections/who-we-help-professionals.jpeg"
-                  alt="A health professional speaking with a client"
-                />
-              </div>
-              <div class="who-we-help-card__content">
-                <h2>For Health Professionals</h2>
-                <p class="who-we-help-card__description">
-                  Resources, training and a clear referral pathway for the clinicians, social workers and educators
-                  making a difference every day.
-                </p>
-                <span class="who-we-help-card__link line-link">
-                  Learn More
-                  <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
-                </span>
-              </div>
-            </a>
+               <div class="button-row">
+                  <a class="btn btn-primary" href="#support">Get Support</a>
+                  <a class="btn btn-outline-primary" href="#">
+                    Stories
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9.38672 6.67285C9.48754 6.67285 9.56452 6.70326 9.64258 6.78125L14.5869 11.7256C14.6408 11.7795 14.666 11.8215 14.6777 11.8496V11.8506C14.6925 11.8861 14.7012 11.9259 14.7012 11.9746C14.7012 12.0233 14.6925 12.0631 14.6777 12.0986V12.0996C14.666 12.1277 14.6408 12.1697 14.5869 12.2236L9.61816 17.1924C9.54039 17.2702 9.47325 17.292 9.39258 17.2891C9.29855 17.2856 9.21769 17.2537 9.13184 17.168C9.05371 17.0898 9.02246 17.013 9.02246 16.9121C9.02246 16.8112 9.05371 16.7344 9.13184 16.6562L13.8135 11.9746L9.10645 7.26758C9.02878 7.18988 9.00684 7.12357 9.00977 7.04297C9.01321 6.9487 9.04578 6.86731 9.13184 6.78125C9.20976 6.70344 9.28613 6.67293 9.38672 6.67285Z" fill="#013D9E" stroke="#013D9E"></path>
+                  </svg>
+                  </a>
+                </div>
+
+            </div>
+
+            <div class="col-lg-5 offset-lg-1 feature-section__visual">
+              <span aria-hidden="true"></span>
+              <img
+                src="/assets/images/design/sections/brain-injuries-expanded-definition.webp"
+                alt="People taking part in an arts and crafts activity"
+              />
+            </div>
           </div>
         </div>
       </section>
-      <!-- .section-who-we-help ends -->
+
+      <!-- .common-effects starts-->
+      <section class="common-effects section-space" id="common-effects">
+        <div class="container-fluid site-container">
+          <div class="row align-items-start gx-lg-5 gy-5 common-effects__layout">
+            <div class="col-lg-6 align-self-stretch">
+              <div class="common-effects__intro sticky-lg-top">
+                <p class="eyebrow">Effects</p>
+                <h2>Common effects of a brain injury</h2>
+                <p>
+                  A brain injury can change many things at once. These effects are not a sign of weakness. They are a normal response to a complex injury.
+                </p>
+                <div class="button-row">
+                  <a class="btn btn-primary" href="#referral">
+                    <img src="/assets/images/design/icons/page-header-repeat.svg" alt="" aria-hidden="true" />
+                    Refer
+                  </a>
+                  <a class="btn btn-outline-primary" href="#">Get In Touch</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="common-effects__cards">
+                <article class="common-effects-card">
+                  <div class="common-effects-card__inner">
+                    <img
+                      class="common-effects-card__icon common-effects-card__icon--small"
+                      src="/assets/images/design/icons/common-effects-physical.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                    <h3>Physical changes</h3>
+                    <p>Persistent fatigue that sleep does not fix. Headaches, dizziness, and trouble with balance or coordination.</p>
+                  </div>
+                </article>
+
+                <article class="common-effects-card">
+                  <div class="common-effects-card__inner">
+                    <img
+                      class="common-effects-card__icon"
+                      src="/assets/images/design/icons/common-effects-cognitive.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                    <h3>Cognitive changes</h3>
+                    <p>Problems with memory, concentration, and planning. Processing information can take much longer than it used to.</p>
+                  </div>
+                </article>
+
+                <article class="common-effects-card">
+                  <div class="common-effects-card__inner">
+                    <img
+                      class="common-effects-card__icon"
+                      src="/assets/images/design/icons/common-effects-emotional.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                    <h3>Emotional changes</h3>
+                    <p>Sudden mood swings, anxiety, and a deep sense of loss. You might feel irritable or overwhelmed by things that once felt small.</p>
+                  </div>
+                </article>
+
+                <article class="common-effects-card">
+                  <div class="common-effects-card__inner">
+                    <img
+                      class="common-effects-card__icon"
+                      src="/assets/images/design/icons/common-effects-behavioural.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                    <h3>Behavioural changes</h3>
+                    <p>Acting without thinking or struggling to start tasks. Social situations can feel exhausting and confusing.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.common-effects end-->
+
+      <section class="support feature-section feature-section--green section-space" id="key-topics">
+        <div class="container-fluid site-container">
+          <div class="section-intro text-center">
+            <p class="eyebrow">Topics</p>
+            <h2>Key topics</h2>
+            <p>Explore specific areas of life after a brain injury.</p>
+          </div>
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-3">
+              <article class="support-card">
+                <img
+                  src="/assets/images/design/sections/brain-injuries-expanded-key-topics.webp"
+                  alt="A child playing in a colourful ball pool"
+                />
+                <div>
+                  <p class="eyebrow">Symptom</p>
+                  <h3>The heavy weight of fatigue after brain injury</h3>
+                  <p>Understanding why your body and brain need so much rest.</p>
+                  <a class="line-link stretched-link" href="#">
+                    Read
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z" fill="#013D9E" stroke="#013D9E"></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <article class="support-card">
+                <img
+                  src="/assets/images/design/sections/brain-injuries-expanded-key-topics.webp"
+                  alt="A child playing in a colourful ball pool"
+                />
+                <div>
+                  <p class="eyebrow">Symptom</p>
+                  <h3>Memory gaps and finding your way back</h3>
+                  <p>Practical strategies for living with memory problems.</p>
+                  <a class="line-link stretched-link" href="#">
+                    Read
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z" fill="#013D9E" stroke="#013D9E"></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <article class="support-card">
+                <img
+                  src="/assets/images/design/sections/brain-injuries-expanded-key-topics.webp"
+                  alt="A child playing in a colourful ball pool"
+                />
+                <div>
+                  <p class="eyebrow">Symptom</p>
+                  <h3>When your brain struggles to organise life</h3>
+                  <p>A clear look at executive functioning difficulties.</p>
+                  <a class="line-link stretched-link" href="#">
+                    Read
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z" fill="#013D9E" stroke="#013D9E"></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <article class="support-card">
+                <img
+                  src="/assets/images/design/sections/brain-injuries-expanded-key-topics.webp"
+                  alt="A child playing in a colourful ball pool"
+                />
+                <div>
+                  <p class="eyebrow">Symptom</p>
+                  <h3>Finding words when they fail you</h3>
+                  <p>Navigating the frustration of communication difficulties.</p>
+                  <a class="line-link stretched-link" href="#">
+                    Read
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z" fill="#013D9E" stroke="#013D9E"></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- .section-faqs -->
+      <section class="faq-section" id="faqs" aria-labelledby="faqs-title">
+        <div class="container-fluid site-container">
+          <div class="faq-section__inner">
+            <div class="faq-section__intro">
+              <h2 id="faqs-title">FAQs</h2>
+              <p>Honest answers to the questions we hear most often from families finding their way after a brain injury.</p>
+            </div>
+
+            <div class="accordion faq-section__accordion" id="children-faq-accordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="children-faq-heading-one">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#children-faq-one"
+                    aria-expanded="true"
+                    aria-controls="children-faq-one"
+                  >
+                    What caused this injury?
+                  </button>
+                </h3>
+                <div
+                  class="accordion-collapse collapse show"
+                  id="children-faq-one"
+                  aria-labelledby="children-faq-heading-one"
+                  data-bs-parent="#children-faq-accordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      An acquired brain injury happens after birth. It is not something you were born with. It can come
+                      from a sudden trauma like a fall or a car crash. It can also come from something inside the body
+                      like a stroke, an infection, or a tumour.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="children-faq-heading-two">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#children-faq-two"
+                    aria-expanded="false"
+                    aria-controls="children-faq-two"
+                  >
+                    Will I get better?
+                  </button>
+                </h3>
+                <div
+                  class="accordion-collapse collapse"
+                  id="children-faq-two"
+                  aria-labelledby="children-faq-heading-two"
+                  data-bs-parent="#children-faq-accordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Every brain injury is unique. Recovery is not a straight line. Many people see improvements over
+                      time with the right rehabilitation and support. The brain is remarkable in its ability to find
+                      new pathways.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="children-faq-heading-three">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#children-faq-three"
+                    aria-expanded="false"
+                    aria-controls="children-faq-three"
+                  >
+                    Can I work again?
+                  </button>
+                </h3>
+                <div
+                  class="accordion-collapse collapse"
+                  id="children-faq-three"
+                  aria-labelledby="children-faq-heading-three"
+                  data-bs-parent="#children-faq-accordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      The path back to work looks different for everyone. We can help you explore vocational
+                      rehabilitation and volunteering to rebuild confidence at your own pace. The goal is a life with
+                      purpose, whatever shape that takes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="children-faq-heading-four">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#children-faq-four"
+                    aria-expanded="false"
+                    aria-controls="children-faq-four"
+                  >
+                    How do we get support?
+                  </button>
+                </h3>
+                <div
+                  class="accordion-collapse collapse"
+                  id="children-faq-four"
+                  aria-labelledby="children-faq-heading-four"
+                  data-bs-parent="#children-faq-accordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      You can start by talking to your GP or medical team. You can also contact us directly. We will
+                      listen to your story and help you find the right services, whether that is early intervention or
+                      community activities.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="children-faq-heading-five">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#children-faq-five"
+                    aria-expanded="false"
+                    aria-controls="children-faq-five"
+                  >
+                    Is this my fault?
+                  </button>
+                </h3>
+                <div
+                  class="accordion-collapse collapse"
+                  id="children-faq-five"
+                  aria-labelledby="children-faq-heading-five"
+                  data-bs-parent="#children-faq-accordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      No. A brain injury is a medical event. It is not a reflection of who you are or a punishment. The
+                      guilt can feel heavy but it is a weight you do not have to carry alone. We understand.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-section__cta">
+              <h3>Still have questions?</h3>
+              <p>We are here to listen. Get in touch with our team.</p>
+              <a class="btn btn-primary" href="#contact">Get In Touch</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.section-faqs -->
+
+      <!-- .recovery-tiles starts -->
+      <section class="support section-space recovery-tiles" id="recovery">
+        <div class="container-fluid site-container">
+          <div class="section-intro text-center mx-auto">
+            <p class="eyebrow">Recovery</p>
+            <h2>The journey of recovery after a brain injury</h2>
+            <p>
+              Recovery is not a single event. It is a long road with many stages. The path looks different for everyone but you do not have to walk it alone.
+            </p>
+          </div>
+
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <article class="card recovery-card h-100">
+                <div class="card-body">
+                  <div class="recovery-card__icon">
+                    <img src="/assets/images/design/icons/recovery-hospital.png" alt="" aria-hidden="true" />
+                  </div>
+                  <h3 class="card-title">The injury and acute hospital care</h3>
+                  <p class="card-text">The immediate focus is on saving life and stabilising the brain.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <article class="card recovery-card h-100">
+                <div class="card-body">
+                  <div class="recovery-card__icon">
+                    <img src="/assets/images/design/icons/recovery-rehabilitation.png" alt="" aria-hidden="true" />
+                  </div>
+                  <h3 class="card-title">Inpatient rehabilitation and therapy</h3>
+                  <p class="card-text">A team works with you to relearn skills and build strength.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <article class="card recovery-card h-100">
+                <div class="card-body">
+                  <div class="recovery-card__icon">
+                    <img src="/assets/images/design/icons/recovery-community.png" alt="" aria-hidden="true" />
+                  </div>
+                  <h3 class="card-title">Community reintegration and long-term support</h3>
+                  <p class="card-text">The real work of building a good life back in the world begins.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.recovery-tiles ends-->
+
+      <section class="who-we-are feature-section section-space" id="carers">
+        <div class="container-fluid site-container">
+          <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
+            <div class="col-lg-6 feature-section__copy">
+              <p class="eyebrow">Carers</p>
+              <h2>Supporting a loved one through a brain injury</h2>
+              <p>
+                An acquired brain injury is damage to the brain that happens after birth. It is not hereditary or caused by a degenerative condition. It changes how a person thinks, feels, and moves.
+              </p>
+              <div class="feature-section__stats">
+                <div class="feature-section__stat">
+                  <p class="feature-section__stat-heading">50%</p>
+                  <p>Of carers report feeling isolated in their role.</p>
+                </div>
+                <div class="feature-section__stat">
+                  <p class="feature-section__stat-heading">50%</p>
+                  <p>Find strength in connecting with others who understand.</p>
+                </div>
+              </div>
+              <div class="button-row">
+                <a class="btn btn-primary" href="/brain-injury-parents-and-carers.html">
+                  <img src="/assets/images/design/icons/page-header-repeat.svg" alt="" aria-hidden="true" />
+                  Parents
+                </a>
+                <a class="btn btn-outline-primary" href="#">
+                  Get In Touch
+                  <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1 feature-section__visual">
+              <span aria-hidden="true"></span>
+              <img
+                src="/assets/images/design/sections/brain-injuries-expanded-carers.webp"
+                alt="People taking part in a group craft activity"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- .section-stats starts-->
+      <section
+        class="support feature-section feature-section--green section-space section-stats mt-5"
+        aria-labelledby="impact-heading"
+      >
+        <div class="container-fluid site-container">
+          <div class="row align-items-center gy-5 section-stats__layout">
+            <div class="col-lg-4">
+              <div class="section-stats__intro">
+                <p class="eyebrow">Impact</p>
+                <h2 id="impact-heading">The scale of brain injury in the UK</h2>
+                <p class="section-stats__description">
+                  Acquired brain injury is a hidden epidemic. It affects more lives than most people know. We are here
+                  to make sure no one faces it without a community beside them.
+                </p>
+
+                <div class="button-row">
+                  <a class="btn btn-primary" href="#referral">Referrals</a>
+                  <a class="section-stats__text-link" href="#contact">
+                    Get In touch
+                    <img
+                      src="/assets/images/design/icons/page-header-chevron-right.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-8">
+              <div class="row g-4 section-stats__grid" aria-label="Brain injury impact statistics">
+                <div class="col-md-6">
+                  <div class="section-stats__card section-stats__card--yellow">
+                    <p class="section-stats__value">
+                      <span
+                        class="section-stats__number"
+                        data-countup-end="1.3"
+                        data-countup-decimals="1"
+                        aria-hidden="true"
+                      >1.3</span><span class="section-stats__suffix" aria-hidden="true">m</span>
+                      <span class="visually-hidden">1.3 million</span>
+                    </p>
+                    <p class="section-stats__label">People living with ABI</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="section-stats__card section-stats__card--green">
+                    <p class="section-stats__value">
+                      <span class="section-stats__number" data-countup-end="350" aria-hidden="true">350</span><span
+                        class="section-stats__suffix"
+                        aria-hidden="true"
+                      >k</span>
+                      <span class="visually-hidden">350 thousand</span>
+                    </p>
+                    <p class="section-stats__label">Annual hospital admissions</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="section-stats__card section-stats__card--pink">
+                    <p class="section-stats__value">
+                      <span class="section-stats__number" data-countup-end="500" aria-hidden="true">500</span><span
+                        class="section-stats__suffix"
+                        aria-hidden="true"
+                      >+</span>
+                      <span class="visually-hidden">More than 500</span>
+                    </p>
+                    <p class="section-stats__label">Families we support</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="section-stats__card section-stats__card--blue">
+                    <p class="section-stats__value">
+                      <span class="section-stats__number" data-countup-end="0" aria-hidden="true">0</span>
+                      <span class="visually-hidden">Zero</span>
+                    </p>
+                    <p class="section-stats__label">Families turned away</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- /.section-stats ends -->
+
+      <!-- .dual-cta starts -->
+
+        <section class="dual-cta" id="referral" aria-label="Support and referrals">
+          <div class="container-fluid site-container">
+            <div class="dual-cta__panel">
+              <div class="row dual-cta__row">
+                <div class="col-lg-6">
+                  <article class="dual-cta__item">
+                    <div class="dual-cta__icon" aria-hidden="true">
+                      <img src="/assets/images/design/icons/dual-cta-talk.svg" alt="" />
+                    </div>
+
+                    <div class="dual-cta__content">
+                      <h2>You are not alone</h2>
+                      <p>
+                        Understanding the injury is the first step. Finding the right people to walk beside you is the next.
+                      </p>
+                    </div>
+
+                    <div class="dual-cta__actions">
+                      <a class="btn btn-primary" href="#contact">
+                        <img src="/assets/images/design/icons/dual-cta-mail.svg" alt="" aria-hidden="true" />
+                        Get In Touch
+                      </a>
+                      <a class="btn btn-outline-primary" href="#">Stories</a>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="col-lg-6">
+                  <article class="dual-cta__item">
+                    <div class="dual-cta__icon" aria-hidden="true">
+                      <img src="/assets/images/design/icons/dual-cta-referral.svg" alt="" />
+                    </div>
+
+                    <div class="dual-cta__content">
+                      <h2>Need to talk?</h2>
+                      <p>
+                        Our team is ready to answer your questions and connect you with personalised support for your family.
+                      </p>
+                    </div>
+
+                    <div class="dual-cta__actions">
+                      <a class="btn btn-primary" href="#">Refer</a>
+                      <a class="btn btn-outline-primary" href="#">Get In Touch</a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- /.dual-cta ends -->
+
+       <section class="testimonial section-space">
+        <img class="testimonial__background" src="/assets/images/design/sections/testimonial-bg.jpeg" alt="" />
+        <div class="container-fluid site-container">
+          <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
+            <div class="col-lg-6">
+              <button
+                class="video-card"
+                type="button"
+                aria-label="Play Sarah Mitchell's story"
+                data-bs-toggle="modal"
+                data-bs-target="#testimonial-video-modal"
+              >
+                <span class="video-card__background" aria-hidden="true"></span>
+                <img src="/assets/images/design/sections/testimonial-video.png" alt="Sarah Mitchell and her child" />
+                <span class="video-card__play" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.33301 31.9997C5.33301 17.2721 17.2721 5.33301 31.9997 5.33301C39.0721 5.33301 45.8549 8.14253 50.8559 13.1435C55.8568 18.1445 58.6663 24.9273 58.6663 31.9997C58.6663 46.7273 46.7273 58.6664 31.9997 58.6664C17.2721 58.6664 5.33301 46.7273 5.33301 31.9997ZM27.1198 43.4131L42.6664 33.7064C43.2482 33.3338 43.6001 32.6906 43.6001 31.9997C43.6001 31.3089 43.2482 30.6656 42.6664 30.2931L27.0664 20.5864C26.452 20.199 25.6758 20.1752 25.0388 20.5241C24.4018 20.8731 24.004 21.54 23.9998 22.2664V41.7331C23.9912 42.4771 24.3963 43.1644 25.0514 43.5171C25.7065 43.8699 26.5033 43.8298 27.1198 43.4131Z"
+                      fill="white"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <div class="col-lg-6 testimonial__copy">
+              <blockquote>
+                “They didn't just give us a service. They gave us back a future we thought was gone.”
+              </blockquote>
+              <p class="testimonial__name">Sarah Mitchell</p>
+              <p>Parent, Belfast</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="modal fade video-modal"
+        id="testimonial-video-modal"
+        tabindex="-1"
+        aria-labelledby="testimonial-video-modal-title"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <h2 class="visually-hidden" id="testimonial-video-modal-title">Sarah Mitchell's story</h2>
+            <button
+              class="btn-close btn-close-white video-modal__close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close video"
+            ></button>
+
+            <div class="ratio ratio-16x9">
+              <iframe
+                class="video-modal__iframe"
+                data-src="https://www.youtube-nocookie.com/embed/Tu5KxhraAA8?autoplay=1&amp;rel=0"
+                title="Sarah Mitchell's story"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section class="partners section-space" id="partners">
         <div class="container-fluid site-container">

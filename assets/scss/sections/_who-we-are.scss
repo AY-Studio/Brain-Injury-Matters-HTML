@@ -44,6 +44,10 @@
       inset: 0 2.5rem 2.5rem 0;
       background: var(--bim-yellow);
       border-radius: 0 16px;
+
+      &.feature-section__visual-accent--blue {
+        background: var(--bim-blue);
+      }
     }
 
     img {
@@ -55,6 +59,10 @@
     }
   }
 
+  &__visual--focus-left img {
+    object-position: 5% center;
+  }
+
   &__copy {
     > p:not(.eyebrow) {
       margin-top: 1.75rem;
@@ -63,6 +71,29 @@
     }
     > li {
       font-size: 1.25rem;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.75rem;
+  }
+
+  &__stat {
+    p {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .feature-section__stat-heading {
+      color: var(--bim-green);
+      font-size: clamp(2.5rem, 3.34vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
     }
   }
 }

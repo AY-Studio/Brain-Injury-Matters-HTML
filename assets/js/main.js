@@ -88,6 +88,42 @@ if (partnerSwipers.length && typeof window.Swiper === "function") {
   });
 }
 
+const insideViewSwipers = [...document.querySelectorAll(".inside-view__swiper")];
+
+if (insideViewSwipers.length && typeof window.Swiper === "function") {
+  insideViewSwipers.forEach((insideViewSwiper) => {
+    const section = insideViewSwiper.closest(".inside-view");
+
+    new window.Swiper(insideViewSwiper, {
+      slidesPerView: 1.05,
+      slidesPerGroup: 1,
+      spaceBetween: 16,
+      loop: true,
+      speed: 700,
+      grabCursor: true,
+      observer: true,
+      observeParents: true,
+      keyboard: { enabled: true },
+      navigation: {
+        prevEl: section?.querySelector(".inside-view__button--prev"),
+        nextEl: section?.querySelector(".inside-view__button--next")
+      },
+      pagination: {
+        el: section?.querySelector(".inside-view__pagination"),
+        clickable: true
+      },
+      a11y: {
+        enabled: true,
+        slideLabelMessage: "{{index}} of {{slidesLength}}"
+      },
+      breakpoints: {
+        576: { slidesPerView: 1.08, spaceBetween: 24 },
+        992: { slidesPerView: 1.07, spaceBetween: 32 }
+      }
+    });
+  });
+}
+
 const megaTriggers = [...document.querySelectorAll(".mega-trigger")];
 
 const closeMegaMenus = (except) => {
@@ -182,12 +218,145 @@ if (testimonialVideoModal && testimonialVideoIframe) {
   });
 }
 
+const commonEffectsStacks = [...document.querySelectorAll(".common-effects__cards")];
+
+const syncCommonEffectsStacks = () => {
+  commonEffectsStacks.forEach((stack) => {
+    const cards = [...stack.querySelectorAll(".common-effects-card")];
+    const cardInners = cards.map((card) => card.querySelector(".common-effects-card__inner"));
+
+    stack.style.removeProperty("--common-effects-card-height");
+    stack.style.setProperty("--common-effects-card-count", cards.length);
+
+    cards.forEach((card, index) => {
+      card.style.setProperty("--common-effects-card-offset", `${20 + index * 20}px`);
+    });
+
+    const tallestCard = Math.ceil(Math.max(...cardInners.map((cardInner) => cardInner?.offsetHeight || 0)));
+
+    if (tallestCard) {
+      stack.style.setProperty("--common-effects-card-height", `${tallestCard}px`);
+    }
+  });
+};
+
+syncCommonEffectsStacks();
+
+window.addEventListener(
+  "load",
+  () => {
+    syncCommonEffectsStacks();
+    window.ScrollTrigger?.refresh();
+  },
+  { once: true }
+);
+
+let commonEffectsResizeFrame;
+
+window.addEventListener("resize", () => {
+  window.cancelAnimationFrame(commonEffectsResizeFrame);
+  commonEffectsResizeFrame = window.requestAnimationFrame(() => {
+    syncCommonEffectsStacks();
+    window.ScrollTrigger?.refresh();
+  });
+});
+
 const initialiseScrollAnimations = () => {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (reducedMotion || !window.gsap || !window.ScrollTrigger) return;
 
   window.gsap.registerPlugin(window.ScrollTrigger);
+
+  const statsSection = document.querySelector(".section-stats");
+  const statNumbers = statsSection?.querySelectorAll(".section-stats__number[data-countup-end]");
+  const CountUp = window.countUp?.CountUp;
+
+  if (statsSection && statNumbers?.length && typeof CountUp === "function") {
+    const counters = [...statNumbers].map((number) => {
+      const counter = new CountUp(number, Number(number.dataset.countupEnd), {
+        startVal: 0,
+        decimalPlaces: Number(number.dataset.countupDecimals || 0),
+        duration: 2,
+        useGrouping: false
+      });
+
+      if (counter.error) console.error(counter.error);
+
+      return counter;
+    });
+
+    window.ScrollTrigger.create({
+      trigger: statsSection,
+      start: "top 80%",
+      once: true,
+      onEnter: () => {
+        counters.forEach((counter, index) => {
+          if (counter.error) return;
+          window.gsap.delayedCall(index * 0.1, () => counter.start());
+        });
+      }
+    });
+  }
+
+  const activitiesGrid = document.querySelector(".activities__grid");
+  const activityCards = activitiesGrid?.querySelectorAll(".activity-card");
+
+  if (activitiesGrid && activityCards?.length) {
+    window.gsap.fromTo(
+      activityCards,
+      {
+        autoAlpha: 0,
+        y: 32
+      },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        stagger: 0.12,
+        clearProps: "opacity,visibility,transform",
+        scrollTrigger: {
+          trigger: activitiesGrid,
+          start: "top 85%",
+          once: true
+        }
+      }
+    );
+  }
+
+  commonEffectsStacks.forEach((stack) => {
+    const cards = [...stack.querySelectorAll(".common-effects-card")];
+
+    cards.slice(0, -1).forEach((card, index) => {
+      const cardInner = card.querySelector(".common-effects-card__inner");
+      const nextCard = cards[index + 1];
+      const targetScale = 1 - (cards.length - 1 - index) * 0.1;
+      const getStickyTop = () => Number.parseFloat(window.getComputedStyle(card).top) || 0;
+      const getCardOffset = () =>
+        Number.parseFloat(window.getComputedStyle(card).getPropertyValue("--common-effects-card-offset")) || 0;
+
+      window.gsap.fromTo(
+        cardInner,
+        {
+          filter: "brightness(1)",
+          scale: 1
+        },
+        {
+          filter: "brightness(0.6)",
+          scale: targetScale,
+          ease: "none",
+          scrollTrigger: {
+            trigger: nextCard,
+            start: () => `top ${getStickyTop() + card.clientHeight}px`,
+            end: () => `top ${getStickyTop() + getCardOffset()}px`,
+            scrub: true,
+            invalidateOnRefresh: true
+          }
+        }
+      );
+    });
+  });
 
   if (window.SplitText) {
     window.gsap.registerPlugin(window.SplitText);

@@ -144,6 +144,67 @@
     }
   }
 
+  &--outlined-shapes {
+    .page-header__shape {
+      rotate: var(--shape-base-rotation);
+      transform-origin: center;
+
+      &--green-left,
+      &--pink-outline-left {
+        width: 306.561px;
+        height: 346.207px;
+        animation: page-header-float-left-edge 11s ease-in-out infinite;
+      }
+
+      &--green-left {
+        --shape-base-rotation: -52.66deg;
+        --shape-rotation-one: 17deg;
+        --shape-rotation-two: -8deg;
+        --shape-rotation-three: 12deg;
+        --shape-rotation-four: -12deg;
+        top: 10px;
+        left: -271px;
+      }
+
+      &--pink-outline-left {
+        --shape-base-rotation: -52.66deg;
+        --shape-rotation-one: 48deg;
+        --shape-rotation-two: -30deg;
+        --shape-rotation-three: 35deg;
+        --shape-rotation-four: -42deg;
+        top: 95px;
+        left: -178px;
+      }
+
+      &--blue-right,
+      &--yellow-outline-right {
+        width: 265.548px;
+        height: 387.503px;
+        animation: page-header-float-right-edge 13s ease-in-out infinite;
+      }
+
+      &--blue-right {
+        --shape-base-rotation: -130.26deg;
+        --shape-rotation-one: 20deg;
+        --shape-rotation-two: -8deg;
+        --shape-rotation-three: 15deg;
+        --shape-rotation-four: -16deg;
+        top: 82px;
+        right: -133px;
+      }
+
+      &--yellow-outline-right {
+        --shape-base-rotation: -159.88deg;
+        --shape-rotation-one: 55deg;
+        --shape-rotation-two: -32deg;
+        --shape-rotation-three: 42deg;
+        --shape-rotation-four: -48deg;
+        top: 19px;
+        right: -103px;
+      }
+    }
+  }
+
   &__visual {
     position: relative;
     width: 100%;
@@ -164,6 +225,62 @@
       object-fit: cover;
       border-radius: 0 16px;
     }
+  }
+}
+
+@keyframes page-header-float-left-edge {
+  0%,
+  100% {
+    rotate: var(--shape-base-rotation);
+    translate: 0 70px;
+  }
+
+  18% {
+    rotate: calc(var(--shape-base-rotation) + var(--shape-rotation-one));
+    translate: 0 0;
+  }
+
+  38% {
+    rotate: calc(var(--shape-base-rotation) + var(--shape-rotation-two));
+    translate: 0 -80px;
+  }
+
+  52% {
+    rotate: calc(var(--shape-base-rotation) + var(--shape-rotation-three));
+    translate: 0 -120px;
+  }
+
+  76% {
+    rotate: calc(var(--shape-base-rotation) + var(--shape-rotation-four));
+    translate: 0 -20px;
+  }
+}
+
+@keyframes page-header-float-right-edge {
+  0%,
+  100% {
+    rotate: var(--shape-base-rotation);
+    translate: 0 -60px;
+  }
+
+  18% {
+    rotate: calc(var(--shape-base-rotation) + var(--shape-rotation-one));
+    translate: 0 30px;
+  }
+
+  38% {
+    rotate: calc(var(--shape-base-rotation) + var(--shape-rotation-two));
+    translate: 0 150px;
+  }
+
+  52% {
+    rotate: calc(var(--shape-base-rotation) + var(--shape-rotation-three));
+    translate: 0 220px;
+  }
+
+  76% {
+    rotate: calc(var(--shape-base-rotation) + var(--shape-rotation-four));
+    translate: 0 80px;
   }
 }
 
@@ -234,6 +351,32 @@
       scale: 0.75;
     }
 
+    &--outlined-shapes {
+      .page-header__shape--green-left {
+        top: 30px;
+        left: -250px;
+        scale: 0.82;
+      }
+
+      .page-header__shape--pink-outline-left {
+        top: 110px;
+        left: -190px;
+        scale: 0.82;
+      }
+
+      .page-header__shape--blue-right {
+        top: 100px;
+        right: -155px;
+        scale: 0.82;
+      }
+
+      .page-header__shape--yellow-outline-right {
+        top: 35px;
+        right: -130px;
+        scale: 0.82;
+      }
+    }
+
     &--with-image {
       min-height: 0;
       padding-block: 80px;
@@ -296,6 +439,32 @@
       top: -100px;
       right: -400px;
       scale: 0.6;
+    }
+
+    &--outlined-shapes {
+      .page-header__shape--green-left {
+        top: 55px;
+        left: -245px;
+        scale: 0.62;
+      }
+
+      .page-header__shape--pink-outline-left {
+        top: 135px;
+        left: -205px;
+        scale: 0.62;
+      }
+
+      .page-header__shape--blue-right {
+        top: 135px;
+        right: -175px;
+        scale: 0.62;
+      }
+
+      .page-header__shape--yellow-outline-right {
+        top: 70px;
+        right: -150px;
+        scale: 0.62;
+      }
     }
 
     &--with-image {

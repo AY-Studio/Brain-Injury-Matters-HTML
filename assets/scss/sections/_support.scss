@@ -1,3 +1,5 @@
+@use "../mixins" as *;
+
 .support {
 
   &.feature-section {
@@ -172,6 +174,141 @@
         font-size: 1rem;
         line-height: 1.5;
       }
+    }
+  }
+}
+
+.support.feature-section.section-stats {
+  .section-stats__layout {
+    --bs-gutter-x: clamp(3rem, 5.56vw, 5rem);
+  }
+
+  .section-stats__intro {
+    max-width: 400px;
+  }
+
+  .eyebrow {
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-stats__description {
+    margin-bottom: 0;
+    color: var(--bim-navy);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .button-row {
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .section-stats__text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--bim-blue);
+    font-weight: 500;
+    text-decoration: none;
+
+    img {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.25s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+
+      img {
+        transform: translateX(0.2rem);
+      }
+    }
+  }
+
+  .section-stats__grid {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 2rem;
+  }
+
+  .section-stats__card {
+    display: flex;
+    min-height: 224px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem;
+    border-radius: 0 16px;
+    color: var(--bim-white);
+    text-align: center;
+
+    &--yellow {
+      background: var(--bim-yellow);
+    }
+
+    &--green {
+      background: var(--bim-green);
+    }
+
+    &--pink {
+      border-radius: 12px;
+      background: var(--bim-pink);
+    }
+
+    &--blue {
+      border-radius: 12px;
+      background: var(--bim-blue);
+    }
+  }
+
+  .section-stats__value,
+  .section-stats__label {
+    width: 100%;
+    margin: 0;
+    color: inherit;
+    font-weight: 700;
+  }
+
+  .section-stats__value {
+    font-size: clamp(3.5rem, 5.56vw, 5rem);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .section-stats__number,
+  .section-stats__suffix {
+    display: inline-block;
+  }
+
+  .section-stats__label {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    text-transform: capitalize;
+  }
+}
+
+@include lg-down {
+  .support.feature-section.section-stats {
+    .section-stats__intro {
+      max-width: 640px;
+    }
+  }
+}
+
+@include sm-down {
+  .support.feature-section.section-stats {
+    .section-stats__card {
+      min-height: 190px;
+      padding: 1.5rem;
     }
   }
 }

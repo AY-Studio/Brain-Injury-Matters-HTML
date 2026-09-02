@@ -1,0 +1,61 @@
+.recovery-tiles {
+  background: var(--bim-cream);
+
+  .section-intro {
+    max-width: 768px;
+  }
+
+  .row {
+    --bs-gutter-x: 2rem;
+  }
+}
+
+.recovery-card {
+  min-height: 367px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0 8px;
+  background: var(--bim-white);
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  &__icon {
+    display: flex;
+    width: 48px;
+    height: 46px;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    background: var(--bim-pale-pink);
+    border-radius: 0 8px;
+
+    img {
+      width: auto;
+      max-width: 36px;
+      height: auto;
+      max-height: 32px;
+    }
+  }
+
+  .card-title {
+    margin: 0;
+    color: var(--bim-green);
+    font-size: clamp(1.5rem, 2.23vw, 2rem);
+    letter-spacing: 0;
+    line-height: 1.3;
+  }
+
+  .card-text {
+    margin: 0;
+    color: var(--bim-navy);
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}

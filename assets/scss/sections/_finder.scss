@@ -10,6 +10,17 @@
   color: #fff;
   background-color: var(--bim-blue);
 
+  &.home {
+
+    color: var(--bim-blue);
+    
+
+    .support-finder__inner {
+      background: var(--bim-pale-pink);
+    }
+
+  }
+
 
   &::before {
     position: absolute;
@@ -62,6 +73,12 @@
       background-image: url("/assets/images/design/sections/support-finder-wave-pink.svg");
     }
 
+    &--blue {
+      z-index: 1;
+      top: 0;
+      background-image: url("/assets/images/design/sections/support-finder-small-wave-blue.svg");
+    }
+
     &--yellow {
       z-index: 1;
       bottom: 0;
@@ -82,9 +99,28 @@
       mask-size: 100% 100%;
     }
 
+    &--pale-pink-top,
+    &--pale-pink-bottom {
+      background-color: var(--bim-pale-pink);
+      z-index: 2;
+      background-image: none;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center bottom;
+      mask-position: center bottom;
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+    }
+
     &--blue-top {
       top: 0;
       -webkit-mask-image: url("/assets/images/design/sections/support-finder-wave-blue.svg");
+      mask-image: url("/assets/images/design/sections/support-finder-wave-blue.svg");
+    }
+
+    &--pale-pink-top {
+      top: 0;
+      -webkit-mask-image: url("/assets/images/design/sections/support-finder-wave-pale-pink.svg");
       mask-image: url("/assets/images/design/sections/support-finder-wave-blue.svg");
     }
 
@@ -94,6 +130,14 @@
       mask-image: url("/assets/images/design/sections/support-finder-wave-bottom-blue.svg");
       transform: scaleY(-1);
     }
+
+    &--pale-pink-bottom {
+      bottom: 0;
+      -webkit-mask-image: url("/assets/images/design/sections/support-finder-wave-bottom-pale-pink.svg");
+      mask-image: url("/assets/images/design/sections/support-finder-wave-bottom-pale-pink.svg");
+      transform: scaleY(-1);
+    }
+
   }
 
   h2 {
@@ -118,10 +162,11 @@
     .form-select {
       background-color: rgba(255, 255, 255, 0.10) !important;
       border-radius: 0 16px;
-      color: #fff;
-      border: 1.5px solid var(--Color-White, #FFF);
+      color: var(--bim-blue);
+      border: 1.5px solid var(--bim-blue);
       font-weight: 600;
       font-size: 24px;
+      font-weight: 700;
 
       &#support-type {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
@@ -130,8 +175,26 @@
 
     .btn-secondary {
 
-    border-color: var(--bim-pink);
-    background: var(--bim-pink);  
+      border-color: var(--bim-blue);
+      background: var(--bim-blue);
+      color: var(--bim-white);
+
+      &:hover {
+        
+        border-color: var(--bim-pink);
+        background: var(--bim-pink);
+
+      }
+
+      svg {
+
+        path {
+
+          fill: #fff;
+
+        }
+
+      }
 
     }
 
