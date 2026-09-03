@@ -296,6 +296,143 @@
   }
 }
 
+.current-funders {
+  &__intro {
+    max-width: 768px;
+    margin-bottom: 5rem;
+
+    .eyebrow {
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    > p:last-child {
+      margin: 0;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+  }
+
+  .support-card--funder {
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    text-align: center;
+
+    &:hover {
+      box-shadow: none;
+      transform: none;
+    }
+
+    > .current-funders__logo {
+      display: block;
+      width: 100%;
+      min-height: 0;
+      padding: 0;
+      overflow: hidden;
+      background: var(--bim-white);
+      border-radius: 4px 12px 4px 12px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        padding: 16.4%;
+        object-fit: contain;
+      }
+    }
+
+    > .card-body {
+      display: flex;
+      min-height: 0;
+      padding: 0;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    h3 {
+      margin: 0;
+      color: var(--bim-green);
+      font-size: 1.5rem;
+      letter-spacing: 0;
+      line-height: 1.4;
+    }
+
+    .card-text {
+      margin: 0;
+      color: var(--bim-navy);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .current-funders__link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1.5rem;
+      color: var(--bim-blue);
+      border: 0;
+      border-radius: 6px;
+      font-weight: 600;
+      line-height: 1.5;
+
+      img {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.25s ease;
+      }
+
+      &:hover,
+      &:focus-visible {
+        color: var(--bim-blue);
+        background: var(--bim-pale-blue);
+
+        img {
+          transform: translateX(3px);
+        }
+      }
+    }
+
+    > .current-funders__socials {
+      display: flex;
+      width: auto;
+      min-height: 0;
+      padding: 0;
+      flex: 0 0 auto;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 0.875rem;
+
+      a {
+        display: inline-flex;
+        color: var(--bim-navy);
+        border-radius: 3px;
+        transition: color 0.25s ease;
+
+        &:hover,
+        &:focus-visible {
+          color: var(--bim-green);
+        }
+
+        &:focus-visible {
+          outline: 2px solid var(--bim-green);
+          outline-offset: 3px;
+        }
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
 @include lg-down {
   .support.feature-section.section-stats {
     .section-stats__intro {
@@ -305,6 +442,16 @@
 }
 
 @include sm-down {
+  .current-funders {
+    &__intro {
+      margin-bottom: 3rem;
+    }
+
+    .support-card--funder {
+      padding-inline: 0;
+    }
+  }
+
   .support.feature-section.section-stats {
     .section-stats__card {
       min-height: 190px;
