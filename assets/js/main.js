@@ -82,7 +82,7 @@ if (partnerSwipers.length && typeof window.Swiper === "function") {
         576: { slidesPerView: 3.5 },
         768: { slidesPerView: 4.5 },
         992: { slidesPerView: 5.5 },
-        1200: { slidesPerView: 7.5 }
+        1200: { slidesPerView: 8.5 }
       }
     });
   });
