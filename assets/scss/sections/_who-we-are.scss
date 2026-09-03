@@ -116,6 +116,27 @@
   }
 }
 
+.feature-section.feature-section--cream {
+  background: var(--bim-pale-cream);
+
+  &::before {
+    background-image: url("/assets/images/design/sections/feature-section-wave-top-cream.svg");
+  }
+
+  &::after {
+    height: clamp(16px, 1.83vw, 26.354px);
+    background-image: url("/assets/images/design/sections/feature-section-wave-bottom-cream.svg");
+    transform: rotate(180deg);
+  }
+
+  .support-card h3 {
+    color: var(--bim-blue);
+  }
+
+}
+
+
+
 @include lg-down {
   .feature-section {
     &__visual {
