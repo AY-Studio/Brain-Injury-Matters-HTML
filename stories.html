@@ -34,6 +34,7 @@
     <script src="/assets/js/vendor/gsap.min.js" defer></script>
     <script src="/assets/js/vendor/SplitText.min.js" defer></script>
     <script src="/assets/js/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="/assets/js/vendor/countUp.umd.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
   </head>
   <body>
@@ -543,372 +544,416 @@
     <main id="main-content">
 
       <!-- .page-header starts -->
-      <section class="page-header page-header--with-image" aria-labelledby="page-header-title">
+      <section
+        class="page-header page-header--outlined-shapes align-items-center"
+        aria-labelledby="page-header-title"
+      >
         <img
-          class="page-header__shape page-header__shape--green"
-          src="/assets/images/design/sections/page-header-union-green.svg"
+          class="page-header__shape page-header__shape--green-left"
+          src="/assets/images/design/sections/page-header-shape-green-left.svg"
           alt=""
           aria-hidden="true"
         />
         <img
-          class="page-header__shape page-header__shape--pink"
-          src="/assets/images/design/sections/page-header-shape-pink.svg"
+          class="page-header__shape page-header__shape--pink-outline-left"
+          src="/assets/images/design/sections/page-header-shape-pink-outline-left.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="page-header__shape page-header__shape--blue-right"
+          src="/assets/images/design/sections/page-header-shape-blue-right.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="page-header__shape page-header__shape--yellow-outline-right"
+          src="/assets/images/design/sections/page-header-shape-yellow-outline-right.svg"
           alt=""
           aria-hidden="true"
         />
 
         <div class="page-header__inner">
-          <div class="page-header__content">
-            <p class="eyebrow page-header__eyebrow">Parents & Carers</p>
-            <h1 id="page-header-title">You are not alone in this</h1>
-            <p class="page-header__intro">
-              Caring for a child with a brain injury changes everything. We provide the support, guidance and community you need to find your way forward.
-            </p>
-            <div class="page-header__actions">
-              <a class="btn btn-primary" href="#support">
-                <img src="/assets/images/design/icons/care-24.svg" alt="" aria-hidden="true" />
-                Get Support
-              </a>
-              <a class="btn btn-outline-primary" href="#referral">
-                Referrals
-                <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
-              </a>
-            </div>
-          </div>
-
-          <div class="page-header__visual">
-            <span aria-hidden="true"></span>
-            <img
-              src="/assets/images/design/sections/adults-life-changes.webp"
-              alt="A father and daughter reading together"
-            />
-          </div>
+          <!-- <p class="eyebrow page-header__eyebrow"></p> -->
+          <h1 id="page-header-title">Stories from our community</h1>
+          <p class="page-header__intro">
+           Every story shared is a light for someone still in the dark. These are the true accounts of courage, recovery, and the quiet triumphs that follow a brain injury.
+          </p>
         </div>
       </section>
       <!-- .page-header ends -->
 
-      <!-- .section-left-right.blue starts -->
-      <section
-        class="support-finder support-finder--split section-left-right section-left-right--blue"
-        aria-labelledby="childhood-interrupted-title"
-      >
-        <span class="support-finder__wave support-finder__wave--blue-top" aria-hidden="true"></span>
-        <span class="support-finder__wave support-finder__wave--pink" aria-hidden="true"></span>
+      
 
-        <div class="container-fluid  support-finder__inner support-finder__inner--split">
-          <div class="site-container mx-auto">
-            <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
-              <div class="col-lg-5 feature-section__visual support-finder__visual">
-                <span aria-hidden="true"></span>
-                <img
-                  src="/assets/images/design/sections/adults-life-changes.webp"
-                  alt="Children playing on stepping stones outdoors"
-                />
-              </div>
-
-              <div class="col-lg-6 offset-lg-1 feature-section__copy support-finder__copy">
-                <p class="eyebrow">Who We Are</p>
-
-                <h2 id="childhood-interrupted-title">We know the road because we walk it</h2>
-                <p>
-                  Brain Injury Matters exists for the moment after the hospital doors close. We are a charity built on lived experience and professional expertise, fighting for a life not defined by injury.
-                </p>
-
-                <div class="button-row">
-                  <a class="btn btn-secondary" href="#support">Who We Are</a>
-                  <a class="support-finder__stories-link line-link" href="#">
-                    Our Story
-                    <img
-                      src="/assets/images/design/icons/chevron-right-pale-pink.svg"
-                      alt=""
-                      aria-hidden="true"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <span class="support-finder__wave support-finder__wave--blue-bottom" aria-hidden="true"></span>
-        <span class="support-finder__wave support-finder__wave--yellow" aria-hidden="true"></span>
-      </section>
-      <!-- /.section-left-right.blue  ends -->
-
-      <!-- .support starts -->
-
-      <section class="support section-space" id="support">
+      <!-- .stories-featured starts -->
+      <section class="stories-featured section-space" aria-labelledby="featured-story-title">
         <div class="container-fluid site-container">
-          <div class="section-intro text-center">
-            <p class="eyebrow">Support</p>
-            <h2>Available Support for You</h2>
-            <p>Practical help and emotional shelter for the whole family.</p>
-          </div>
-          <div class="row g-4 justify-content-center">
-            <div class="col-md-6 col-xl-3">
-              <article class="support-card">
+          <article class="stories-featured__card row g-0 align-items-stretch overflow-hidden">
+            <div class="col-lg-6">
+              <div class="stories-featured__media">
                 <img
-                  src="/assets/images/design/sections/adults-one-to-one.webp"
-                  alt="A child enjoying a colourful ball pool"
+                  src="/assets/images/design/sections/stories-featured.webp"
+                  alt="Two children dressed as superheroes running outdoors"
                 />
-                <div>
-                  <h3>Advocacy and practical assistance</h3>
-                  <p>Tailored sessions helping children build confidence and new skills.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Learn more
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z"
-                          fill="#013D9E"
-                          stroke="#013D9E"
-                        />
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-xl-3">
-              <article class="support-card">
-                <img
-                  src="/assets/images/design/sections/adults-peer-groups.webp"
-                  alt="A family enjoying time together at home"
-                />
-                <div>
-                  <h3>Family support and empowerment</h3>
-                  <p>Practical and emotional help for parents, carers, and siblings.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Learn more
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z"
-                          fill="#013D9E"
-                          stroke="#013D9E"
-                        />
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-xl-3">
-              <article class="support-card">
-                <img
-                  src="/assets/images/design/sections/adults-community.webp"
-                  alt="Older adults laughing together at home"
-                />
-                <div>
-                  <h3>Help Accessing Education, Health, Housing And Financial Services</h3>
-                  <p>We help you cut through the noise to get what you need.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Learn more
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z"
-                          fill="#013D9E"
-                          stroke="#013D9E"
-                        />
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-xl-3">
-              <article class="support-card">
-                <img
-                  src="/assets/images/design/sections/parents-peer-support.webp"
-                  alt="People taking part in a peer-support group"
-                />
-                <div>
-                  <h3>Parent and carer peer-support networks</h3>
-                  <p>Meet others who share the same road in a safe space.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Learn more
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z"
-                          fill="#013D9E"
-                          stroke="#013D9E"
-                        />
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- .support ends -->
-
-
-      <!-- .support.green starts -->
-
-      <section class="support feature-section feature-section--green section-space" id="accessing-support">
-        <div class="container-fluid site-container">
-          <div class="section-intro text-center">
-            <p class="eyebrow">Process</p>
-            <h2>Accessing Support</h2>
-            <p>A clear path forward when everything feels uncertain.</p>
-          </div>
-          <div class="row g-4 justify-content-center">
-            <div class="col-md-6 col-lg-4">
-              <article class="support-card">
-                <img
-                  src="/assets/images/design/sections/adults-one-to-one.webp"
-                  alt="A child enjoying a colourful ball pool"
-                />
-                <div>
-                  <p class="eyebrow">Step 1.</p>
-                  <h3>Reach out with a call or a message</h3>
-                  <p>A simple hello is all it takes. No forms, no pressure, just a conversation.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Get In Touch
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z"
-                          fill="#013D9E"
-                          stroke="#013D9E"
-                        />
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <article class="support-card">
-                <img
-                  src="/assets/images/design/sections/adults-one-to-one.webp"
-                  alt="A child enjoying a colourful ball pool"
-                />
-                <div>
-                  <p class="eyebrow">Step 2.</p>
-                  <h3>We listen to what you truly need</h3>
-                  <p>Tell us your story in your own time. We hear the weight behind the words.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Learn
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z"
-                          fill="#013D9E"
-                          stroke="#013D9E"
-                        />
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <article class="support-card">
-                <img
-                  src="/assets/images/design/sections/adults-one-to-one.webp"
-                  alt="A child enjoying a colourful ball pool"
-                />
-                <div>
-                  <p class="eyebrow">Step 3.</p>
-                  <h3>Together we build a plan that fits</h3>
-                  <p>Practical help shaped around your family, not a one-size-fits-all solution.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Support
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z"
-                          fill="#013D9E"
-                          stroke="#013D9E"
-                        />
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- /.support.green ends -->
-
-      <!-- .dual-cta starts -->
-
-      <section class="dual-cta" id="referral" aria-label="Support and referrals">
-        <div class="container-fluid site-container">
-          <div class="dual-cta__panel">
-            <div class="row dual-cta__row">
-              <div class="col-lg-6">
-                <article class="dual-cta__item">
-                  <div class="dual-cta__icon" aria-hidden="true">
-                    <img src="/assets/images/design/icons/dual-cta-talk.svg" alt="" />
-                  </div>
-
-                  <div class="dual-cta__content">
-                    <h2>Talk To Us</h2>
-                    <p>
-                      A conversation costs nothing but can change everything. Speak with someone who truly listens
-                      and understands your situation.
-                    </p>
-                  </div>
-
-                  <div class="dual-cta__actions">
-                    <a class="btn btn-primary" href="#contact">
-                      <img src="/assets/images/design/icons/dual-cta-mail.svg" alt="" aria-hidden="true" />
-                      Get In Touch
-                    </a>
-                    <a class="btn btn-outline-primary" href="#">Stories</a>
-                  </div>
-                </article>
-              </div>
-
-              <div class="col-lg-6">
-                <article class="dual-cta__item">
-                  <div class="dual-cta__icon" aria-hidden="true">
-                    <img src="/assets/images/design/icons/dual-cta-referral.svg" alt="" />
-                  </div>
-
-                  <div class="dual-cta__content">
-                    <h2>Make A Referral</h2>
-                    <p>
-                      Professionals can refer a family directly to our support services. Start the process with a
-                      simple, confidential form.
-                    </p>
-                  </div>
-
-                  <div class="dual-cta__actions">
-                    <a class="btn btn-primary" href="#">Refer</a>
-                    <a class="btn btn-outline-primary" href="#">Learn</a>
-                  </div>
-                </article>
               </div>
             </div>
-          </div>
+
+            <div class="col-lg-6">
+              <div class="stories-featured__content">
+                <div>
+                  <div class="stories-featured__meta d-flex align-items-center">
+                    <span class="stories-featured__tag">Story</span>
+                    <span>4 min read</span>
+                  </div>
+
+                  <h2 id="featured-story-title">Finding the words again after everything went quiet</h2>
+                  <p>Groundbreaking research from our partners reveals the critical window for support after a brain injury.</p>
+                </div>
+
+                <a class="stories-featured__link line-link" href="#">
+                  Read more
+                  <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
+      <!-- /.stories-featured ends -->
 
-      <!-- /.dual-cta ends -->
+      <!-- .stories starts -->
+      <section class="stories section-space pt-0" aria-label="Community stories">
+        <div class="container-fluid site-container">
+          <div class="stories__filters d-flex flex-wrap align-items-center justify-content-center" aria-label="Filter stories">
+            <button class="btn stories__filter active" type="button" aria-pressed="true">View all</button>
+            <button class="btn stories__filter" type="button" aria-pressed="false">Children</button>
+            <button class="btn stories__filter" type="button" aria-pressed="false">Family</button>
+            <button class="btn stories__filter" type="button" aria-pressed="false">Recovery</button>
+            <button class="btn stories__filter" type="button" aria-pressed="false">Community</button>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 stories__grid" id="stories-grid">
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="overflow-hidden"> 
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>A brother's promise kept on the football pitch</h3>
+                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="Read more: A brother's promise kept on the football pitch"
+                  >
+                    <span class="stories-card__link-label">
+                      Read more
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="overflow-hidden"> 
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>A brother's promise kept on the football pitch</h3>
+                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="Read more: A brother's promise kept on the football pitch"
+                  >
+                    <span class="stories-card__link-label">
+                      Read more
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="overflow-hidden"> 
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>A brother's promise kept on the football pitch</h3>
+                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="Read more: A brother's promise kept on the football pitch"
+                  >
+                    <span class="stories-card__link-label">
+                      Read more
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="overflow-hidden"> 
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>A brother's promise kept on the football pitch</h3>
+                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="Read more: A brother's promise kept on the football pitch"
+                  >
+                    <span class="stories-card__link-label">
+                      Read more
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="overflow-hidden"> 
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>A brother's promise kept on the football pitch</h3>
+                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="#"
+                    aria-label="Read more: A brother's promise kept on the football pitch"
+                  >
+                    <span class="stories-card__link-label">
+                      Read more
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="overflow-hidden"> 
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>A brother's promise kept on the football pitch</h3>
+                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="Read more: A brother's promise kept on the football pitch"
+                  >
+                    <span class="stories-card__link-label">
+                      Read more
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="overflow-hidden"> 
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>A brother's promise kept on the football pitch</h3>
+                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="Read more: A brother's promise kept on the football pitch"
+                  >
+                    <span class="stories-card__link-label">
+                      Read more
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="overflow-hidden"> 
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>A brother's promise kept on the football pitch</h3>
+                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="Read more: A brother's promise kept on the football pitch"
+                  >
+                    <span class="stories-card__link-label">
+                      Read more
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="overflow-hidden"> 
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>A brother's promise kept on the football pitch</h3>
+                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="Read more: A brother's promise kept on the football pitch"
+                  >
+                    <span class="stories-card__link-label">
+                      Read more
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <nav class="stories__pagination-wrap" aria-label="Stories pagination">
+            <ul class="pagination stories__pagination justify-content-center align-items-center mb-0">
+              <li class="page-item stories__pagination-arrow">
+                <a class="page-link" href="#stories-grid" aria-label="Previous page">
+                  <img src="/assets/images/design/icons/stories-pagination-arrow.svg" alt="" aria-hidden="true" />
+                </a>
+              </li>
+              <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+              <li class="page-item"><a class="page-link" href="#stories-grid">2</a></li>
+              <li class="page-item"><a class="page-link" href="#stories-grid">3</a></li>
+              <li class="page-item"><span class="page-link">…</span></li>
+              <li class="page-item"><a class="page-link" href="#stories-grid">25</a></li>
+              <li class="page-item stories__pagination-arrow stories__pagination-arrow--next">
+                <a class="page-link" href="#stories-grid" aria-label="Next page">
+                  <img src="/assets/images/design/icons/stories-pagination-arrow.svg" alt="" aria-hidden="true" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <!-- /.stories ends -->
+
 
 
       <section class="partners section-space" id="partners">

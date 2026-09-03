@@ -158,6 +158,61 @@ document.addEventListener("keydown", (event) => {
 document.querySelector(".support-finder__form")?.addEventListener("submit", (event) => event.preventDefault());
 document.querySelector(".newsletter__form")?.addEventListener("submit", (event) => event.preventDefault());
 
+const storyShareLinks = [...document.querySelectorAll("[data-story-share]")];
+
+if (storyShareLinks.length) {
+  const storyUrl = new URL(window.location.href);
+  storyUrl.hash = "";
+
+  const encodedStoryUrl = encodeURIComponent(storyUrl.href);
+  const encodedStoryTitle = encodeURIComponent(document.title);
+  const shareUrls = {
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedStoryUrl}`,
+    x: `https://twitter.com/intent/tweet?url=${encodedStoryUrl}&text=${encodedStoryTitle}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedStoryUrl}`
+  };
+
+  const copyStoryUrl = async () => {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(storyUrl.href);
+      return;
+    }
+
+    const input = document.createElement("textarea");
+    input.value = storyUrl.href;
+    input.setAttribute("readonly", "");
+    input.style.position = "fixed";
+    input.style.opacity = "0";
+    document.body.append(input);
+    input.select();
+    document.execCommand("copy");
+    input.remove();
+  };
+
+  storyShareLinks.forEach((link) => {
+    const platform = link.dataset.storyShare;
+
+    if (platform === "copy") {
+      link.href = storyUrl.href;
+      link.addEventListener("click", async (event) => {
+        event.preventDefault();
+        const originalLabel = link.getAttribute("aria-label");
+
+        try {
+          await copyStoryUrl();
+          link.setAttribute("aria-label", "Story link copied");
+          window.setTimeout(() => link.setAttribute("aria-label", originalLabel), 2000);
+        } catch {
+          window.location.href = storyUrl.href;
+        }
+      });
+      return;
+    }
+
+    if (shareUrls[platform]) link.href = shareUrls[platform];
+  });
+}
+
 const initialiseStickyNavbar = () => {
   const siteHeader = document.querySelector(".site-header");
   const navbar = siteHeader?.querySelector(".navbar");
@@ -325,6 +380,30 @@ const initialiseScrollAnimations = () => {
     );
   }
 
+  const storyContent = document.querySelector(".story__content");
+
+  if (storyContent) {
+    window.gsap.fromTo(
+      storyContent,
+      {
+        autoAlpha: 0,
+        y: 32
+      },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        clearProps: "opacity,visibility,transform",
+        scrollTrigger: {
+          trigger: storyContent,
+          start: "top 85%",
+          once: true
+        }
+      }
+    );
+  }
+
   commonEffectsStacks.forEach((stack) => {
     const cards = [...stack.querySelectorAll(".common-effects-card")];
 
@@ -395,6 +474,8 @@ const initialiseScrollAnimations = () => {
   const animationGroups = document.querySelectorAll("main section, .site-footer");
 
   animationGroups.forEach((group) => {
+    if (group.classList.contains("story")) return;
+
     const headings = group.querySelectorAll("h1, h2, h3");
 
     if (!headings.length) return;
@@ -424,6 +505,8 @@ const initialiseScrollAnimations = () => {
   );
 
   fadeElements.forEach((element) => {
+    if (element.closest(".story__content")) return;
+
     window.gsap.fromTo(
       element,
       {
