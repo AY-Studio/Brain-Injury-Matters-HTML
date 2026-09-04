@@ -1,0 +1,231 @@
+.section-form {
+  background: var(--bim-cream);
+
+  .section-intro {
+    max-width: 768px;
+    margin-bottom: 3rem;
+
+    .eyebrow {
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    > p:last-child {
+      margin: 0;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+  }
+
+  &__form,
+  .gform_wrapper {
+    width: 100%;
+    max-width: 560px;
+    margin-inline: auto;
+  }
+
+  .gform_wrapper.gform-theme--framework {
+    --gf-form-gap-x: 1.5rem;
+    --gf-form-gap-y: 1.5rem;
+    --gf-ctrl-bg-color: var(--bim-white);
+    --gf-ctrl-border-color: var(--bim-navy);
+    --gf-ctrl-label-color-primary: var(--bim-navy);
+    --gf-ctrl-label-font-size-primary: 1.125rem;
+    --gf-ctrl-label-font-weight-primary: 500;
+    --gf-ctrl-radius: 0 8px;
+    --gf-ctrl-btn-bg-color-primary: var(--bim-blue);
+    --gf-ctrl-btn-bg-color-hover-primary: var(--bim-navy);
+    --gf-ctrl-btn-color-primary: var(--bim-white);
+    --gf-ctrl-btn-font-size: 1rem;
+    --gf-ctrl-btn-font-weight: 600;
+    --gf-ctrl-btn-radius: 3px 12px;
+  }
+
+  &__form {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  &__field {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .form-label,
+  .gform_wrapper .gfield_label,
+  .gform_wrapper .gform-field-label:not(.gform-field-label--type-sub) {
+    margin: 0;
+    color: var(--bim-navy);
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .form-control,
+  .form-select,
+  .gform_wrapper input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="hidden"]),
+  .gform_wrapper select,
+  .gform_wrapper textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.75rem;
+    border: 1px solid var(--bim-navy);
+    border-radius: 0 8px;
+    color: var(--bim-navy);
+    background-color: var(--bim-white);
+    font-size: 1rem;
+    line-height: 1.5;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.6);
+      opacity: 1;
+    }
+
+    &:focus {
+      border-color: var(--bim-blue);
+      outline: 0;
+      box-shadow: 0 0 0 3px rgba(1, 61, 158, 0.16);
+    }
+  }
+
+  .form-select,
+  .gform_wrapper select {
+    appearance: none;
+    padding-right: 2.75rem;
+    background-image: url("/assets/images/design/icons/form-select-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 24px 24px;
+  }
+
+  textarea.form-control,
+  .gform_wrapper textarea {
+    height: 180px;
+    min-height: 180px;
+    resize: vertical;
+  }
+
+  .form-control[type="file"],
+  .gform_wrapper input[type="file"] {
+    padding: 0;
+    overflow: hidden;
+
+    &::file-selector-button {
+      height: 46px;
+      padding: 0.75rem;
+      margin-right: 0.75rem;
+      border: 0;
+      border-right: 1px solid var(--bim-navy);
+      color: var(--bim-navy);
+      background: var(--bim-pale-blue);
+    }
+  }
+
+  &__consent,
+  .gform_wrapper .gfield--type-consent .ginput_container_consent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 18px;
+    padding: 0 0 1rem;
+    margin: 0;
+  }
+
+  .form-check-input,
+  .gform_wrapper input[type="checkbox"] {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    border: 1px solid var(--bim-navy);
+    border-radius: 0;
+    background-color: var(--bim-white);
+
+    &:checked {
+      border-color: var(--bim-blue);
+      background-color: var(--bim-blue);
+    }
+
+    &:focus {
+      border-color: var(--bim-blue);
+      box-shadow: 0 0 0 3px rgba(1, 61, 158, 0.16);
+    }
+  }
+
+  .form-check-label,
+  .gform_wrapper .gfield--type-consent label {
+    margin: 0;
+    color: var(--bim-navy);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  &__form .btn,
+  .gform_wrapper .gform_button,
+  .gform_wrapper input[type="submit"],
+  .gform_wrapper button[type="submit"].gform_button,
+  .gform_wrapper .gfield--type-submit button[type="submit"].button {
+    min-height: 50px;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--bim-blue);
+    border-radius: 3px 12px;
+    color: var(--bim-white);
+    background: var(--bim-blue);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.5;
+    transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+
+    &:hover,
+    &:focus-visible {
+      border-color: var(--bim-navy);
+      color: var(--bim-white);
+      background: var(--bim-navy);
+      transform: translateY(-2px);
+    }
+  }
+
+  .gform_wrapper {
+    .gform_fields {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    .gfield {
+      grid-column: 1 / -1;
+    }
+
+    .gfield_label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .ginput_complex {
+      gap: 0.75rem;
+    }
+
+    .gform_footer,
+    .gform-footer,
+    .gform_page_footer {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin-top: 1.5rem;
+    }
+
+    .gfield_validation_message,
+    .validation_message {
+      margin-top: 0.5rem;
+      color: #9f1224;
+      font-size: 0.875rem;
+    }
+  }
+}

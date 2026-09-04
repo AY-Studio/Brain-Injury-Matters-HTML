@@ -5,6 +5,47 @@
   overflow: hidden;
   background: var(--bim-pale-pink);
 
+  &.pink {
+    background: var(--bim-pink);
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--bim-blue);
+    }
+
+    .eyebrow {
+
+      background: var(--bim-green);
+      color: var(--bim-white);
+
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+      content: "";
+      pointer-events: none;
+    }
+
+     &::before {
+      top: 0;
+      height: clamp(18px, 2.103vw, 30.278px);
+      background-image: url("/assets/images/design/sections/feature-section-wave-top--pink.svg");
+    }
+
+    &::after {
+      bottom: 0;
+      height: clamp(25px, 2.917vw, 42px);
+      background-image: url("/assets/images/design/sections/feature-section-wave-bottom--pink.svg");
+    }
+
+  }
+
   &::before,
   &::after {
     position: absolute;
