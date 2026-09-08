@@ -6,6 +6,34 @@
 
     .support-card {
 
+      &:not(:has(p)), &:not(:has(img))  {
+
+        h2, h3 {
+          
+          font-size: 32px;
+
+        }
+
+        .support-card__image-wrap {
+
+          max-height: 300px;
+
+        }
+
+        div:not(.support-card__image-wrap) {
+
+          min-height: 195px;
+
+        }
+
+        &.support-card--process {
+
+          min-height: 350px;
+
+        }
+
+      }
+
       h2, h3 {
 
         color: var(--bim-green);
