@@ -1,0 +1,128 @@
+@use "../mixins" as *;
+
+.other-ways {
+  &__intro {
+    max-width: 768px;
+    margin-bottom: 5rem;
+
+    .eyebrow {
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      margin: 0 0 1.5rem;
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+
+    > p:last-child {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+  }
+
+  &__grid {
+    --bs-gutter-x: 3rem;
+    --bs-gutter-y: 2rem;
+  }
+}
+
+.other-ways-card {
+  display: flex;
+  min-height: 359px;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 0.75rem;
+  background: var(--bim-white);
+  border-radius: 4px 12px;
+
+  &__icon {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    flex: 0 0 64px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bim-yellow);
+
+    img {
+      display: block;
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &__body,
+  &__copy {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  &__body {
+    gap: 1.5rem;
+  }
+
+  &__copy {
+    gap: 1rem;
+
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h3 {
+      color: var(--bim-green);
+      font-size: 2rem;
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
+
+    p {
+      color: var(--bim-navy);
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+  }
+
+  &__link {
+    color: var(--bim-blue);
+    font-size: 1rem;
+    font-weight: 500;
+
+    &::after {
+      height: 1px;
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    &:hover::after,
+    &:focus-visible::after {
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+  }
+}
+
+@include md-down {
+  .other-ways {
+    &__intro {
+      margin-bottom: 3rem;
+
+      h2 {
+        font-size: 2.25rem;
+      }
+    }
+  }
+
+  .other-ways-card {
+    min-height: 0;
+    padding: 1.5rem;
+  }
+}

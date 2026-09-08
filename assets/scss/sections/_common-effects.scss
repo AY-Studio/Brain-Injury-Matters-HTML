@@ -66,6 +66,11 @@
       overflow: hidden;
       background: var(--bim-pale-pink);
       border-radius: 12px;
+
+      &.light-pink {
+        background: var(--bim-light-pink);
+      }
+
     }
 
     &:nth-child(1) &__inner {

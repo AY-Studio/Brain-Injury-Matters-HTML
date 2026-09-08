@@ -1,6 +1,18 @@
 @use "../mixins" as *;
 
 .stories-featured {
+
+    &.feature-section {
+
+      .stories-featured__content {
+
+        min-height: 0%;
+
+      }
+
+    }
+
+
   &__card {
     overflow: hidden;
     background: var(--bim-white);
