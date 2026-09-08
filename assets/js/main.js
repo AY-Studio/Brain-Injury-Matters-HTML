@@ -437,6 +437,134 @@ const initialiseScrollAnimations = () => {
     });
   });
 
+  const heroSection = document.querySelector(".hero");
+  const heroImageAccents = heroSection?.querySelectorAll(".hero-slide__image span");
+
+  if (heroSection && heroImageAccents?.length) {
+    window.gsap.fromTo(
+      heroImageAccents,
+      {
+        y: -30
+      },
+      {
+        y: 30,
+        ease: "none",
+        scrollTrigger: {
+          trigger: heroSection,
+          start: "top top",
+          end: "bottom top",
+          scrub: 0.6,
+          invalidateOnRefresh: true
+        }
+      }
+    );
+  }
+
+  const pageHeaderVisuals = document.querySelectorAll(".page-header__visual");
+
+  pageHeaderVisuals.forEach((visual) => {
+    const accent = visual.querySelector("span");
+    const pageHeader = visual.closest(".page-header");
+
+    if (!accent || !pageHeader) return;
+
+    window.gsap.fromTo(
+      accent,
+      {
+        y: -15
+      },
+      {
+        y: 15,
+        ease: "none",
+        scrollTrigger: {
+          trigger: pageHeader,
+          start: "top top",
+          end: "bottom top",
+          scrub: 0.6,
+          invalidateOnRefresh: true
+        }
+      }
+    );
+  });
+
+  const featureVisuals = document.querySelectorAll(".feature-section__visual");
+
+  featureVisuals.forEach((visual) => {
+    const accent = visual.querySelector("span");
+
+    if (!accent) return;
+
+    window.gsap.fromTo(
+      accent,
+      {
+        y: -30
+      },
+      {
+        y: 30,
+        ease: "none",
+        scrollTrigger: {
+          trigger: visual,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.6,
+          invalidateOnRefresh: true
+        }
+      }
+    );
+  });
+
+  const videoCards = document.querySelectorAll(".video-card");
+
+  videoCards.forEach((card) => {
+    const background = card.querySelector(".video-card__background");
+
+    if (!background) return;
+
+    window.gsap.fromTo(
+      background,
+      {
+        y: -30
+      },
+      {
+        y: 30,
+        ease: "none",
+        scrollTrigger: {
+          trigger: card,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.6,
+          invalidateOnRefresh: true
+        }
+      }
+    );
+  });
+
+  const testimonialSections = document.querySelectorAll(".testimonial");
+
+  testimonialSections.forEach((testimonial) => {
+    const background = testimonial.querySelector(".testimonial__background");
+
+    if (!background) return;
+
+    window.gsap.fromTo(
+      background,
+      {
+        yPercent: -10
+      },
+      {
+        yPercent: 10,
+        ease: "none",
+        scrollTrigger: {
+          trigger: testimonial,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.6,
+          invalidateOnRefresh: true
+        }
+      }
+    );
+  });
+
   if (window.SplitText) {
     window.gsap.registerPlugin(window.SplitText);
 

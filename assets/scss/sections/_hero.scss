@@ -102,6 +102,7 @@
         // border-radius: 52% 48% 42% 58% / 46% 42% 58% 54%;
         background: var(--bim-yellow);
         border-radius: 0 16px;
+        will-change: transform;
       }
 
       img {
@@ -140,7 +141,7 @@
       color: var(--bim-blue);
       background: transparent;
       font-size: 1.2rem;
-      // font-weight: 700;
+      font-weight: 500;
       text-align: center;
 
       @include xl {
@@ -154,6 +155,7 @@
         height: 4px;
         overflow: hidden;
         background: rgba(1, 61, 158, 0.2);
+        border-radius: 50px;
 
         > b {
           position: absolute;

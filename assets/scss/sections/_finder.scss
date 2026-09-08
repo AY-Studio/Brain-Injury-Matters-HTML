@@ -160,16 +160,18 @@
     }
 
     .form-select {
-      background-color: rgba(255, 255, 255, 0.10) !important;
+      background-color: rgba(255, 255, 255, 1) !important;
       border-radius: 0 16px;
-      color: var(--bim-blue);
-      border: 1.5px solid var(--bim-blue);
+      color: var(--bim-navy);
+      border: 1.5px solid var(--bim-navy);
       font-weight: 600;
       font-size: 24px;
       font-weight: 700;
 
       &#support-type {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23013d9e' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+        background-size: 20px 15px;
+        font-weight: 600;
       }
     }
 

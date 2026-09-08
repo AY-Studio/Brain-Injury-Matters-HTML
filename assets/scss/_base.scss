@@ -11,7 +11,7 @@
   --bim-pale-green: #edf9f5;
   --bim-cream: #f7f9ed;
   --bim-white: #fff;
-  --section-space: clamp(4.5rem, 7.8vw, 7rem);
+  --section-space: clamp(6.75rem, 11.7vw, 10.5rem);
 }
 
 html {
@@ -101,7 +101,7 @@ p {
 }
 
 .eyebrow {
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
   color: var(--bim-blue);
   font-weight: 600;
   background: var(--bim-pink);

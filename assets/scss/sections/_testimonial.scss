@@ -6,11 +6,14 @@
 
   &__background {
     position: absolute;
-    inset: 0;
+    top: -14%;
+    left: 0;
     width: 100%;
-    height: 100%;
+    height: 128%;
     opacity: 0.1;
     object-fit: cover;
+    pointer-events: none;
+    will-change: transform;
   }
 
   .site-container {
@@ -64,6 +67,7 @@
     background: var(--bim-yellow);
     pointer-events: none;
     border-radius: 0 16px;
+    will-change: transform;
   }
 
   &__play {

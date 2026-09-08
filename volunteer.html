@@ -44,19 +44,16 @@
       <div class="utility-bar d-none d-xl-block">
         <div class="utility-bar--wrap d-flex align-items-center justify-content-end">
           <div class="actions d-flex px-5 py-3">
-            <form class="utility-search" action="/" method="get" role="search">
-              <label class="visually-hidden" for="utility-search-input">Search the site</label>
-              <button class="utility-search__submit" type="submit" aria-label="Submit search">
-                <img src="/assets/images/design/icons/search.svg" alt="" />
-              </button>
-              <input
-                class="utility-search__input"
-                id="utility-search-input"
-                name="search"
-                type="search"
-                placeholder="Search the site"
-              />
-            </form>
+            <div class="utility-search__wrap">
+              <form class="utility-search" action="/" method="get" role="search">
+                <label class="visually-hidden" for="utility-search-input">Search the site</label>
+                <button class="utility-search__submit" type="submit" aria-label="Submit search">
+                  <img src="/assets/images/design/icons/search.svg" alt="" />
+                </button>
+                <input
+                  class="utility-search__input" id="utility-search-input" name="search" type="search" placeholder="Search the site" />
+              </form>
+            </div>
             <a class="line-link border-left" href="#contact">Contact Us</a>
             <a class="line-link" href="#news">News</a>
             <a class="line-link border-right" href="#fundraising">Fundraise</a>
@@ -123,8 +120,8 @@
       <nav class="navbar navbar-expand-xl" aria-label="Main navigation">
         <div class="container-fluid px-3 px-lg-5">
           <a class="site-logo" href="/" aria-label="Brain Injury Matters home">
-            <img class="site-logo__word" src="/assets/images/design/header/logo-word.svg" alt="Brain Injury Matters" />
             <img class="site-logo__mark" src="/assets/images/design/header/logo-mark.svg" alt="" />
+            <img class="site-logo__word" src="/assets/images/design/header/logo-word.svg" alt="Brain Injury Matters" />
           </a>
           <button
             class="navbar-toggler"
@@ -161,19 +158,27 @@
                     </a>
                     <div class="mega-grid mega-grid--4">
                       <a class="mega-card" href="/brain-injury-children.html">
-                        <img src="/assets/images/design/sections/support-1.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/sections/support-1.jpeg" alt="" />
+                        </div>
                         <span>Children With Brain Injuries</span>
                       </a>
                       <a class="mega-card" href="/brain-injury-adults.html">
-                        <img src="/assets/images/design/sections/support-2.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/sections/support-2.jpeg" alt="" />
+                        </div>
                         <span>Adults With Brain Injuries</span>
                       </a>
                       <a class="mega-card" href="/brain-injury-parents-and-carers.html">
-                        <img src="/assets/images/design/sections/support-3.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/sections/support-3.jpeg" alt="" />
+                        </div>
                         <span>Parents &amp; Carers</span>
                       </a>
                       <a class="mega-card" href="/brain-injury-professionals.html">
-                        <img src="/assets/images/design/sections/support-4.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/sections/support-4.jpeg" alt="" />
+                        </div>
                         <span>Professionals</span>
                       </a>
                     </div>
@@ -202,19 +207,27 @@
                     </a>
                     <div class="mega-grid mega-grid--4">
                       <a class="mega-card" href="#services">
-                        <img src="/assets/images/design/sections/services-main.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/sections/services-main.jpeg" alt="" />
+                        </div>
                         <span>Early Intervention</span>
                       </a>
                       <a class="mega-card" href="/brain-injuries-explained.html">
-                        <img src="/assets/images/design/sections/support-2.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/sections/support-2.jpeg" alt="" />
+                        </div>
                         <span>Brain Injuries Explained</span>
                       </a>
                       <a class="mega-card" href="#services">
-                        <img src="/assets/images/design/sections/support-4.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/sections/support-4.jpeg" alt="" />
+                        </div>
                         <span>Referrals</span>
                       </a>
                       <a class="mega-card" href="#services">
-                        <img src="/assets/images/design/sections/services-community.jpg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/sections/services-community.jpg" alt="" />
+                        </div>
                         <span>Community</span>
                       </a>
                     </div>
@@ -248,15 +261,21 @@
                     </a>
                     <div class="mega-grid mega-grid--3">
                       <a class="mega-card" href="#events">
-                        <img src="/assets/images/design/gallery/gallery-1.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/gallery/gallery-1.jpeg" alt="" />
+                        </div>
                         <span>Events</span>
                       </a>
                       <a class="mega-card" href="#news">
-                        <img src="/assets/images/design/gallery/gallery-3.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/gallery/gallery-3.jpeg" alt="" />
+                        </div>
                         <span>News &amp; Insights</span>
                       </a>
                       <a class="mega-card" href="/the-studio.html">
-                        <img src="/assets/images/design/gallery/gallery-5.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/gallery/gallery-5.jpeg" alt="" />
+                        </div>
                         <span>The Studio</span>
                       </a>
                     </div>
@@ -285,19 +304,27 @@
                     </a>
                     <div class="mega-grid mega-grid--4">
                       <a class="mega-card" href="#who-we-are">
-                        <img src="/assets/images/design/sections/who-we-are.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/sections/who-we-are.jpeg" alt="" />
+                        </div>
                         <span>Our Story</span>
                       </a>
                       <a class="mega-card" href="/funders.html">
-                        <img src="/assets/images/design/sections/campaign.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/sections/campaign.jpeg" alt="" />
+                        </div>
                         <span>Our Partners</span>
                       </a>
                       <a class="mega-card" href="/funders.html">
-                        <img src="/assets/images/design/gallery/gallery-7.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/gallery/gallery-7.jpeg" alt="" />
+                        </div>
                         <span>Funders</span>
                       </a>
                       <a class="mega-card" href="#contact">
-                        <img src="/assets/images/design/sections/testimonial-video.png" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/sections/testimonial-video.png" alt="" />
+                        </div>
                         <span>Careers</span>
                       </a>
                     </div>
@@ -326,23 +353,33 @@
                     </a>
                     <div class="mega-grid mega-grid--5">
                       <a class="mega-card" href="https://braininjurymatters.enthuse.com/cp/539aa/Donate#!/" target="_blank">
-                        <img src="/assets/images/design/gallery/gallery-2.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/gallery/gallery-2.jpeg" alt="" />
+                        </div>
                         <span>Donate</span>
                       </a>
                       <a class="mega-card" href="#fundraising">
-                        <img src="/assets/images/design/sections/fundraising.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/sections/fundraising.jpeg" alt="" />
+                        </div>
                         <span>Fundraise</span>
                       </a>
                       <a class="mega-card" href="#campaigns">
-                        <img src="/assets/images/design/gallery/gallery-4.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/gallery/gallery-4.jpeg" alt="" />
+                        </div>
                         <span>Volunteer</span>
                       </a>
                       <a class="mega-card" href="#campaigns">
-                        <img src="/assets/images/design/sections/campaign.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/sections/campaign.jpeg" alt="" />
+                        </div>
                         <span>Campaigns</span>
                       </a>
                       <a class="mega-card" href="#contact">
-                        <img src="/assets/images/design/gallery/gallery-6.jpeg" alt="" />
+                        <div class="mega-card__image-wrap">
+                          <img src="/assets/images/design/gallery/gallery-6.jpeg" alt="" />
+                        </div>
                         <span>Careers</span>
                       </a>
                     </div>
@@ -1077,15 +1114,21 @@
                 <div class="site-footer__contact-group">
                   <h2>Find Us:</h2>
                   <address>
-                    Brain Injury Matters
-                    <br />
-                    Suite 5C, Stirling House,
-                    <br />
-                    Castlereagh Business Park,
-                    <br />
-                    478 Castlereagh Road,
-                    <br />
-                    Belfast, BT5 6BQ
+                    <a
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Suite%205C%20Stirling%20House%2C%20Castlereagh%20Business%20Park%2C%20478%20Castlereagh%20Road%2C%20Belfast%2C%20BT5%206BQ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                      Brain Injury Matters
+                      <br />
+                      Suite 5C, Stirling House,
+                      <br />
+                      Castlereagh Business Park,
+                      <br />
+                      478 Castlereagh Road,
+                      <br />
+                      Belfast, BT5 6BQ
+                      </a>
                   </address>
                 </div>
 

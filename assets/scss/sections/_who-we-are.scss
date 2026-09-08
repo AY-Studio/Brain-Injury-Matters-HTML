@@ -85,6 +85,7 @@
       inset: 0 2.5rem 2.5rem 0;
       background: var(--bim-yellow);
       border-radius: 0 16px;
+      will-change: transform;
 
       &.feature-section__visual-accent--blue {
         background: var(--bim-blue);

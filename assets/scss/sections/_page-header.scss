@@ -215,6 +215,7 @@
       inset: 0 24px 24px 0;
       background: var(--bim-yellow);
       border-radius: 0 16px;
+      will-change: transform;
     }
 
     img {
