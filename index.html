@@ -115,13 +115,39 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+
+      .project-index__group {
+        display: grid;
         gap: 1rem;
+        padding: clamp(1rem, 2.5vw, 1.5rem);
+        border: 1px solid rgba(0, 0, 105, 0.08);
+        border-radius: 5px 20px;
+        background: rgba(247, 249, 237, 0.7);
+      }
+
+      .project-index__group-title {
+        margin: 0;
+        padding-inline: 0.25rem;
+        color: var(--bim-green);
+        font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+        line-height: 1.2;
+      }
+
+      .project-index__children {
+        display: grid;
+        padding: 0 0 0 1rem;
+        margin: 0;
+        border-left: 3px solid var(--bim-pink);
+        list-style: none;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 0.75rem;
       }
 
       .project-index__link {
         display: flex;
-        min-height: 170px;
+        min-height: 130px;
         padding: 1.5rem;
         border: 2px solid transparent;
         border-radius: 3px 16px;
@@ -137,12 +163,18 @@
         transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
       }
 
-      .project-index__pages li:nth-child(2) .project-index__link {
-        /* background: var(--bim-light-pink); */
+      .project-index__link--parent {
+        font-size: 1.2rem;
       }
 
-      .project-index__pages li:nth-child(3) .project-index__link {
-        /* background: var(--bim-yellow); */
+      .project-index__link--child {
+        min-height: 92px;
+        padding: 1rem;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        background: var(--bim-white);
+        font-size: 0.95rem;
       }
 
       .project-index__link:hover,
@@ -163,6 +195,14 @@
         background: var(--bim-blue);
         font-size: 1.4rem;
         line-height: 1;
+      }
+
+      .project-index__link--child .project-index__link-icon {
+        width: 32px;
+        height: 32px;
+        flex: 0 0 32px;
+        align-self: center;
+        font-size: 1rem;
       }
 
       .project-index__path {
@@ -186,11 +226,19 @@
         }
 
         .project-index__pages {
+          gap: 1rem;
+        }
+
+        .project-index__children {
           grid-template-columns: 1fr;
         }
 
-        .project-index__link {
-          min-height: 120px;
+        .project-index__link--parent {
+          min-height: 110px;
+        }
+
+        .project-index__link--child {
+          min-height: 78px;
         }
       }
     </style>
@@ -222,8 +270,8 @@
 
           <nav aria-label="Project pages">
             <ul class="project-index__pages">
-              <li>
-                <a class="project-index__link" href="/home.html">
+              <li class="project-index__group">
+                <a class="project-index__link project-index__link--parent" href="/home.html">
                   <span>
                     Home
                     <span class="project-index__path">home.html</span>
@@ -231,134 +279,137 @@
                   <span class="project-index__link-icon" aria-hidden="true">→</span>
                 </a>
               </li>
-              <li>
-                <a class="project-index__link" href="/who-we-help.html">
+
+              <li class="project-index__group">
+                <a class="project-index__link project-index__link--parent" href="/who-we-help.html">
                   <span>
                     Who We Help
                     <span class="project-index__path">who-we-help.html</span>
                   </span>
                   <span class="project-index__link-icon" aria-hidden="true">→</span>
                 </a>
+
+                <ul class="project-index__children">
+                  <li>
+                    <a class="project-index__link project-index__link--child" href="/brain-injury-children.html">
+                      <span>Children With Brain Injuries</span>
+                      <span class="project-index__link-icon" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="project-index__link project-index__link--child" href="/brain-injury-adults.html">
+                      <span>Adults With Brain Injuries</span>
+                      <span class="project-index__link-icon" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="project-index__link project-index__link--child" href="/brain-injury-parents-and-carers.html">
+                      <span>Parents &amp; Carers</span>
+                      <span class="project-index__link-icon" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="project-index__link project-index__link--child" href="/brain-injury-professionals.html">
+                      <span>Professionals</span>
+                      <span class="project-index__link-icon" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                </ul>
               </li>
-              <li>
-                <a class="project-index__link" href="/how-we-help.html">
+
+              <li class="project-index__group">
+                <a class="project-index__link project-index__link--parent" href="/how-we-help.html">
                   <span>
                     How We Help
                     <span class="project-index__path">how-we-help.html</span>
                   </span>
                   <span class="project-index__link-icon" aria-hidden="true">→</span>
                 </a>
+
+                <ul class="project-index__children">
+                  <li>
+                    <a class="project-index__link project-index__link--child" href="/early-intervention.html">
+                      <span>Early Intervention</span>
+                      <span class="project-index__link-icon" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="project-index__link project-index__link--child" href="/brain-injuries-explained.html">
+                      <span>Brain Injuries Explained</span>
+                      <span class="project-index__link-icon" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="project-index__link project-index__link--child" href="/referrals.html">
+                      <span>Referrals</span>
+                      <span class="project-index__link-icon" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="project-index__link project-index__link--child" href="/community-support.html">
+                      <span>Community Support</span>
+                      <span class="project-index__link-icon" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                </ul>
               </li>
-              <li>
-                <a class="project-index__link" href="/early-intervention.html">
-                  <span>
-                    Early Intervention
-                    <span class="project-index__path">early-intervention.html</span>
-                  </span>
-                  <span class="project-index__link-icon" aria-hidden="true">→</span>
-                </a>
+
+              <li class="project-index__group">
+                <h2 class="project-index__group-title">Community</h2>
+                <ul class="project-index__children">
+                  <li>
+                    <a class="project-index__link project-index__link--child" href="/the-studio.html">
+                      <span>The Studio</span>
+                      <span class="project-index__link-icon" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="project-index__link project-index__link--child" href="/stories.html">
+                      <span>Stories</span>
+                      <span class="project-index__link-icon" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="project-index__link project-index__link--child" href="/story-single.html">
+                      <span>Story Single</span>
+                      <span class="project-index__link-icon" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                </ul>
               </li>
-              <li>
-                <a class="project-index__link" href="/brain-injuries-explained.html">
-                  <span>
-                    Brain Injuries Explained
-                    <span class="project-index__path">brain-injuries-explained.html</span>
-                  </span>
-                  <span class="project-index__link-icon" aria-hidden="true">→</span>
-                </a>
+
+              <li class="project-index__group">
+                <h2 class="project-index__group-title">Who We Are</h2>
+                <ul class="project-index__children">
+                  <li>
+                    <a class="project-index__link project-index__link--child" href="/funders.html">
+                      <span>Funders</span>
+                      <span class="project-index__link-icon" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                </ul>
               </li>
-              <li>
-                <a class="project-index__link" href="/brain-injury-children.html">
-                  <span>
-                    Brain Injury and Children
-                    <span class="project-index__path">brain-injury-children.html</span>
-                  </span>
-                  <span class="project-index__link-icon" aria-hidden="true">→</span>
-                </a>
+
+              <li class="project-index__group">
+                <h2 class="project-index__group-title">Get Involved</h2>
+                <ul class="project-index__children">
+                  <li>
+                    <a class="project-index__link project-index__link--child" href="/fundraise.html">
+                      <span>Fundraise</span>
+                      <span class="project-index__link-icon" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="project-index__link project-index__link--child" href="/volunteer.html">
+                      <span>Volunteer</span>
+                      <span class="project-index__link-icon" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                </ul>
               </li>
-              <li>
-                <a class="project-index__link" href="/brain-injury-adults.html">
-                  <span>
-                    Brain Injury and Adults
-                    <span class="project-index__path">brain-injury-adults.html</span>
-                  </span>
-                  <span class="project-index__link-icon" aria-hidden="true">→</span>
-                </a>
-              </li>
-              <li>
-                <a class="project-index__link" href="/brain-injury-parents-and-carers.html">
-                  <span>
-                    Parents and Carers
-                    <span class="project-index__path">brain-injury-parents-and-carers.html</span>
-                  </span>
-                  <span class="project-index__link-icon" aria-hidden="true">→</span>
-                </a>
-              </li>
-              <li>
-                <a class="project-index__link" href="/brain-injury-professionals.html">
-                  <span>
-                    Professionals
-                    <span class="project-index__path">brain-injury-professionals.html</span>
-                  </span>
-                  <span class="project-index__link-icon" aria-hidden="true">→</span>
-                </a>
-              </li>
-              <li>
-                <a class="project-index__link" href="/stories.html">
-                  <span>
-                    Stories
-                    <span class="project-index__path">stories.html</span>
-                  </span>
-                  <span class="project-index__link-icon" aria-hidden="true">→</span>
-                </a>
-              </li>
-              <li>
-                <a class="project-index__link" href="/story-single.html">
-                  <span>
-                    Story Single
-                    <span class="project-index__path">story-single.html</span>
-                  </span>
-                  <span class="project-index__link-icon" aria-hidden="true">→</span>
-                </a>
-              </li>
-              <li>
-                <a class="project-index__link" href="/the-studio.html">
-                  <span>
-                    The Studio
-                    <span class="project-index__path">the-studio.html</span>
-                  </span>
-                  <span class="project-index__link-icon" aria-hidden="true">→</span>
-                </a>
-              </li>
-              <li>
-                <a class="project-index__link" href="/funders.html">
-                  <span>
-                    Funders
-                    <span class="project-index__path">funders.html</span>
-                  </span>
-                  <span class="project-index__link-icon" aria-hidden="true">→</span>
-                </a>
-              </li>
-              <li>
-                <a class="project-index__link" href="/fundraise.html">
-                  <span>
-                    Fundraise
-                    <span class="project-index__path">fundraise.html</span>
-                  </span>
-                  <span class="project-index__link-icon" aria-hidden="true">→</span>
-                </a>
-              </li>
-              <li>
-                <a class="project-index__link" href="/volunteer.html">
-                  <span>
-                    Volunteer
-                    <span class="project-index__path">volunteer.html</span>
-                  </span>
-                  <span class="project-index__link-icon" aria-hidden="true">→</span>
-                </a>
-              </li>
-              <li>
-                <a class="project-index__link" href="/contact.html">
+
+              <li class="project-index__group">
+                <a class="project-index__link project-index__link--parent" href="/contact.html">
                   <span>
                     Contact
                     <span class="project-index__path">contact.html</span>
