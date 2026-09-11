@@ -5,6 +5,13 @@
   overflow: hidden;
   background: var(--bim-pale-pink);
 
+  &--no-wave {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
   &.pink {
     background: var(--bim-pink);
 
@@ -114,6 +121,60 @@
     > li {
       font-size: 1.25rem;
     }
+  }
+
+  &__process-intro {
+    max-width: 768px;
+    margin-bottom: 5rem;
+    margin-inline: auto;
+
+    > p:last-child {
+      margin-top: 1.5rem;
+      font-size: 1.125rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+
+  &__tagline {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  &__cards {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 2.5rem;
+  }
+
+  &__card {
+    height: 100%;
+    min-height: 212px;
+    padding: 1.5rem;
+    overflow: hidden;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: var(--bim-white);
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  &__card-step {
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  &__card-title {
+    margin: 0 0 0.5rem;
+    color: inherit;
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    line-height: 1.4;
+  }
+
+  &__card-text {
+    margin: 0;
+    line-height: 1.5;
   }
 
   &__stats {
