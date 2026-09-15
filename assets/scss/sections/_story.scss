@@ -342,6 +342,14 @@
 .related-stories {
   background: var(--bim-pale-blue);
 
+  &--cream {
+    background: var(--bim-cream);
+  }
+
+  &--pale-pink {
+    background: var(--bim-pale-pink);
+  }
+
   &__intro {
     max-width: 768px;
     margin-bottom: 80px;

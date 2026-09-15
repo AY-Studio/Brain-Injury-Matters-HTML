@@ -1,0 +1,152 @@
+@use "../mixins" as *;
+
+.support-benefits {
+  padding-block: clamp(64px, 7.78vw, 112px);
+  background: var(--bim-cream);
+
+  &__list {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+  }
+
+  &__item-inner {
+    display: flex;
+    width: 100%;
+    min-height: 397px;
+    padding: 24px 64px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    background: var(--bim-pale-pink);
+    border-radius: 0 16px;
+  }
+
+  &__number {
+    flex: 0 0 auto;
+    color: var(--bim-green);
+    font-family: "Roboto", sans-serif;
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  &__content {
+    display: flex;
+    min-width: 0;
+    min-height: 349px;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+
+    .eyebrow {
+      margin: 0;
+      color: var(--bim-navy);
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+  }
+
+  &__copy {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 24px;
+
+    h3,
+    p {
+      width: 100%;
+      margin: 0;
+    }
+
+    h3 {
+      color: var(--bim-blue);
+      font-size: 2.5rem;
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
+
+    p {
+      color: var(--bim-navy);
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+  }
+}
+
+@include lg-down {
+  .support-benefits {
+    &__item-inner {
+      min-height: 0;
+      padding: 40px;
+      gap: 48px;
+    }
+
+    &__number {
+      font-size: 6rem;
+    }
+
+    &__content {
+      min-height: 280px;
+    }
+
+    &__copy h3 {
+      font-size: 2.25rem;
+    }
+  }
+}
+
+@include md-down {
+  .support-benefits {
+    &__item-inner {
+      padding: 32px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    &__number {
+      font-size: 4.5rem;
+      line-height: 1;
+    }
+
+    &__content {
+      min-height: 0;
+    }
+
+    &__copy {
+      gap: 16px;
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
+@include sm-down {
+  .support-benefits {
+    &__item-inner {
+      padding: 24px;
+      gap: 20px;
+    }
+
+    &__number {
+      font-size: 4rem;
+    }
+
+    &__copy h3 {
+      font-size: 1.75rem;
+    }
+  }
+}

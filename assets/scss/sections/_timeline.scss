@@ -1,0 +1,232 @@
+.timeline {
+  padding-block: clamp(64px, 7.78vw, 112px);
+  background: var(--bim-cream);
+
+  &__inner {
+    display: flex;
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+
+  &__intro {
+    display: flex;
+    width: 100%;
+    max-width: 768px;
+    margin-bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__heading {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    .eyebrow {
+      margin: 0;
+      color: var(--bim-navy);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__heading-copy {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    h2,
+    p {
+      margin: 0;
+    }
+
+    h2 {
+      font-size: clamp(2.5rem, 3.34vw, 3rem);
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    .btn {
+      min-height: 50px;
+      border-width: 1px;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+  }
+
+  &__volunteer-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--bim-blue);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+
+    img {
+      display: block;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      transition: transform 0.25s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: var(--bim-blue);
+      text-decoration: underline;
+
+      img {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  &__swiper {
+    width: 100%;
+  }
+}
+
+.timeline-card {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  &__image-wrap {
+    width: 192px;
+    height: 204px;
+    flex: 0 0 auto;
+    overflow: hidden;
+    border-radius: 0 8px 0 8px;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &__progress {
+    display: flex;
+    width: 100%;
+    padding-top: 16px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    &::before,
+    &::after {
+      display: block;
+      min-width: 0;
+      height: 3px;
+      flex: 1 1 auto;
+      background: var(--bim-blue);
+      content: "";
+    }
+  }
+
+  &__dot {
+    display: block;
+    width: 15px;
+    height: 15px;
+    flex: 0 0 15px;
+    color: var(--bim-blue);
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    padding-inline: 8px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+
+    h3,
+    p {
+      width: 100%;
+      margin: 0;
+    }
+
+    h3 {
+      color: var(--bim-blue);
+      font-size: 1.5rem;
+      letter-spacing: 0;
+      line-height: 1.4;
+    }
+
+    p {
+      color: var(--bim-navy);
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+  }
+
+  &:hover {
+    .timeline-card__image {
+      transform: scale(1.05);
+    }
+
+    .timeline-card__dot {
+      color: var(--bim-green);
+      transform: scale(1.5);
+    }
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .timeline {
+    &__inner {
+      gap: 64px;
+    }
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .timeline {
+    &__inner {
+      gap: 48px;
+    }
+
+    &__heading-copy p {
+      font-size: 1.125rem;
+    }
+
+    &__actions {
+      gap: 16px;
+    }
+  }
+}

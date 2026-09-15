@@ -2,9 +2,8 @@
 
 .who-we-help {
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 80px 48px;
+    --bs-gutter-x: 48px;
+    --bs-gutter-y: 80px;
   }
 
   &-card {
@@ -17,13 +16,6 @@
     &:focus-visible {
       outline: 3px solid var(--bim-yellow);
       outline-offset: 6px;
-    }
-
-    &:hover &__link::after,
-    &:focus-visible &__link::after {
-      transform: scaleX(1);
-      transform-origin: left;
-
     }
 
     &:hover &__image,
@@ -86,14 +78,25 @@
         flex: 0 0 24px;
       }
     }
+
+    &__actions {
+      display: flex;
+      margin-top: 32px;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px 32px;
+
+      .who-we-help-card__link {
+        margin-top: 0;
+      }
+    }
   }
 }
 
 @include lg-down {
   .who-we-help {
     &__grid {
-      grid-template-columns: 1fr;
-      gap: 64px;
+      --bs-gutter-y: 64px;
     }
 
     &-card__description {
@@ -105,7 +108,7 @@
 @include sm-down {
   .who-we-help {
     &__grid {
-      gap: 48px;
+      --bs-gutter-y: 48px;
     }
 
     &-card {

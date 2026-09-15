@@ -1,0 +1,100 @@
+@use "../mixins" as *;
+
+.community {
+  padding-block: clamp(64px, 7.78vw, 112px);
+  background: var(--bim-pale-pink);
+
+  &__grid {
+    --bs-gutter-x: 48px;
+    --bs-gutter-y: 80px;
+  }
+}
+
+.community-card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+  &__image-wrap {
+    border-radius: 8px;
+  }
+
+  &__content {
+    flex: 1 1 auto;
+  }
+
+  h2 {
+    color: var(--bim-navy);
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  &__description {
+    // min-height: 72px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 18px;
+
+    &--large {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__link {
+    margin-top: auto;
+  }
+
+  &__actions {
+    display: flex;
+    margin-top: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 32px;
+
+    .community-card__link {
+      margin-top: 0;
+    }
+  }
+
+  &:focus-within {
+    .community-card__image {
+      opacity: 0.65;
+      transform: scale(1.05);
+    }
+  }
+}
+
+@include lg-down {
+  .community {
+    &__grid {
+      --bs-gutter-y: 64px;
+    }
+  }
+
+  .community-card {
+    &__description {
+      min-height: 0;
+    }
+
+    &__link,
+    &__actions {
+      margin-top: 32px;
+    }
+  }
+}
+
+@include sm-down {
+  .community {
+    &__grid {
+      --bs-gutter-y: 48px;
+    }
+  }
+
+  .community-card {
+    &__link,
+    &__actions {
+      margin-top: 24px;
+    }
+  }
+}

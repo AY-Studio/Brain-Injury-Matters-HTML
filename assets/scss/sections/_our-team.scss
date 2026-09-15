@@ -1,0 +1,281 @@
+@use "../mixins" as *;
+
+.our-team {
+  padding-block: clamp(64px, 7.78vw, 112px);
+  background: var(--bim-cream);
+
+  &__inner {
+    display: flex;
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+
+  &__intro {
+    display: flex;
+    width: 100%;
+    max-width: 768px;
+    margin-bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    .eyebrow {
+      margin: 0;
+      color: var(--bim-navy);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__heading-copy {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 24px;
+
+    h2,
+    p {
+      margin: 0;
+    }
+
+    h2 {
+      font-size: clamp(2.5rem, 3.34vw, 3rem);
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 32px 48px;
+  }
+
+  &__cta {
+    display: flex;
+    width: 100%;
+    max-width: 768px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    &-copy {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      gap: 16px;
+
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h3 {
+        font-size: 2rem;
+        letter-spacing: 0;
+        line-height: 1.3;
+      }
+
+      p {
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+    }
+
+    .btn {
+      min-height: 50px;
+      padding: 12px 24px;
+      border-width: 1.5px;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+  }
+}
+
+.our-team-card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  height: 100%;
+  padding-inline: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  cursor: pointer;
+
+  &__image-wrap {
+    width: 100%;
+    aspect-ratio: 1;
+    flex: 0 0 auto;
+    overflow: hidden;
+    border-radius: 4px 12px 4px 12px;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+  }
+
+  &:hover &__image,
+  &:focus-within &__image {
+    transform: scale(1.15);
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__title {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      letter-spacing: 0;
+      line-height: 1.4;
+    }
+
+    p {
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+  }
+
+  &__summary {
+    width: 100%;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  &__bio-link {
+    min-height: 48px;
+    margin-top: auto;
+    padding: 12px 24px;
+    border: 0;
+    border-radius: 6px;
+    color: var(--bim-blue);
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    transform: none;
+
+    &:hover,
+    &:focus-visible {
+      transform: none;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      max-height: none;
+    }
+  }
+
+  &:hover &__bio-link,
+  &:focus-within &__bio-link {
+    color: var(--bim-navy);
+    background: var(--bim-pale-blue);
+    transform: none;
+  }
+
+  &__socials {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    a {
+      display: grid;
+      width: 24px;
+      height: 24px;
+      place-items: center;
+      color: var(--bim-navy);
+      text-decoration: none;
+      transition: color 0.25s ease;
+
+      &:hover,
+      &:focus-visible {
+        color: var(--bim-green);
+      }
+    }
+
+    svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+@include lg-down {
+  .our-team {
+    &__inner {
+      gap: 64px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+@include sm-down {
+  .our-team {
+    &__inner {
+      gap: 48px;
+    }
+
+    &__heading-copy p,
+    &__cta-copy p {
+      font-size: 1.125rem;
+    }
+
+    &__grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 48px;
+    }
+  }
+
+  .our-team-card {
+    width: 100%;
+    max-width: 443px;
+    margin-inline: auto;
+    padding-inline: 12px;
+  }
+}

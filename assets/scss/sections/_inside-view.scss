@@ -4,6 +4,12 @@
   overflow: hidden;
   background: var(--bim-cream);
 
+  &--pink {
+  background: var(--bim-pale-pink);
+  }
+
+  
+
   &__layout {
     --bs-gutter-x: 5rem;
   }

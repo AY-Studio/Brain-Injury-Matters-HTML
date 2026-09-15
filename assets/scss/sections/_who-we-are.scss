@@ -5,6 +5,10 @@
   overflow: hidden;
   background: var(--bim-pale-pink);
 
+  &--pale-blue {
+    background: var(--bim-pale-blue);
+  }
+
   &--no-wave {
     &::before,
     &::after {
@@ -120,6 +124,35 @@
     }
     > li {
       font-size: 1.25rem;
+    }
+  }
+
+  &__feature-list {
+    --bs-gutter-y: 2rem;
+  }
+
+  &__feature-card {
+    height: 100%;
+    padding: 1.25rem 1.5rem 1.5rem;
+    border-radius: 12px;
+    color: var(--bim-navy);
+    background: var(--bim-white);
+
+    h3 {
+      margin: 0 0 0.75rem;
+      color: inherit;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.4;
+    }
+
+    p {
+      max-width: 768px;
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
     }
   }
 

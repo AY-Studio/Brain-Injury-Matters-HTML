@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Roboto:wght@700&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/css/style.min.css" />
@@ -581,122 +581,119 @@
     <main id="main-content">
 
       <!-- .page-header starts -->
-      <section class="page-header page-header--with-image" aria-labelledby="page-header-title">
+      <section
+        class="page-header page-header--outlined-shapes page-header--stacked-image align-items-center"
+        aria-labelledby="page-header-title"
+      >
         <img
-          class="page-header__shape page-header__shape--green"
-          src="/assets/images/design/sections/page-header-union-green.svg"
+          class="page-header__shape page-header__shape--green-left"
+          src="/assets/images/design/sections/page-header-shape-green-left.svg"
           alt=""
           aria-hidden="true"
         />
         <img
-          class="page-header__shape page-header__shape--pink"
-          src="/assets/images/design/sections/page-header-shape-pink.svg"
+          class="page-header__shape page-header__shape--pink-outline-left"
+          src="/assets/images/design/sections/page-header-shape-pink-outline-left.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="page-header__shape page-header__shape--blue-right"
+          src="/assets/images/design/sections/page-header-shape-blue-right.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="page-header__shape page-header__shape--yellow-outline-right"
+          src="/assets/images/design/sections/page-header-shape-yellow-outline-right.svg"
           alt=""
           aria-hidden="true"
         />
 
         <div class="page-header__inner">
-          <div class="page-header__content">
-            <p class="eyebrow page-header__eyebrow">Adults With Brain Injuries</p>
-            <h1 id="page-header-title">Life Changes in a Moment. We Stay.</h1>
-            <p class="page-header__intro">
-              You are not alone. Find the right support for your new path forward.
-            </p>
-            <div class="page-header__actions">
-              <a class="btn btn-primary" href="#support">
-                <img src="/assets/images/design/icons/care-24.svg" alt="" aria-hidden="true" />
-                Get Support
-              </a>
-              <a class="btn btn-outline-primary" href="/referrals.html">
-                Referrals
-                <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
-              </a>
+          <!-- <p class="eyebrow page-header__eyebrow"></p> -->
+          <h1 id="page-header-title">A place to play, grow and belong</h1>
+          <p class="page-header__intro">
+           We build safe spaces where children with brain injuries discover friendship and rediscover joy. Every session is built around what they can do, not what they cannot.
+          </p>
+        </div>
+        <div class="site-container">
+          <div class="page-header__image page-header__image--parallax ">
+            <img
+              src="/assets/images/design/sections/components-page-header-family.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
+        </div>
+
+      </section>
+      <!-- .page-header ends -->
+
+      
+      <!-- .section-intro-featured-image starts-->
+      <section
+        class="section-intro-featured-image feature-section--pale-blue section-space"
+        aria-labelledby="section-intro-featured-image-title"
+      >
+        <div class="container-fluid site-container">
+          <div class="row g-5 section-intro-featured-image__intro">
+            <div class="col-lg-6">
+              <div class="section-intro-featured-image__heading">
+                <p class="eyebrow">Community</p>
+                <h2 id="section-intro-featured-image-title">
+                  A place where children find their crew and their courage
+                </h2>
+              </div>
+            </div>
+            <div class="col-lg-6 align-self-center">
+              <div class="section-intro-featured-image__content">
+                <p class="section-intro-featured-image__lead">
+                  We leave the clinical world at the door. Here, a child is not a patient. They are a cyclist, an artist, a
+                  friend. Our community is built on the simple truth that play heals.
+                </p>
+                <ul class="section-intro-featured-image__list">
+                  <li>Safe spaces designed for every ability and every mood</li>
+                  <li>Friendships forged through shared laughter and shared challenges</li>
+                  <li>Confidence built one pedal stroke and paint stroke at a time</li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <div class="page-header__visual">
-            <span aria-hidden="true"></span>
+          <div class="page-header__image page-header__image--parallax section-intro-featured-image__image">
             <img
-              src="/assets/images/design/sections/adults-life-changes.webp"
-              alt="Adults and support workers taking part in a creative group activity"
+              src="/assets/images/design/sections/components-page-header-family.jpg"
+              alt="A family enjoying a walk together in the woods"
             />
           </div>
         </div>
       </section>
-      <!-- .page-header ends -->
+      <!-- /.section-intro-featured-image ends-->
+      
 
-      <!-- .section-left-right.blue starts -->
-      <section
-        class="support-finder support-finder--split section-left-right section-left-right--blue"
-        aria-labelledby="different-world-title"
-      >
-        <span class="support-finder__wave support-finder__wave--blue-top" aria-hidden="true"></span>
-        <span class="support-finder__wave support-finder__wave--pink" aria-hidden="true"></span>
-
-        <div class="container-fluid  support-finder__inner support-finder__inner--split">
-          <div class="site-container mx-auto">
-            <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
-              <div class="col-lg-5 feature-section__visual support-finder__visual">
-                <span aria-hidden="true"></span>
-                <img
-                  src="/assets/images/design/sections/adults-life-changes.webp"
-                  alt="Adults and support workers taking part in a creative group activity"
-                />
-              </div>
-
-              <div class="col-lg-6 offset-lg-1 feature-section__copy support-finder__copy">
-                <h2 id="different-world-title">The World Looks Different Now. We Understand That.</h2>
-                <p>
-                  An acquired brain injury can make you feel like a stranger in your own life. Memory, mood, and
-                  movement might not obey you the way they used to. We are here to help you navigate the new terrain
-                  with practical support and steady hope.
-                </p>
-
-                <div class="button-row">
-                  <a class="btn btn-secondary" href="#support">Get Support</a>
-                  <a class="support-finder__stories-link line-link" href="/stories.html">
-                    Stories
-                    <img
-                      src="/assets/images/design/icons/chevron-right-pale-pink.svg"
-                      alt=""
-                      aria-hidden="true"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <span class="support-finder__wave support-finder__wave--blue-bottom" aria-hidden="true"></span>
-        <span class="support-finder__wave support-finder__wave--yellow" aria-hidden="true"></span>
-      </section>
-      <!-- /.section-left-right.blue  ends -->
-
-      <!-- .support starts -->
-
-      <section class="support section-space" id="support">
+      <section class="support bg-pale-pink section-space" id="support">
         <div class="container-fluid site-container">
           <div class="section-intro text-center">
-            <p class="eyebrow">Support</p>
-            <h2>Steady Ground to Stand On</h2>
-            <p>Practical help that meets you where you are right now.</p>
+            <p class="eyebrow">Explore</p>
+            <h2>What We Do Together</h2>
+            <p>Three core programmes, one simple goal. Helping children discover what they love.</p>
           </div>
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-xl-4">
               <article class="support-card">
                 <div class="support-card__image-wrap">
                   <img
-                    src="/assets/images/design/sections/adults-one-to-one.webp"
-                    alt="A child enjoying a colourful ball pool"
+                    src="/assets/images/design/sections/support-1.jpeg"
+                    alt="A child taking part in a creative activity"
                   />
                 </div>
                 <div>
-                  <p class="eyebrow">One-to-one</p>
-                  <h3>A steady hand for the road ahead</h3>
-                  <p>Work with a key worker who understands your specific injury.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Learn more
+                  <p class="eyebrow">Move</p>
+                  <h3>Pedal Power gets wheels turning and hearts racing on adapted bikes</h3>
+                  <p>Freedom on two wheels or three, with support right beside them.</p>
+                  <a class="line-link stretched-link" href="/community-support.html#how-we-move-fast">
+                    Pedal
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path
@@ -712,20 +709,17 @@
                 </div>
               </article>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-xl-4">
               <article class="support-card">
                 <div class="support-card__image-wrap">
-                  <img
-                    src="/assets/images/design/sections/adults-peer-groups.webp"
-                    alt="A family enjoying time together at home"
-                  />
+                  <img src="/assets/images/design/sections/support-2.jpeg" alt="A family spending time together" />
                 </div>
                 <div>
-                  <p class="eyebrow">Peer groups</p>
-                  <h3>People who get it</h3>
-                  <p>Meet others rebuilding their lives. No explanations needed here.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Learn more
+                  <p class="eyebrow">Create</p>
+                  <h3>The Studio is a riot of colour, sound, and self-expression</h3>
+                  <p>Art and music sessions where the process matters more than the product.</p>
+                  <a class="line-link stretched-link" href="/the-studio.html">
+                    Create
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path
@@ -741,20 +735,17 @@
                 </div>
               </article>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-xl-4">
               <article class="support-card">
                 <div class="support-card__image-wrap">
-                  <img
-                    src="/assets/images/design/sections/adults-community.webp"
-                    alt="Older adults laughing together at home"
-                  />
+                  <img src="/assets/images/design/sections/support-3.jpeg" alt="Children enjoying an activity together" />
                 </div>
                 <div>
-                  <p class="eyebrow">Community</p>
-                  <h3>Back in the world</h3>
-                  <p>Rediscover old interests or find new ones alongside others.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Learn more
+                  <p class="eyebrow">Connect</p>
+                  <h3>Family events bring everyone together for days out and simple fun</h3>
+                  <p>Picnics, games, and outings where the whole family belongs to the tribe.</p>
+                  <a class="line-link stretched-link" href="#events">
+                    Events
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path
@@ -774,217 +765,377 @@
         </div>
       </section>
 
-      <!-- .support ends -->
-
-      <!-- .who-we-are starts -->
-      <section class="who-we-are section-space" id="who-we-are">
+      
+      <section class="who-we-are feature-section feature-section--cream section-space" id="who-we-are">
+        
         <div class="container-fluid site-container">
-          <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
 
-            <div class="col-lg-5 feature-section__visual">
+          <p class="fw-semibold mb-5">01 Peer support</p>
+          <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
+            <div class="col-lg-6 feature-section__copy">
+              <p class="eyebrow">Connect</p>
+              <h2>Friendships that understand without a single word spoken</h2>
+              <p>
+                We bring children together who share a similar path. In this circle, a child finds they are not the only one, and that is a powerful medicine.
+              </p>
+              <div class="button-row">
+                <a class="btn btn-outline-primary" href="/home.html#who-we-are">
+                  Children With Brain Injuries
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1 feature-section__visual">
               <span aria-hidden="true"></span>
               <img
-                src="/assets/images/design/sections/adults-family.webp"
-                alt="A mother and her young children looking at a tablet together"
+                src="/assets/images/design/sections/who-we-are.jpeg"
+                alt="Brain Injury Matters members in a group activity"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="who-we-are feature-section section-space" id="who-we-are">
+        
+        <div class="container-fluid site-container">
+
+          <p class="fw-semibold mb-5">02 Creative play</p>
+          <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
+            
+
+            <div class="col-lg-5  feature-section__visual">
+              <span aria-hidden="true"></span>
+              <img
+                src="/assets/images/design/sections/who-we-are.jpeg"
+                alt="Brain Injury Matters members in a group activity"
               />
             </div>
 
+
             <div class="col-lg-6 offset-lg-1 feature-section__copy">
-              <p class="eyebrow">Family</p>
-              <h2>The People Beside You Need a Map Too</h2>
+              <p class="eyebrow">Create</p>
+              <h2>A riot of colour where expression needs no permission</h2>
               <p>
-                A brain injury reshapes the lives of everyone who loves you. We offer separate, dedicated support for
-                partners, family, and friends so they can find their own footing while supporting yours.
+                Art and music sessions that leave the clinic behind. The goal is not a perfect picture but the courage to make a mark on the world.
               </p>
               <div class="button-row">
-                <a class="btn btn-primary" href="/brain-injury-parents-and-carers.html">
-                  <img src="/assets/images/design/icons/bike.svg" alt="" aria-hidden="true" />
-                  Parents
+                <a class="btn btn-outline-primary" href="/home.html#who-we-are">
+                  Explore
                 </a>
-                <a class="btn btn-outline-primary" href="/contact.html">
-                  Get In Touch
+                <a class="line-link" href="/stories.html">
+                    Stories
+                    <img src="/assets/images/design/icons/timeline-chevron-right.svg" alt="" aria-hidden="true">
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <section class="who-we-are feature-section feature-section--cream section-space" id="who-we-are">
+        
+        <div class="container-fluid site-container">
+
+          <p class="fw-semibold mb-5">03 Adapted activity</p>
+          <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
+            <div class="col-lg-6 feature-section__copy">
+              <p class="eyebrow">Move</p>
+              <h2>Freedom found on two wheels, three wheels, or simply running</h2>
+              <p>
+                We put the right equipment in the right hands. A child who could not walk far discovers they can fly on an adapted bike.
+              </p>
+              <div class="button-row">
+                <a class="btn btn-outline-primary" href="/home.html#who-we-are">
+                  Pedal
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1 feature-section__visual">
+              <span aria-hidden="true"></span>
+              <img
+                src="/assets/images/design/sections/who-we-are.jpeg"
+                alt="Brain Injury Matters members in a group activity"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="who-we-are feature-section feature-section--cream section-space" id="who-we-are">
+        
+        <div class="container-fluid site-container">
+
+          <p class="fw-semibold mb-5">04 Feature four</p>
+          <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
+
+            <div class="col-lg-5  feature-section__visual">
+              <span aria-hidden="true"></span>
+              <img
+                src="/assets/images/design/sections/who-we-are.jpeg"
+                alt="Brain Injury Matters members in a group activity"
+              />
+            </div>
+
+
+            <div class="col-lg-6 offset-lg-1 feature-section__copy">
+              <p class="eyebrow">Nurture</p>
+              <h2>Building quiet confidence and a steady sense of self</h2>
+              <p>
+                Through gentle, consistent support, we help a child rebuild their inner world. They learn to trust their own strength again, one small victory at a time.
+              </p>
+              <div class="button-row">
+                <a class="btn btn-outline-primary" href="/home.html#who-we-are">
+                  Explore
+                </a>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonial section-space">
+        <img class="testimonial__background" src="/assets/images/design/sections/testimonial-bg.jpeg" alt="" />
+        <div class="container-fluid site-container">
+          <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
+            <div class="col-lg-6">
+              <button
+                class="video-card"
+                type="button"
+                aria-label="Play Sarah Mitchell's story"
+                data-bs-toggle="modal"
+                data-bs-target="#testimonial-video-modal"
+              >
+                <span class="video-card__background" aria-hidden="true"></span>
+                <img src="/assets/images/design/sections/testimonial-video.png" alt="Sarah Mitchell and her child" />
+                <span class="video-card__play" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
                     <path
-                      d="M9.38672 6.67285C9.48754 6.67285 9.56452 6.70326 9.64258 6.78125L14.5869 11.7256C14.6408 11.7795 14.666 11.8215 14.6777 11.8496V11.8506C14.6925 11.8861 14.7012 11.9259 14.7012 11.9746C14.7012 12.0233 14.6925 12.0631 14.6777 12.0986V12.0996C14.666 12.1277 14.6408 12.1697 14.5869 12.2236L9.61816 17.1924C9.54039 17.2702 9.47325 17.292 9.39258 17.2891C9.29855 17.2856 9.21769 17.2537 9.13184 17.168C9.05371 17.0898 9.02246 17.013 9.02246 16.9121C9.02246 16.8112 9.05371 16.7344 9.13184 16.6562L13.8135 11.9746L9.10645 7.26758C9.02878 7.18988 9.00684 7.12357 9.00977 7.04297C9.01321 6.9487 9.04578 6.86731 9.13184 6.78125C9.20976 6.70344 9.28613 6.67293 9.38672 6.67285Z"
-                      fill="#013D9E"
-                      stroke="#013D9E"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.33301 31.9997C5.33301 17.2721 17.2721 5.33301 31.9997 5.33301C39.0721 5.33301 45.8549 8.14253 50.8559 13.1435C55.8568 18.1445 58.6663 24.9273 58.6663 31.9997C58.6663 46.7273 46.7273 58.6664 31.9997 58.6664C17.2721 58.6664 5.33301 46.7273 5.33301 31.9997ZM27.1198 43.4131L42.6664 33.7064C43.2482 33.3338 43.6001 32.6906 43.6001 31.9997C43.6001 31.3089 43.2482 30.6656 42.6664 30.2931L27.0664 20.5864C26.452 20.199 25.6758 20.1752 25.0388 20.5241C24.4018 20.8731 24.004 21.54 23.9998 22.2664V41.7331C23.9912 42.4771 24.3963 43.1644 25.0514 43.5171C25.7065 43.8699 26.5033 43.8298 27.1198 43.4131Z"
+                      fill="white"
                     />
                   </svg>
-                </a>
-              </div>
+                </span>
+              </button>
             </div>
 
-
+            <div class="col-lg-6 testimonial__copy">
+              <blockquote>
+                “They didn't just give us a service. They gave us back a future we thought was gone.”
+              </blockquote>
+              <p class="testimonial__name">Sarah Mitchell</p>
+              <p>Parent, Belfast</p>
+            </div>
           </div>
         </div>
       </section>
-      <!-- /.who-we-are ends -->
 
-      <!-- .section-faqs -->
-      <section class="faq-section" id="faqs" aria-labelledby="faqs-title">
+      <div
+        class="modal fade video-modal"
+        id="testimonial-video-modal"
+        tabindex="-1"
+        aria-labelledby="testimonial-video-modal-title"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <h2 class="visually-hidden" id="testimonial-video-modal-title">Sarah Mitchell's story</h2>
+            <button
+              class="btn-close btn-close-white video-modal__close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close video"
+            ></button>
+
+            <div class="ratio ratio-16x9">
+              <iframe
+                class="video-modal__iframe"
+                data-src="https://www.youtube-nocookie.com/embed/Tu5KxhraAA8?autoplay=1&amp;rel=0"
+                title="Sarah Mitchell's story"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="events section-space" id="events">
         <div class="container-fluid site-container">
-          <div class="faq-section__inner">
-            <div class="faq-section__intro">
-              <h2 id="faqs-title">FAQs</h2>
-              <p>The questions come hard and fast after an injury. We have some answers to start with.</p>
+          <div class="section-intro">
+            <!-- <p class="eyebrow">Community</p> -->
+            <h2>Childrens Events</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. </p>
+          </div>
+
+          <div class="events__content">
+            <div class="event-filters" role="group" aria-label="Filter events">
+              <button class="active" type="button">View All</button>
+              <button type="button">Category one</button>
+              <button type="button">Category two</button>
+              <button type="button">Category three</button>
+              <button type="button">Category four</button>
             </div>
 
-            <div class="accordion faq-section__accordion" id="adults-faq-accordion">
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="adults-faq-heading-one">
-                  <button
-                    class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#adults-faq-one"
-                    aria-expanded="true"
-                    aria-controls="adults-faq-one"
-                  >
-                    How do I start?
-                  </button>
-                </h3>
-                <div
-                  class="accordion-collapse collapse show"
-                  id="adults-faq-one"
-                  aria-labelledby="adults-faq-heading-one"
-                  data-bs-parent="#adults-faq-accordion"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      You can refer yourself directly through our website or ask a GP to do it. A member of our team
-                      will then call you for a quiet, honest chat about what you need. There is no wrong way to begin.
-                    </p>
+            <div class="events__list">
+              <article class="event-card">
+                <time class="event-card__date" datetime="2025-06-04T18:00">
+                  <!-- <span>Wed</span> -->
+                  <strong>04</strong>
+                  <span>June 2025</span>
+                </time>
+                <img
+                  class="event-card__divider"
+                  src="/assets/images/design/icons/event-divider.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div class="event-card__content">
+                  <div>
+                    <h3>Country Hits and Heart Benefit Concert</h3>
+                    <p class="event-card__meta">6pm | Great Hall, Parliament Buildings, Stormont</p>
                   </div>
+                  <p>
+                    Buy your tickets now to join us for a special evening with Auburn McCormick in aid of Brain Injury
+                    Matters.
+                  </p>
                 </div>
-              </div>
+                <a
+                  class="btn btn-outline-primary event-card__button"
+                  href="https://braininjurymatters.org.uk/events/2025-06-04/country-hits-and-heart-benefit-concert"
+                >
+                  View Event
+                </a>
+              </article>
 
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="adults-faq-heading-two">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#adults-faq-two"
-                    aria-expanded="false"
-                    aria-controls="adults-faq-two"
-                  >
-                    What will it cost?
-                  </button>
-                </h3>
-                <div
-                  class="accordion-collapse collapse"
-                  id="adults-faq-two"
-                  aria-labelledby="adults-faq-heading-two"
-                  data-bs-parent="#adults-faq-accordion"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      Many of our core services are free at the point of use thanks to our funders. Where there is a
-                      cost, we will discuss it openly with you beforehand. Money should never be the barrier to getting
-                      steady on your feet again.
-                    </p>
+              <article class="event-card">
+                <time class="event-card__date" datetime="2024-05-16T18:30">
+                  <strong>16</strong>
+                  <span>May 2024</span>
+                </time>
+                <img
+                  class="event-card__divider"
+                  src="/assets/images/design/icons/event-divider.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div class="event-card__content">
+                  <div>
+                    <h3>Fundraising Fashion Show; Thursday 16th May</h3>
+                    <p class="event-card__meta">6:30pm | Lisburn Golf Club</p>
                   </div>
+                  <p>Fundraising Fashion Show; Thursday 16th May.</p>
                 </div>
-              </div>
+                <a
+                  class="btn btn-outline-primary event-card__button"
+                  href="https://braininjurymatters.org.uk/events/2024-05-16/fundraising-fashion-show-thursday-16th-may"
+                >
+                  View Event
+                </a>
+              </article>
 
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="adults-faq-heading-three">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#adults-faq-three"
-                    aria-expanded="false"
-                    aria-controls="adults-faq-three"
-                  >
-                    Can I work again?
-                  </button>
-                </h3>
-                <div
-                  class="accordion-collapse collapse"
-                  id="adults-faq-three"
-                  aria-labelledby="adults-faq-heading-three"
-                  data-bs-parent="#adults-faq-accordion"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      The path back to work looks different for everyone. We can help you explore vocational
-                      rehabilitation and volunteering to rebuild confidence at your own pace. The goal is a life with
-                      purpose, whatever shape that takes.
-                    </p>
+              <article class="event-card">
+                <time class="event-card__date" datetime="2024-03-19T13:00">
+                  <strong>19</strong>
+                  <span>Mar 2024</span>
+                </time>
+                <img
+                  class="event-card__divider"
+                  src="/assets/images/design/icons/event-divider.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div class="event-card__content">
+                  <div>
+                    <h3>Imagine Festival 2024 Reverse Engineering</h3>
+                    <p class="event-card__meta">1pm | Belfast</p>
                   </div>
+                  <p>New Screenplay Showcase.</p>
                 </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="adults-faq-heading-four">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#adults-faq-four"
-                    aria-expanded="false"
-                    aria-controls="adults-faq-four"
-                  >
-                    Is it confidential?
-                  </button>
-                </h3>
-                <div
-                  class="accordion-collapse collapse"
-                  id="adults-faq-four"
-                  aria-labelledby="adults-faq-heading-four"
-                  data-bs-parent="#adults-faq-accordion"
+                <a
+                  class="btn btn-outline-primary event-card__button"
+                  href="https://braininjurymatters.org.uk/events/2024-03-19/imagine-festival-2024-reverse-engineering"
                 >
-                  <div class="accordion-body">
-                    <p>
-                      Yes. Your story belongs to you. We listen with respect and keep your information safe, sharing it
-                      only with your consent. You can speak freely here.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="adults-faq-heading-five">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#adults-faq-five"
-                    aria-expanded="false"
-                    aria-controls="adults-faq-five"
-                  >
-                    What about my family?
-                  </button>
-                </h3>
-                <div
-                  class="accordion-collapse collapse"
-                  id="adults-faq-five"
-                  aria-labelledby="adults-faq-heading-five"
-                  data-bs-parent="#adults-faq-accordion"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      A brain injury changes the lives of everyone close to you. We offer separate support for
-                      partners, parents, and children because they are walking their own hard road. You can all find
-                      help here.
-                    </p>
-                  </div>
-                </div>
-              </div>
+                  View Event
+                </a>
+              </article>
             </div>
 
-            <div class="faq-section__cta">
-              <h3>Still have questions?</h3>
-              <p>We are here to listen. Get in touch with our team.</p>
-              <a class="btn btn-primary" href="/contact.html">Get In Touch</a>
+            <div class="events__actions">
+              <a class="btn btn-primary" href="/the-studio.html#events">View All Our Events</a>
+              <a class="events__studio-link" href="/the-studio.html">
+                The Studio
+                <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" />
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <!-- /.section-faqs -->
 
+      <!-- .inside-view starts -->
+      <section class="inside-view inside-view--pink section-space" id="inside-view">
+        <div class="container-fluid site-container">
+          <div class="row align-items-center gy-5 inside-view__layout">
+            <div class="col-lg-6 inside-view__copy">
+              <h2>Image gallery</h2>
+              <p>Laughter in the studio, speed on the track, quiet moments of pride.</p>
+            </div>
+
+            <div class="col-lg-6 inside-view__gallery">
+              <div class="swiper inside-view__swiper" aria-label="Inside The Studio gallery">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="/assets/images/design/sections/the-studio-inside-view-1.webp"
+                      alt="People taking part in a creative workshop inside The Studio"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="/assets/images/design/sections/the-studio-welcome.jpg"
+                      alt="People making colourful fabric artwork at The Studio"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/assets/images/design/sections/the-studio-inside-view-placeholder.png" alt="" aria-hidden="true" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/assets/images/design/sections/the-studio-inside-view-placeholder.png" alt="" aria-hidden="true" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/assets/images/design/sections/the-studio-inside-view-placeholder.png" alt="" aria-hidden="true" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/assets/images/design/sections/the-studio-inside-view-placeholder.png" alt="" aria-hidden="true" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/assets/images/design/sections/the-studio-inside-view-placeholder.png" alt="" aria-hidden="true" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="inside-view__controls">
+                <div class="inside-view__navigation">
+                  <button class="inside-view__button inside-view__button--prev" type="button" aria-label="Previous slide">
+                    <img src="/assets/images/design/icons/inside-view-arrow-back.svg" alt="" aria-hidden="true" />
+                  </button>
+                  <button class="inside-view__button inside-view__button--next" type="button" aria-label="Next slide">
+                    <img src="/assets/images/design/icons/inside-view-arrow-forward.svg" alt="" aria-hidden="true" />
+                  </button>
+                </div>
+                <div class="swiper-pagination inside-view__pagination" aria-label="Choose a gallery slide"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.inside-view ends -->
 
 
       <section class="partners section-space" id="partners">

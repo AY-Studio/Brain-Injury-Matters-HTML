@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Roboto:wght@700&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/css/style.min.css" />
@@ -581,228 +581,451 @@
     <main id="main-content">
 
       <!-- .page-header starts -->
-      <section class="page-header page-header--with-image" aria-labelledby="page-header-title">
+      <section
+        class="page-header page-header--outlined-shapes page-header--stacked-image align-items-center"
+        aria-labelledby="page-header-title"
+      >
         <img
-          class="page-header__shape page-header__shape--green"
-          src="/assets/images/design/sections/page-header-union-green.svg"
+          class="page-header__shape page-header__shape--green-left"
+          src="/assets/images/design/sections/page-header-shape-green-left.svg"
           alt=""
           aria-hidden="true"
         />
         <img
-          class="page-header__shape page-header__shape--pink"
-          src="/assets/images/design/sections/page-header-shape-pink.svg"
+          class="page-header__shape page-header__shape--pink-outline-left"
+          src="/assets/images/design/sections/page-header-shape-pink-outline-left.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="page-header__shape page-header__shape--blue-right"
+          src="/assets/images/design/sections/page-header-shape-blue-right.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="page-header__shape page-header__shape--yellow-outline-right"
+          src="/assets/images/design/sections/page-header-shape-yellow-outline-right.svg"
           alt=""
           aria-hidden="true"
         />
 
         <div class="page-header__inner">
-          <div class="page-header__content">
-            <p class="eyebrow page-header__eyebrow">Adults With Brain Injuries</p>
-            <h1 id="page-header-title">Life Changes in a Moment. We Stay.</h1>
-            <p class="page-header__intro">
-              You are not alone. Find the right support for your new path forward.
-            </p>
-            <div class="page-header__actions">
-              <a class="btn btn-primary" href="#support">
-                <img src="/assets/images/design/icons/care-24.svg" alt="" aria-hidden="true" />
-                Get Support
+          <!-- <p class="eyebrow page-header__eyebrow"></p> -->
+          <h1 id="page-header-title">Our community</h1>
+          <p class="page-header__intro">
+           A vibrant network of children, adults, families and supporters walking the same road. You are not alone here.
+          </p>
+          <div class="page-header__actions">
+              <a class="btn btn-primary" href="#">
+                
+                Get involved
               </a>
-              <a class="btn btn-outline-primary" href="/referrals.html">
-                Referrals
-                <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
+              <a class="btn btn-outline-primary" href="#">
+                
+               Donate
               </a>
+              
             </div>
           </div>
 
-          <div class="page-header__visual">
-            <span aria-hidden="true"></span>
-            <img
-              src="/assets/images/design/sections/adults-life-changes.webp"
-              alt="Adults and support workers taking part in a creative group activity"
-            />
-          </div>
-        </div>
       </section>
       <!-- .page-header ends -->
 
-      <!-- .section-left-right.blue starts -->
-      <section
-        class="support-finder support-finder--split section-left-right section-left-right--blue"
-        aria-labelledby="different-world-title"
-      >
-        <span class="support-finder__wave support-finder__wave--blue-top" aria-hidden="true"></span>
-        <span class="support-finder__wave support-finder__wave--pink" aria-hidden="true"></span>
-
-        <div class="container-fluid  support-finder__inner support-finder__inner--split">
-          <div class="site-container mx-auto">
-            <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
-              <div class="col-lg-5 feature-section__visual support-finder__visual">
-                <span aria-hidden="true"></span>
-                <img
-                  src="/assets/images/design/sections/adults-life-changes.webp"
-                  alt="Adults and support workers taking part in a creative group activity"
-                />
-              </div>
-
-              <div class="col-lg-6 offset-lg-1 feature-section__copy support-finder__copy">
-                <h2 id="different-world-title">The World Looks Different Now. We Understand That.</h2>
-                <p>
-                  An acquired brain injury can make you feel like a stranger in your own life. Memory, mood, and
-                  movement might not obey you the way they used to. We are here to help you navigate the new terrain
-                  with practical support and steady hope.
-                </p>
-
-                <div class="button-row">
-                  <a class="btn btn-secondary" href="#support">Get Support</a>
-                  <a class="support-finder__stories-link line-link" href="/stories.html">
-                    Stories
-                    <img
-                      src="/assets/images/design/icons/chevron-right-pale-pink.svg"
-                      alt=""
-                      aria-hidden="true"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <span class="support-finder__wave support-finder__wave--blue-bottom" aria-hidden="true"></span>
-        <span class="support-finder__wave support-finder__wave--yellow" aria-hidden="true"></span>
-      </section>
-      <!-- /.section-left-right.blue  ends -->
-
-      <!-- .support starts -->
-
-      <section class="support section-space" id="support">
+      <!-- .section-commnunity starts -->
+      <section class="community section-space" aria-label="Community">
         <div class="container-fluid site-container">
-          <div class="section-intro text-center">
-            <p class="eyebrow">Support</p>
-            <h2>Steady Ground to Stand On</h2>
-            <p>Practical help that meets you where you are right now.</p>
+          <div class="row community__grid">
+            <div class="col-12 col-lg-6 col-xl-4">
+              <a class="community-card who-we-help-card" href="/children-community.html">
+                <div class="community-card__image-wrap who-we-help-card__image-wrap">
+                  <img
+                    class="community-card__image who-we-help-card__image"
+                    src="/assets/images/design/sections/who-we-help-children.jpeg"
+                    alt="Children spending time together beside the water"
+                  />
+                </div>
+                <div class="community-card__content who-we-help-card__content">
+                  <h2>Childrens Community</h2>
+                  <p class="community-card__description community-card__description--large who-we-help-card__description">
+                    Every pound you raise powers vital support for children and adults living with acquired brain injury.
+                    Your courage inspires ours.
+                  </p>
+                  <span class="community-card__link who-we-help-card__link line-link">
+                    Learn More
+                    <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-12 col-lg-6 col-xl-4">
+              <a class="community-card who-we-help-card" href="/community-support.html#how-we-move-fast">
+                <div class="community-card__image-wrap who-we-help-card__image-wrap">
+                  <img
+                    class="community-card__image who-we-help-card__image"
+                    src="/assets/images/design/sections/who-we-help-adults.jpeg"
+                    alt="Adults taking part in a classroom session"
+                  />
+                </div>
+                <div class="community-card__content who-we-help-card__content">
+                  <h2>Pedal Power</h2>
+                  <p class="community-card__description who-we-help-card__description">
+                    Share your skills and steady presence with people who need it
+                  </p>
+                  <span class="community-card__link who-we-help-card__link line-link">
+                    Learn More
+                    <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-12 col-lg-6 col-xl-4">
+              <article class="community-card who-we-help-card">
+                <div class="community-card__image-wrap who-we-help-card__image-wrap">
+                  <img
+                    class="community-card__image who-we-help-card__image"
+                    src="/assets/images/design/sections/who-we-help-carers.jpeg"
+                    alt="A parent and child exploring outdoors together"
+                  />
+                </div>
+                <div class="community-card__content who-we-help-card__content">
+                  <h2>The Studio</h2>
+                  <p class="community-card__description who-we-help-card__description">
+                    Align your business with tangible, local impact that your team can see
+                  </p>
+                  <div class="community-card__actions">
+                    <a class="community-card__link who-we-help-card__link line-link" href="/the-studio.html">
+                      Studio
+                      <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
+                    </a>
+                    <a class="community-card__link who-we-help-card__link line-link" href="/contact.html">
+                      Hire Studio
+                      <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-lg-6 col-xl-4">
+              <a class="community-card who-we-help-card" href="/the-studio.html#events">
+                <div class="community-card__image-wrap who-we-help-card__image-wrap">
+                  <img
+                    class="community-card__image who-we-help-card__image"
+                    src="/assets/images/design/sections/who-we-help-professionals.jpeg"
+                    alt="A health professional speaking with a client"
+                  />
+                </div>
+                <div class="community-card__content who-we-help-card__content">
+                  <h2>Our Events</h2>
+                  <p class="community-card__description who-we-help-card__description">
+                    Honour a life with a gift that builds a lasting legacy of care
+                  </p>
+                  <span class="community-card__link who-we-help-card__link line-link">
+                    Learn More
+                    <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-12 col-lg-6 col-xl-4">
+              <a class="community-card who-we-help-card" href="/stories.html">
+                <div class="community-card__image-wrap who-we-help-card__image-wrap">
+                  <img
+                    class="community-card__image who-we-help-card__image"
+                    src="/assets/images/design/sections/who-we-help-children.jpeg"
+                    alt="Children spending time together beside the water"
+                  />
+                </div>
+                <div class="community-card__content who-we-help-card__content">
+                  <h2>Stories</h2>
+                  <p class="community-card__description who-we-help-card__description">
+                    A quiet promise that sustains our work for the next generation
+                  </p>
+                  <span class="community-card__link who-we-help-card__link line-link">
+                    Learn More
+                    <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-12 col-lg-6 col-xl-4">
+              <a class="community-card who-we-help-card" href="/home.html#campaigns">
+                <div class="community-card__image-wrap who-we-help-card__image-wrap">
+                  <img
+                    class="community-card__image who-we-help-card__image"
+                    src="/assets/images/design/sections/who-we-help-adults.jpeg"
+                    alt="Adults taking part in a classroom session"
+                  />
+                </div>
+                <div class="community-card__content who-we-help-card__content">
+                  <h2>Campaigns</h2>
+                  <p class="community-card__description who-we-help-card__description">
+                    Work that matters. Every day you help someone rebuild a life after brain injury.
+                  </p>
+                  <span class="community-card__link who-we-help-card__link line-link">
+                    Learn More
+                    <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
+                  </span>
+                </div>
+              </a>
+            </div>
           </div>
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <article class="support-card">
-                <div class="support-card__image-wrap">
-                  <img
-                    src="/assets/images/design/sections/adults-one-to-one.webp"
-                    alt="A child enjoying a colourful ball pool"
-                  />
+        </div>
+      </section>
+      <!-- .section-commnunity ends -->
+
+      <section class="events section-space" id="events">
+        <div class="container-fluid site-container">
+          <div class="section-intro">
+            <p class="eyebrow">Community</p>
+            <h2>Upcoming Events</h2>
+          </div>
+
+          <div class="events__content">
+            <div class="event-filters" role="group" aria-label="Filter events">
+              <button class="active" type="button">View All</button>
+              <button type="button">Category one</button>
+              <button type="button">Category two</button>
+              <button type="button">Category three</button>
+              <button type="button">Category four</button>
+            </div>
+
+            <div class="events__list">
+              <article class="event-card">
+                <time class="event-card__date" datetime="2025-06-04T18:00">
+                  <!-- <span>Wed</span> -->
+                  <strong>04</strong>
+                  <span>June 2025</span>
+                </time>
+                <img
+                  class="event-card__divider"
+                  src="/assets/images/design/icons/event-divider.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div class="event-card__content">
+                  <div>
+                    <h3>Country Hits and Heart Benefit Concert</h3>
+                    <p class="event-card__meta">6pm | Great Hall, Parliament Buildings, Stormont</p>
+                  </div>
+                  <p>
+                    Buy your tickets now to join us for a special evening with Auburn McCormick in aid of Brain Injury
+                    Matters.
+                  </p>
                 </div>
-                <div>
-                  <p class="eyebrow">One-to-one</p>
-                  <h3>A steady hand for the road ahead</h3>
-                  <p>Work with a key worker who understands your specific injury.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Learn more
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z"
-                          fill="#013D9E"
-                          stroke="#013D9E"
-                        />
-                      </svg>
-                    </span>
-                  </a>
+                <a
+                  class="btn btn-outline-primary event-card__button"
+                  href="https://braininjurymatters.org.uk/events/2025-06-04/country-hits-and-heart-benefit-concert"
+                >
+                  View Event
+                </a>
+              </article>
+
+              <article class="event-card">
+                <time class="event-card__date" datetime="2024-05-16T18:30">
+                  <strong>16</strong>
+                  <span>May 2024</span>
+                </time>
+                <img
+                  class="event-card__divider"
+                  src="/assets/images/design/icons/event-divider.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div class="event-card__content">
+                  <div>
+                    <h3>Fundraising Fashion Show; Thursday 16th May</h3>
+                    <p class="event-card__meta">6:30pm | Lisburn Golf Club</p>
+                  </div>
+                  <p>Fundraising Fashion Show; Thursday 16th May.</p>
                 </div>
+                <a
+                  class="btn btn-outline-primary event-card__button"
+                  href="https://braininjurymatters.org.uk/events/2024-05-16/fundraising-fashion-show-thursday-16th-may"
+                >
+                  View Event
+                </a>
+              </article>
+
+              <article class="event-card">
+                <time class="event-card__date" datetime="2024-03-19T13:00">
+                  <strong>19</strong>
+                  <span>Mar 2024</span>
+                </time>
+                <img
+                  class="event-card__divider"
+                  src="/assets/images/design/icons/event-divider.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div class="event-card__content">
+                  <div>
+                    <h3>Imagine Festival 2024 Reverse Engineering</h3>
+                    <p class="event-card__meta">1pm | Belfast</p>
+                  </div>
+                  <p>New Screenplay Showcase.</p>
+                </div>
+                <a
+                  class="btn btn-outline-primary event-card__button"
+                  href="https://braininjurymatters.org.uk/events/2024-03-19/imagine-festival-2024-reverse-engineering"
+                >
+                  View Event
+                </a>
               </article>
             </div>
-            <div class="col-md-6 col-lg-4">
-              <article class="support-card">
-                <div class="support-card__image-wrap">
-                  <img
-                    src="/assets/images/design/sections/adults-peer-groups.webp"
-                    alt="A family enjoying time together at home"
-                  />
-                </div>
-                <div>
-                  <p class="eyebrow">Peer groups</p>
-                  <h3>People who get it</h3>
-                  <p>Meet others rebuilding their lives. No explanations needed here.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Learn more
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z"
-                          fill="#013D9E"
-                          stroke="#013D9E"
-                        />
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <article class="support-card">
-                <div class="support-card__image-wrap">
-                  <img
-                    src="/assets/images/design/sections/adults-community.webp"
-                    alt="Older adults laughing together at home"
-                  />
-                </div>
-                <div>
-                  <p class="eyebrow">Community</p>
-                  <h3>Back in the world</h3>
-                  <p>Rediscover old interests or find new ones alongside others.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Learn more
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z"
-                          fill="#013D9E"
-                          stroke="#013D9E"
-                        />
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </article>
+
+            <div class="events__actions">
+              <a class="btn btn-primary" href="/the-studio.html#events">View All Our Events</a>
+              <a class="events__studio-link" href="/the-studio.html">
+                The Studio
+                <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" />
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- .support ends -->
+      <!-- .related-stories starts -->
+      <section class="related-stories related-stories--cream section-space" aria-labelledby="related-stories-title">
+        <div class="container-fluid site-container">
+          <div class="section-intro related-stories__intro mx-auto text-center">
+            <p class="eyebrow">Stories</p>
+            <h2 id="related-stories-title">Voices from our community</h2>
+            <p>Real experiences, honest words and the quiet courage of recovery.</p>
+          </div>
 
-      <!-- .who-we-are starts -->
-      <section class="who-we-are section-space" id="who-we-are">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 related-stories__grid">
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="overflow-hidden">
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>A brother's promise kept on the football pitch</h3>
+                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="Read more: A brother's promise kept on the football pitch"
+                  >
+                    <span class="stories-card__link-label">
+                      Read more
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="overflow-hidden">
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>A brother's promise kept on the football pitch</h3>
+                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="Read more: A brother's promise kept on the football pitch"
+                  >
+                    <span class="stories-card__link-label">
+                      Read more
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="overflow-hidden">
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>A brother's promise kept on the football pitch</h3>
+                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="Read more: A brother's promise kept on the football pitch"
+                  >
+                    <span class="stories-card__link-label">
+                      Read more
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="related-stories__actions d-flex justify-content-center">
+            <a class="btn btn-outline-primary" href="/stories.html">View All Stories</a>
+          </div>
+        </div>
+      </section>
+      <!-- .related-stories ends -->
+
+      
+      <section class="who-we-are feature-section section-space" id="who-we-are">
         <div class="container-fluid site-container">
           <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
-
-            <div class="col-lg-5 feature-section__visual">
-              <span aria-hidden="true"></span>
-              <img
-                src="/assets/images/design/sections/adults-family.webp"
-                alt="A mother and her young children looking at a tablet together"
-              />
-            </div>
-
-            <div class="col-lg-6 offset-lg-1 feature-section__copy">
-              <p class="eyebrow">Family</p>
-              <h2>The People Beside You Need a Map Too</h2>
+            <div class="col-lg-6 feature-section__copy">
+              <div class="mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="69" height="53" viewBox="0 0 69 53" fill="none">
+                <path d="M65.7808 28.7832H58.0442C57.2625 28.7832 56.6103 28.5215 56.0875 27.9982C55.5642 27.4754 55.3025 26.8271 55.3025 26.0532C55.3025 25.2799 55.565 24.6352 56.09 24.119C56.615 23.6029 57.2656 23.3449 58.0417 23.3449H65.7808C66.5514 23.3449 67.1972 23.6065 67.7183 24.1299C68.2394 24.6527 68.5 25.301 68.5 26.0749C68.5 26.8482 68.2394 27.4929 67.7183 28.009C67.1972 28.5252 66.5514 28.7832 65.7808 28.7832ZM50.9508 43.0924C51.4319 42.4963 52.0342 42.1393 52.7575 42.0215C53.4808 41.9038 54.1497 42.0804 54.7642 42.5515L61.0275 47.1907C61.6225 47.6618 61.9822 48.259 62.1067 48.9824C62.2311 49.7057 62.0544 50.3782 61.5767 50.9999C61.0994 51.6021 60.4989 51.9652 59.775 52.089C59.0517 52.2135 58.3742 52.0315 57.7425 51.5432L51.4858 46.9099C50.8903 46.4388 50.5303 45.8388 50.4058 45.1099C50.2814 44.3804 50.4631 43.7079 50.9508 43.0924ZM61.0275 4.93737L55.0142 9.49321C54.3997 9.96432 53.7308 10.141 53.0075 10.0232C52.2842 9.90543 51.6819 9.54848 51.2008 8.95237C50.7131 8.35571 50.5292 7.68821 50.6492 6.94987C50.7692 6.21154 51.1314 5.60654 51.7358 5.13487L57.7683 0.558207C58.3828 0.0876511 59.0517 -0.0854029 59.775 0.0390416C60.4989 0.16293 61.0961 0.519321 61.5667 1.10821C62.0511 1.72377 62.2311 2.39793 62.1067 3.13071C61.9822 3.86404 61.6225 4.46626 61.0275 4.93737ZM10.8333 36.5624H5.45833C3.93722 36.509 2.64722 35.9293 1.58833 34.8232C0.529444 33.7171 0 32.4043 0 30.8849V21.2432C0 19.6765 0.557778 18.3354 1.67333 17.2199C2.78944 16.1038 4.13083 15.5457 5.6975 15.5457H20.3583L33.415 7.73654C34.3678 7.16987 35.3172 7.16265 36.2633 7.71487C37.21 8.26765 37.6833 9.08987 37.6833 10.1815V41.9465C37.6833 43.0382 37.21 43.8604 36.2633 44.4132C35.3172 44.9654 34.3678 44.9582 33.415 44.3915L20.3583 36.5624H16.6108V47.0165C16.6108 47.8315 16.3333 48.5152 15.7783 49.0674C15.2228 49.6196 14.5358 49.8957 13.7175 49.8957C12.8986 49.8957 12.2131 49.6196 11.6608 49.0674C11.1092 48.5152 10.8333 47.8315 10.8333 47.0165V36.5624ZM31.9858 36.9315V15.1965L21.8317 21.2432H5.6975V30.8849H21.8317L31.9858 36.9315ZM41.0167 37.729V14.379C42.6628 15.7524 43.9839 17.4471 44.98 19.4632C45.9767 21.4799 46.475 23.6802 46.475 26.064C46.475 28.4479 45.9781 30.6474 44.9842 32.6624C43.9903 34.6774 42.6678 36.3663 41.0167 37.729Z" fill="#000069"/>
+              </svg>
+              </div>
+              <p class="eyebrow">Our Campaigns</p>
+              <h2>Lend your voice to a campaign</h2>
               <p>
-                A brain injury reshapes the lives of everyone who loves you. We offer separate, dedicated support for
-                partners, family, and friends so they can find their own footing while supporting yours.
+                Our campaigns fight for better care, faster diagnosis, and a world that sees the person first. Join a campaign and help us reach more people affected by brain injury.
               </p>
               <div class="button-row">
-                <a class="btn btn-primary" href="/brain-injury-parents-and-carers.html">
-                  <img src="/assets/images/design/icons/bike.svg" alt="" aria-hidden="true" />
-                  Parents
-                </a>
-                <a class="btn btn-outline-primary" href="/contact.html">
-                  Get In Touch
+                <a class="btn btn-primary" href="https://braininjurymatters.enthuse.com/cp/539aa/Donate#!/" target="_blank">Campaigns</a>
+                <a class="btn btn-outline-primary" href="/home.html#who-we-are">
+                  Donate
 
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
@@ -815,176 +1038,18 @@
               </div>
             </div>
 
-
-          </div>
-        </div>
-      </section>
-      <!-- /.who-we-are ends -->
-
-      <!-- .section-faqs -->
-      <section class="faq-section" id="faqs" aria-labelledby="faqs-title">
-        <div class="container-fluid site-container">
-          <div class="faq-section__inner">
-            <div class="faq-section__intro">
-              <h2 id="faqs-title">FAQs</h2>
-              <p>The questions come hard and fast after an injury. We have some answers to start with.</p>
-            </div>
-
-            <div class="accordion faq-section__accordion" id="adults-faq-accordion">
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="adults-faq-heading-one">
-                  <button
-                    class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#adults-faq-one"
-                    aria-expanded="true"
-                    aria-controls="adults-faq-one"
-                  >
-                    How do I start?
-                  </button>
-                </h3>
-                <div
-                  class="accordion-collapse collapse show"
-                  id="adults-faq-one"
-                  aria-labelledby="adults-faq-heading-one"
-                  data-bs-parent="#adults-faq-accordion"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      You can refer yourself directly through our website or ask a GP to do it. A member of our team
-                      will then call you for a quiet, honest chat about what you need. There is no wrong way to begin.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="adults-faq-heading-two">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#adults-faq-two"
-                    aria-expanded="false"
-                    aria-controls="adults-faq-two"
-                  >
-                    What will it cost?
-                  </button>
-                </h3>
-                <div
-                  class="accordion-collapse collapse"
-                  id="adults-faq-two"
-                  aria-labelledby="adults-faq-heading-two"
-                  data-bs-parent="#adults-faq-accordion"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      Many of our core services are free at the point of use thanks to our funders. Where there is a
-                      cost, we will discuss it openly with you beforehand. Money should never be the barrier to getting
-                      steady on your feet again.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="adults-faq-heading-three">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#adults-faq-three"
-                    aria-expanded="false"
-                    aria-controls="adults-faq-three"
-                  >
-                    Can I work again?
-                  </button>
-                </h3>
-                <div
-                  class="accordion-collapse collapse"
-                  id="adults-faq-three"
-                  aria-labelledby="adults-faq-heading-three"
-                  data-bs-parent="#adults-faq-accordion"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      The path back to work looks different for everyone. We can help you explore vocational
-                      rehabilitation and volunteering to rebuild confidence at your own pace. The goal is a life with
-                      purpose, whatever shape that takes.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="adults-faq-heading-four">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#adults-faq-four"
-                    aria-expanded="false"
-                    aria-controls="adults-faq-four"
-                  >
-                    Is it confidential?
-                  </button>
-                </h3>
-                <div
-                  class="accordion-collapse collapse"
-                  id="adults-faq-four"
-                  aria-labelledby="adults-faq-heading-four"
-                  data-bs-parent="#adults-faq-accordion"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      Yes. Your story belongs to you. We listen with respect and keep your information safe, sharing it
-                      only with your consent. You can speak freely here.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="adults-faq-heading-five">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#adults-faq-five"
-                    aria-expanded="false"
-                    aria-controls="adults-faq-five"
-                  >
-                    What about my family?
-                  </button>
-                </h3>
-                <div
-                  class="accordion-collapse collapse"
-                  id="adults-faq-five"
-                  aria-labelledby="adults-faq-heading-five"
-                  data-bs-parent="#adults-faq-accordion"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      A brain injury changes the lives of everyone close to you. We offer separate support for
-                      partners, parents, and children because they are walking their own hard road. You can all find
-                      help here.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="faq-section__cta">
-              <h3>Still have questions?</h3>
-              <p>We are here to listen. Get in touch with our team.</p>
-              <a class="btn btn-primary" href="/contact.html">Get In Touch</a>
+            <div class="col-lg-5 offset-lg-1 feature-section__visual">
+              <span aria-hidden="true"></span>
+              <img
+                src="/assets/images/design/sections/who-we-are.jpeg"
+                alt="Brain Injury Matters members in a group activity"
+              />
             </div>
           </div>
         </div>
       </section>
-      <!-- /.section-faqs -->
 
+      
 
 
       <section class="partners section-space" id="partners">

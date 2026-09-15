@@ -17,6 +17,7 @@
 @use "components/forms";
 @use "sections/header";
 @use "sections/page-header";
+@use "sections/section-intro-featured-image";
 @use "sections/hero";
 @use "sections/finder";
 @use "sections/support";
@@ -24,8 +25,10 @@
 @use "sections/stories";
 @use "sections/story";
 @use "sections/inside-view";
+@use "sections/timeline";
 @use "sections/who-we-are";
 @use "sections/who-we-help";
+@use "sections/community";
 @use "sections/common-effects";
 @use "sections/process";
 @use "sections/contact";
@@ -40,6 +43,9 @@
 @use "sections/campaigns";
 @use "sections/fundraising";
 @use "sections/gallery";
+@use "sections/support-benefits";
+@use "sections/our-team";
+@use "sections/pricing-table";
 @use "sections/partners";
 @use "sections/newsletter";
 @use "sections/footer";

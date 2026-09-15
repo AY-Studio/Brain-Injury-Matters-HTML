@@ -124,6 +124,53 @@ if (insideViewSwipers.length && typeof window.Swiper === "function") {
   });
 }
 
+const timelineSwipers = [...document.querySelectorAll(".timeline__swiper")];
+
+if (timelineSwipers.length && typeof window.Swiper === "function") {
+  timelineSwipers.forEach((timelineSwiper) => {
+    const wrapper = timelineSwiper.querySelector(".swiper-wrapper");
+    const sourceSlides = [...wrapper.querySelectorAll(".swiper-slide")];
+
+    if (!wrapper.querySelector(".timeline-card--loop-copy")) {
+      sourceSlides.forEach((slide) => {
+        const copy = slide.cloneNode(true);
+        copy.classList.add("timeline-card--loop-copy");
+        copy.setAttribute("aria-hidden", "true");
+        wrapper.append(copy);
+      });
+    }
+
+    new window.Swiper(timelineSwiper, {
+      slidesPerView: 1.1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+      loop: true,
+      loopAdditionalSlides: 5,
+      speed: 700,
+      grabCursor: true,
+      watchOverflow: false,
+      observer: true,
+      observeParents: true,
+      keyboard: { enabled: true },
+      a11y: {
+        enabled: true,
+        slideLabelMessage: "{{index}} of {{slidesLength}}"
+      },
+      // autoplay: {
+      //   delay: 3500,
+      //   disableOnInteraction: false,
+      //   pauseOnMouseEnter: true*
+      // },
+      breakpoints: {
+        576: { slidesPerView: 2.25 },
+        768: { slidesPerView: 3.25 },
+        992: { slidesPerView: 4.25 },
+        1200: { slidesPerView: 5 }
+      }
+    });
+  });
+}
+
 const megaTriggers = [...document.querySelectorAll(".mega-trigger")];
 
 const closeMegaMenus = (except) => {
@@ -565,6 +612,32 @@ const initialiseScrollAnimations = () => {
     );
   });
 
+  const pageHeaderParallaxImages = document.querySelectorAll(".page-header__image--parallax");
+
+  pageHeaderParallaxImages.forEach((imageWrap) => {
+    const image = imageWrap.querySelector("img");
+
+    if (!image) return;
+
+    window.gsap.fromTo(
+      image,
+      {
+        yPercent: -10
+      },
+      {
+        yPercent: 10,
+        ease: "none",
+        scrollTrigger: {
+          trigger: imageWrap,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.6,
+          invalidateOnRefresh: true
+        }
+      }
+    );
+  });
+
   if (window.SplitText) {
     window.gsap.registerPlugin(window.SplitText);
 
@@ -629,7 +702,7 @@ const initialiseScrollAnimations = () => {
   });
 
   const fadeElements = document.querySelectorAll(
-    'main section img:not([alt=""]):not([aria-hidden="true"]), main section .event-card__date'
+    'main section img:not([alt=""]):not([aria-hidden="true"]), main section .page-header__image--parallax img, main section .event-card__date'
   );
 
   fadeElements.forEach((element) => {
