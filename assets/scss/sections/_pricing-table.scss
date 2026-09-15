@@ -2,6 +2,10 @@
   padding-block: clamp(64px, 7.78vw, 112px);
   background: var(--bim-pale-pink);
 
+  &--cream {
+    background: var(--bim-cream);
+  }
+
   &__inner {
     display: flex;
     width: 100%;

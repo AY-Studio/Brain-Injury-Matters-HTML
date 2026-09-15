@@ -117,8 +117,8 @@ if (insideViewSwipers.length && typeof window.Swiper === "function") {
         slideLabelMessage: "{{index}} of {{slidesLength}}"
       },
       breakpoints: {
-        576: { slidesPerView: 1.08, spaceBetween: 24 },
-        992: { slidesPerView: 1.07, spaceBetween: 32 }
+        576: { slidesPerView: 1.15, spaceBetween: 24 },
+        992: { slidesPerView: 1.15, spaceBetween: 32 }
       }
     });
   });
@@ -702,7 +702,7 @@ const initialiseScrollAnimations = () => {
   });
 
   const fadeElements = document.querySelectorAll(
-    'main section img:not([alt=""]):not([aria-hidden="true"]), main section .page-header__image--parallax img, main section .event-card__date'
+    'main section img:not([alt=""]):not([aria-hidden="true"]), main section .page-header__image--parallax img, main section .event-card__date, main section .pricing-card'
   );
 
   fadeElements.forEach((element) => {

@@ -34,6 +34,7 @@
     <script src="/assets/js/vendor/gsap.min.js" defer></script>
     <script src="/assets/js/vendor/SplitText.min.js" defer></script>
     <script src="/assets/js/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="/assets/js/vendor/countUp.umd.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
   </head>
   <body>
@@ -581,415 +582,462 @@
     <main id="main-content">
 
       <!-- .page-header starts -->
-      <section class="page-header page-header--with-image" aria-labelledby="page-header-title">
-        <img class="page-header__shape page-header__shape--yellow" src="/assets/images/design/sections/page-header-shape-yellow.svg" alt="" aria-hidden="true">
+      <section
+        class="page-header page-header--outlined-shapes align-items-center"
+        aria-labelledby="page-header-title"
+      >
         <img
-          class="page-header__shape page-header__shape--pink"
-          src="/assets/images/design/sections/page-header-shape-pink.svg"
+          class="page-header__shape page-header__shape--green-left"
+          src="/assets/images/design/sections/page-header-shape-green-left.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="page-header__shape page-header__shape--pink-outline-left"
+          src="/assets/images/design/sections/page-header-shape-pink-outline-left.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="page-header__shape page-header__shape--blue-right"
+          src="/assets/images/design/sections/page-header-shape-blue-right.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="page-header__shape page-header__shape--yellow-outline-right"
+          src="/assets/images/design/sections/page-header-shape-yellow-outline-right.svg"
           alt=""
           aria-hidden="true"
         />
 
         <div class="page-header__inner">
-          <div class="page-header__content">
-            <p class="eyebrow page-header__eyebrow">The Studio</p>
-            <h1 id="page-header-title">The Studio, a creative space for our community</h1>
-            <p class="page-header__intro">
-              A place to make, move and meet. It is built for young lives touched by brain injury.
-            </p>
-            <div class="page-header__actions">
-              <a class="btn btn-primary" href="/hire-the-studio.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M5.61941 19.3805H13.1902V15.899H5.61941V19.3805ZM14.8097 19.3805H18.3864V15.899H14.8097V19.3805ZM5.61941 14.2853H9.19016V10.8038H5.61941V14.2853ZM10.8097 14.2853H18.3864V10.8038H10.8097V14.2853ZM6.44991 9.19027H17.5499L11.9999 5.06852L6.44991 9.19027ZM5.61941 21.0898C5.14541 21.0898 4.74199 20.9234 4.40916 20.5908C4.07649 20.2579 3.91016 19.8545 3.91016 19.3805V9.80977C3.91016 9.53743 3.96932 9.28077 4.08766 9.03977C4.20582 8.79893 4.37457 8.59985 4.59391 8.44252L10.9744 3.65702C11.1326 3.54518 11.2982 3.45926 11.4712 3.39926C11.644 3.33926 11.8219 3.30927 12.0049 3.30927C12.1877 3.30927 12.3645 3.33926 12.5352 3.39926C12.7058 3.45926 12.8692 3.54518 13.0254 3.65702L19.4119 8.44252C19.6259 8.60102 19.7923 8.80043 19.9112 9.04077C20.0302 9.2811 20.0897 9.53743 20.0897 9.80977V19.3805C20.0897 19.8545 19.9228 20.2579 19.5892 20.5908C19.2555 20.9234 18.8546 21.0898 18.3864 21.0898H5.61941Z" fill="white"/>
-                </svg>
-                Hire The Studio
-              </a>
-              <a class="btn btn-outline-primary" href="/referrals.html">
-                Referrals
-                <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
-              </a>
-            </div>
-          </div>
-
-          <div class="page-header__visual">
-            <span aria-hidden="true"></span>
-            <img
-              src="/assets/images/design/sections/brain-injury-children-header.jpg"
-              alt="A father and daughter reading together"
-            />
-          </div>
+          <!-- <p class="eyebrow page-header__eyebrow"></p> -->
+          <h1 id="page-header-title">Events and activities</h1>
+          <p class="page-header__intro">
+           Find your place in our community. There is always something happening that brings us together.
+          </p>
         </div>
       </section>
       <!-- .page-header ends -->
 
-      <!-- .section-who-we-help starts -->
-      <section class="who-we-are feature-section section-space" id="services">
+      
+
+      <!-- .stories-featured starts -->
+      <section class="stories-featured section-space" aria-labelledby="featured-story-title">
         <div class="container-fluid site-container">
-          <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
-            <div class="col-lg-6 feature-section__copy">
-              <p class="eyebrow">Welcome</p>
-              <h2>A place to make, move and meet</h2>
-              <p>
-                The Studio is built for young lives touched by brain injury. It is a workshop for confidence, a quiet corner for friendship and a stage for finding your voice again. No pressure, no judgment, just the right tools and the right people.
-              </p>
-              <div class="feature-section__stats">
-                <div class="feature-section__stat">
-                  <p>Music and sound workshops with adaptive instruments</p>
-                </div>
-                <div class="feature-section__stat">
-                  <p>Art and making sessions for all ability levels</p>
-                </div>
-                <div class="feature-section__stat">
-                  <p>Movement and drama to build physical confidence</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-5 offset-lg-1 feature-section__visual">
-              <span class="feature-section__visual-accent--blue" aria-hidden="true"></span>
-              <img
-                src="/assets/images/design/sections/the-studio-welcome.jpg"
-                alt="People taking part in an arts and crafts activity"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- .section-who-we-help ends -->
-
-      <!-- .activities starts -->
-      <section class="activities support section-space" id="activities">
-        <div class="container-fluid site-container">
-          <div class="section-intro text-center mx-auto">
-            <p class="eyebrow">Activities</p>
-            <h2>What happens here</h2>
-            <p>Sessions built for discovery, not for pressure.</p>
-          </div>
-
-          <div class="row g-4 align-items-stretch activities__grid">
+          <article class="stories-featured__card row g-0 align-items-stretch overflow-hidden">
             <div class="col-lg-6">
-              <a class="activity-card activity-card--featured" href="/contact.html">
+              <div class="stories-featured__media">
                 <img
-                  class="activity-card__image"
-                  src="/assets/images/design/sections/the-studio-activity-music.webp"
-                  alt=""
-                  aria-hidden="true"
+                  src="/assets/images/design/sections/stories-featured.webp"
+                  alt="Two children dressed as superheroes running outdoors"
                 />
-                <div class="activity-card__content">
-                  <p class="activity-card__eyebrow">Music</p>
-                  <h3>Find your rhythm again</h3>
-                  <p>Adaptive instruments and sound workshops. No experience needed, just a willingness to listen and play.</p>
-                </div>
-              </a>
+              </div>
             </div>
 
             <div class="col-lg-6">
-              <div class="row g-4">
-                <div class="col-sm-6">
-                  <a class="activity-card" href="/contact.html">
-                    <img
-                      class="activity-card__image"
-                      src="/assets/images/design/sections/the-studio-activity-art.webp"
-                      alt=""
-                      aria-hidden="true"
-                    />
-                    <div class="activity-card__content">
-                      <h3>Make something true</h3>
-                      <p>Art sessions for every hand. Paint, clay, collage. The work is the thing.</p>
-                    </div>
-                  </a>
+              <div class="stories-featured__content">
+                <div>
+                  <div class="stories-featured__meta d-flex align-items-center">
+                    <span class="stories-featured__tag">Story</span>
+                    <span>4 min read</span>
+                  </div>
+
+                  <h2 id="featured-story-title">The Big spin</h2>
+                  <p>A 100-mile charity cycle through the glens. Hard miles for a soft landing for families in crisis.</p>
                 </div>
 
-                <div class="col-sm-6">
-                  <a class="activity-card" href="/contact.html">
-                    <img
-                      class="activity-card__image"
-                      src="/assets/images/design/sections/the-studio-activity-art.webp"
-                      alt=""
-                      aria-hidden="true"
-                    />
-                    <div class="activity-card__content">
-                      <h3>Move without judgment</h3>
-                      <p>Drama and movement to rebuild physical confidence in a safe room.</p>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="col-sm-6">
-                  <a class="activity-card" href="/contact.html">
-                    <img
-                      class="activity-card__image"
-                      src="/assets/images/design/sections/the-studio-activity-social.webp"
-                      alt=""
-                      aria-hidden="true"
-                    />
-                    <div class="activity-card__content">
-                      <h3>A table and a laugh</h3>
-                      <p>Social groups where friendship grows quietly, over games and shared stories.</p>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="col-sm-6">
-                  <a class="activity-card" href="/contact.html">
-                    <img
-                      class="activity-card__image"
-                      src="/assets/images/design/sections/the-studio-activity-music.webp"
-                      alt=""
-                      aria-hidden="true"
-                    />
-                    <div class="activity-card__content">
-                      <h3>Quiet corners</h3>
-                      <p>Sensory spaces for when the world feels too loud. A place to breathe.</p>
-                    </div>
-                  </a>
-                </div>
+                <a class="stories-featured__link line-link" href="/story-single.html">
+                  Read more
+                  <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                </a>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </section>
-      <!-- .activities ends -->
+      <!-- /.stories-featured ends -->
 
-
-      <section class="events section-space" id="events">
+      <!-- .stories starts -->
+      <section class="stories section-space pt-0" aria-label="Community stories">
         <div class="container-fluid site-container">
-          <div class="section-intro">
-            <p class="eyebrow">Community</p>
-            <h2>Upcoming Events</h2>
+          <div class="stories__filters d-flex flex-wrap align-items-center justify-content-center" aria-label="Filter stories">
+            <button class="btn stories__filter active" type="button" aria-pressed="true">View all</button>
+            <button class="btn stories__filter" type="button" aria-pressed="false">Children</button>
+            <button class="btn stories__filter" type="button" aria-pressed="false">Family</button>
+            <button class="btn stories__filter" type="button" aria-pressed="false">Recovery</button>
+            <button class="btn stories__filter" type="button" aria-pressed="false">Community</button>
           </div>
 
-          <div class="events__content">
-            <div class="event-filters" role="group" aria-label="Filter events">
-              <button class="active" type="button">View All</button>
-              <button type="button">Category one</button>
-              <button type="button">Category two</button>
-              <button type="button">Category three</button>
-              <button type="button">Category four</button>
-            </div>
-
-            <div class="events__list">
-              <article class="event-card">
-                <time class="event-card__date" datetime="2025-06-04T18:00">
-                  <!-- <span>Wed</span> -->
-                  <strong>04</strong>
-                  <span>June 2025</span>
-                </time>
-                <img
-                  class="event-card__divider"
-                  src="/assets/images/design/icons/event-divider.svg"
-                  alt=""
-                  aria-hidden="true"
-                />
-                <div class="event-card__content">
-                  <div>
-                    <h3>Country Hits and Heart Benefit Concert</h3>
-                    <p class="event-card__meta">6pm | Great Hall, Parliament Buildings, Stormont</p>
-                  </div>
-                  <p>
-                    Buy your tickets now to join us for a special evening with Auburn McCormick in aid of Brain Injury
-                    Matters.
-                  </p>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 stories__grid" id="stories-grid">
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="position-relative overflow-hidden">
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
+                    <strong>04</strong>
+                    <span>June 2025</span>
+                  </time>
                 </div>
-                <a
-                  class="btn btn-outline-primary event-card__button"
-                  href="https://braininjurymatters.org.uk/events/2025-06-04/country-hits-and-heart-benefit-concert"
-                >
-                  View Event
-                </a>
-              </article>
-
-              <article class="event-card">
-                <time class="event-card__date" datetime="2024-05-16T18:30">
-                  <strong>16</strong>
-                  <span>May 2024</span>
-                </time>
-                <img
-                  class="event-card__divider"
-                  src="/assets/images/design/icons/event-divider.svg"
-                  alt=""
-                  aria-hidden="true"
-                />
-                <div class="event-card__content">
-                  <div>
-                    <h3>Fundraising Fashion Show; Thursday 16th May</h3>
-                    <p class="event-card__meta">6:30pm | Lisburn Golf Club</p>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>Event title heading</h3>
+                    <p>Location</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
                   </div>
-                  <p>Fundraising Fashion Show; Thursday 16th May.</p>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="View event: Event title heading"
+                  >
+                    <span class="stories-card__link-label">
+                      View event
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
                 </div>
-                <a
-                  class="btn btn-outline-primary event-card__button"
-                  href="https://braininjurymatters.org.uk/events/2024-05-16/fundraising-fashion-show-thursday-16th-may"
-                >
-                  View Event
-                </a>
-              </article>
-
-              <article class="event-card">
-                <time class="event-card__date" datetime="2024-03-19T13:00">
-                  <strong>19</strong>
-                  <span>Mar 2024</span>
-                </time>
-                <img
-                  class="event-card__divider"
-                  src="/assets/images/design/icons/event-divider.svg"
-                  alt=""
-                  aria-hidden="true"
-                />
-                <div class="event-card__content">
-                  <div>
-                    <h3>Imagine Festival 2024 Reverse Engineering</h3>
-                    <p class="event-card__meta">1pm | Belfast</p>
-                  </div>
-                  <p>New Screenplay Showcase.</p>
-                </div>
-                <a
-                  class="btn btn-outline-primary event-card__button"
-                  href="https://braininjurymatters.org.uk/events/2024-03-19/imagine-festival-2024-reverse-engineering"
-                >
-                  View Event
-                </a>
               </article>
             </div>
 
-            <div class="events__actions">
-              <a class="btn btn-primary" href="/the-studio.html#events">View All Our Events</a>
-              <a class="events__studio-link" href="/the-studio.html">
-                The Studio
-                <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- .inside-view starts -->
-      <section class="inside-view section-space" id="inside-view">
-        <div class="container-fluid site-container">
-          <div class="row align-items-center gy-5 inside-view__layout">
-            <div class="col-lg-6 inside-view__copy">
-              <h2>Inside View</h2>
-              <p>A bright, accessible space alive with music, art and movement.</p>
-            </div>
-
-            <div class="col-lg-6 inside-view__gallery">
-              <div class="swiper inside-view__swiper" aria-label="Inside The Studio gallery">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img
-                      src="/assets/images/design/sections/the-studio-inside-view-1.webp"
-                      alt="People taking part in a creative workshop inside The Studio"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="/assets/images/design/sections/the-studio-welcome.jpg"
-                      alt="People making colourful fabric artwork at The Studio"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="/assets/images/design/sections/the-studio-inside-view-placeholder.png" alt="" aria-hidden="true" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="/assets/images/design/sections/the-studio-inside-view-placeholder.png" alt="" aria-hidden="true" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="/assets/images/design/sections/the-studio-inside-view-placeholder.png" alt="" aria-hidden="true" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="/assets/images/design/sections/the-studio-inside-view-placeholder.png" alt="" aria-hidden="true" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="/assets/images/design/sections/the-studio-inside-view-placeholder.png" alt="" aria-hidden="true" />
-                  </div>
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="position-relative overflow-hidden">
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
+                    <strong>04</strong>
+                    <span>June 2025</span>
+                  </time>
                 </div>
-              </div>
-
-              <div class="inside-view__controls">
-                <div class="inside-view__navigation">
-                  <button class="inside-view__button inside-view__button--prev" type="button" aria-label="Previous slide">
-                    <img src="/assets/images/design/icons/inside-view-arrow-back.svg" alt="" aria-hidden="true" />
-                  </button>
-                  <button class="inside-view__button inside-view__button--next" type="button" aria-label="Next slide">
-                    <img src="/assets/images/design/icons/inside-view-arrow-forward.svg" alt="" aria-hidden="true" />
-                  </button>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>Event title heading</h3>
+                    <p>Location</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="View event: Event title heading"
+                  >
+                    <span class="stories-card__link-label">
+                      View event
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
                 </div>
-                <div class="swiper-pagination inside-view__pagination" aria-label="Choose a gallery slide"></div>
-              </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="position-relative overflow-hidden">
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
+                    <strong>04</strong>
+                    <span>June 2025</span>
+                  </time>
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>Event title heading</h3>
+                    <p>Location</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="View event: Event title heading"
+                  >
+                    <span class="stories-card__link-label">
+                      View event
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="position-relative overflow-hidden">
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
+                    <strong>04</strong>
+                    <span>June 2025</span>
+                  </time>
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>Event title heading</h3>
+                    <p>Location</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="View event: Event title heading"
+                  >
+                    <span class="stories-card__link-label">
+                      View event
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="position-relative overflow-hidden">
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
+                    <strong>04</strong>
+                    <span>June 2025</span>
+                  </time>
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>Event title heading</h3>
+                    <p>Location</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="View event: Event title heading"
+                  >
+                    <span class="stories-card__link-label">
+                      View event
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="position-relative overflow-hidden">
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
+                    <strong>04</strong>
+                    <span>June 2025</span>
+                  </time>
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>Event title heading</h3>
+                    <p>Location</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="View event: Event title heading"
+                  >
+                    <span class="stories-card__link-label">
+                      View event
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="position-relative overflow-hidden">
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
+                    <strong>04</strong>
+                    <span>June 2025</span>
+                  </time>
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>Event title heading</h3>
+                    <p>Location</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="View event: Event title heading"
+                  >
+                    <span class="stories-card__link-label">
+                      View event
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="position-relative overflow-hidden">
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
+                    <strong>04</strong>
+                    <span>June 2025</span>
+                  </time>
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>Event title heading</h3>
+                    <p>Location</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="View event: Event title heading"
+                  >
+                    <span class="stories-card__link-label">
+                      View event
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card stories-card position-relative h-100">
+                <div class="position-relative overflow-hidden">
+                  <img
+                    class="card-img-top stories-card__image"
+                    src="/assets/images/design/sections/stories-card.webp"
+                    alt="A family walking together through a wooded park"
+                    loading="lazy"
+                  />
+                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
+                    <strong>04</strong>
+                    <span>June 2025</span>
+                  </time>
+                </div>
+                <div class="card-body stories-card__content">
+                  <div class="stories-card__body">
+                    <div class="stories-card__meta d-flex align-items-center">
+                      <span class="stories-card__tag">Story</span>
+                      <span>6 min read</span>
+                    </div>
+                    <h3>Event title heading</h3>
+                    <p>Location</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                  </div>
+                  <a
+                    class="stories-card__link stretched-link"
+                    href="/story-single.html"
+                    aria-label="View event: Event title heading"
+                  >
+                    <span class="stories-card__link-label">
+                      View event
+                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+              </article>
             </div>
           </div>
+
+          <nav class="stories__pagination-wrap" aria-label="Stories pagination">
+            <ul class="pagination stories__pagination justify-content-center align-items-center mb-0">
+              <li class="page-item stories__pagination-arrow">
+                <a class="page-link" href="#stories-grid" aria-label="Previous page">
+                  <img src="/assets/images/design/icons/stories-pagination-arrow.svg" alt="" aria-hidden="true" />
+                </a>
+              </li>
+              <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+              <li class="page-item"><a class="page-link" href="#stories-grid">2</a></li>
+              <li class="page-item"><a class="page-link" href="#stories-grid">3</a></li>
+              <li class="page-item"><span class="page-link">…</span></li>
+              <li class="page-item"><a class="page-link" href="#stories-grid">25</a></li>
+              <li class="page-item stories__pagination-arrow stories__pagination-arrow--next">
+                <a class="page-link" href="#stories-grid" aria-label="Next page">
+                  <img src="/assets/images/design/icons/stories-pagination-arrow.svg" alt="" aria-hidden="true" />
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </section>
-      <!-- /.inside-view ends -->
+      <!-- /.stories ends -->
 
-      <section class="testimonial section-space">
-        <img class="testimonial__background" src="/assets/images/design/sections/testimonial-bg.jpeg" alt="" />
-        <div class="container-fluid site-container">
-          <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
-            <div class="col-lg-6">
-              <button
-                class="video-card"
-                type="button"
-                aria-label="Play Sarah Mitchell's story"
-                data-bs-toggle="modal"
-                data-bs-target="#testimonial-video-modal"
-              >
-                <span class="video-card__background" aria-hidden="true"></span>
-                <img src="/assets/images/design/sections/testimonial-video.png" alt="Sarah Mitchell and her child" />
-                <span class="video-card__play" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M5.33301 31.9997C5.33301 17.2721 17.2721 5.33301 31.9997 5.33301C39.0721 5.33301 45.8549 8.14253 50.8559 13.1435C55.8568 18.1445 58.6663 24.9273 58.6663 31.9997C58.6663 46.7273 46.7273 58.6664 31.9997 58.6664C17.2721 58.6664 5.33301 46.7273 5.33301 31.9997ZM27.1198 43.4131L42.6664 33.7064C43.2482 33.3338 43.6001 32.6906 43.6001 31.9997C43.6001 31.3089 43.2482 30.6656 42.6664 30.2931L27.0664 20.5864C26.452 20.199 25.6758 20.1752 25.0388 20.5241C24.4018 20.8731 24.004 21.54 23.9998 22.2664V41.7331C23.9912 42.4771 24.3963 43.1644 25.0514 43.5171C25.7065 43.8699 26.5033 43.8298 27.1198 43.4131Z"
-                      fill="white"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </div>
 
-            <div class="col-lg-6 testimonial__copy">
-              <blockquote>
-                “They didn't just give us a service. They gave us back a future we thought was gone.”
-              </blockquote>
-              <p class="testimonial__name">Sarah Mitchell</p>
-              <p>Parent, Belfast</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div
-        class="modal fade video-modal"
-        id="testimonial-video-modal"
-        tabindex="-1"
-        aria-labelledby="testimonial-video-modal-title"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-          <div class="modal-content">
-            <h2 class="visually-hidden" id="testimonial-video-modal-title">Sarah Mitchell's story</h2>
-            <button
-              class="btn-close btn-close-white video-modal__close"
-              type="button"
-              data-bs-dismiss="modal"
-              aria-label="Close video"
-            ></button>
-
-            <div class="ratio ratio-16x9">
-              <iframe
-                class="video-modal__iframe"
-                data-src="https://www.youtube-nocookie.com/embed/Tu5KxhraAA8?autoplay=1&amp;rel=0"
-                title="Sarah Mitchell's story"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <section class="partners section-space" id="partners">
         <div class="container-fluid site-container">

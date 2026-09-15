@@ -16,6 +16,18 @@
     var(--bim-cream) 100%
   );
 
+  &--cream {
+    background-color: var(--bim-cream);
+    background-image: none;
+
+    &::before,
+    &::after {
+
+      display: none;
+
+    }
+  }
+
   &::before,
   &::after {
     position: absolute;
@@ -40,6 +52,8 @@
     background-image: url("/assets/images/design/sections/gallery-wave-bottom.svg");
     transform: scaleY(-1);
   }
+
+  
 
   .site-container {
     position: relative;
