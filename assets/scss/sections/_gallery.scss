@@ -15,6 +15,11 @@
     var(--bim-cream) 100%
   );
 
+  &--cream {
+    background-color: var(--bim-cream) !important;
+    --gallery-wave-height: 0;
+  }
+
   &::before,
   &::after {
     position: absolute;
