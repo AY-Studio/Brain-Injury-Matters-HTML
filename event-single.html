@@ -581,461 +581,280 @@
 
     <main id="main-content">
 
-      <!-- .page-header starts -->
-      <section
-        class="page-header page-header--outlined-shapes align-items-center"
-        aria-labelledby="page-header-title"
-      >
-        <img
-          class="page-header__shape page-header__shape--green-left"
-          src="/assets/images/design/sections/page-header-shape-green-left.svg"
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          class="page-header__shape page-header__shape--pink-outline-left"
-          src="/assets/images/design/sections/page-header-shape-pink-outline-left.svg"
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          class="page-header__shape page-header__shape--blue-right"
-          src="/assets/images/design/sections/page-header-shape-blue-right.svg"
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          class="page-header__shape page-header__shape--yellow-outline-right"
-          src="/assets/images/design/sections/page-header-shape-yellow-outline-right.svg"
-          alt=""
-          aria-hidden="true"
-        />
-
-        <div class="page-header__inner">
-          <!-- <p class="eyebrow page-header__eyebrow"></p> -->
-          <h1 id="page-header-title">Events and activities</h1>
-          <p class="page-header__intro">
-           Find your place in our community. There is always something happening that brings us together.
-          </p>
-        </div>
-      </section>
-      <!-- .page-header ends -->
-
-      
-
-      <!-- .stories-featured starts -->
-      <section class="stories-featured section-space" aria-labelledby="featured-story-title">
+      <!-- .story-header starts -->
+      <section class="story-header section-space" aria-labelledby="story-title">
         <div class="container-fluid site-container">
-          <article class="stories-featured__card row g-0 align-items-stretch overflow-hidden">
-            <div class="col-lg-6">
-              <div class="stories-featured__media">
-                <img
-                  src="/assets/images/design/sections/stories-featured.webp"
-                  alt="Two children dressed as superheroes running outdoors"
-                />
+          <div class="row g-0 justify-content-start">
+            <div class="col-xl-6">
+              <div class="story-header__intro">
+                <div class="story-header__heading">
+                  <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb story-header__breadcrumbs align-items-center mb-0">
+                      <li class="breadcrumb-item"><a href="/events.html">Events</a></li>
+                      <li class="story-header__breadcrumb-divider" aria-hidden="true">
+                        <img src="/assets/images/design/icons/story-header-chevron.svg" alt="" />
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">Events title</li>
+                    </ol>
+                  </nav>
+
+                  <div class="d-flex w-100 flex-column align-items-start gap-4">
+                    <h1 id="story-title">Event title heading</h1>
+
+                    <dl class="story-header__event-meta row row-cols-1 row-cols-sm-2 g-4 mb-0">
+                      <div class="col">
+                        <dt class="h5 text-navy fw-bold mb-2">Date</dt>
+                        <dd class="mb-0"><time datetime="2024-02-10">Sat 10 Feb 2024</time></dd>
+                      </div>
+                      <div class="col">
+                        <dt class="h5 text-navy fw-bold mb-2">Location</dt>
+                        <dd class="mb-0">Sydney, Australia</dd>
+                      </div>
+                      <div class="col">
+                        <dt class="h5 text-navy fw-bold mb-2">Artist Speaker</dt>
+                        <dd class="mb-0">Full name</dd>
+                      </div>
+                      <div class="col">
+                        <dt class="h5 text-navy fw-bold mb-2">Type</dt>
+                        <dd class="mb-0">Fundraiser</dd>
+                      </div>
+                    </dl>
+
+                    <p class="mb-0">
+                      Buy your tickets now to join us for a special evening in aid of Brain Injury Matters
+                    </p>
+
+                    <a
+                      class="btn btn-primary mt-2"
+                      href="https://braininjurymatters.org.uk/events"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >Book Ticket</a>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <div class="col-lg-6">
-              <div class="stories-featured__content">
-                <div>
-                  <div class="stories-featured__meta d-flex align-items-center">
-                    <span class="stories-featured__tag">Story</span>
-                    <span>4 min read</span>
-                  </div>
-
-                  <h2 id="featured-story-title">The Big spin</h2>
-                  <p>A 100-mile charity cycle through the glens. Hard miles for a soft landing for families in crisis.</p>
-                </div>
-
-                <a class="stories-featured__link line-link" href="/story-single.html">
-                  Read more
-                  <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <!-- /.stories-featured ends -->
-
-      <!-- .stories starts -->
-      <section class="stories section-space pt-0" aria-label="Community stories">
-        <div class="container-fluid site-container">
-          <div class="stories__filters d-flex flex-wrap align-items-center justify-content-center" aria-label="Filter stories">
-            <button class="btn stories__filter active" type="button" aria-pressed="true">View all</button>
-            <button class="btn stories__filter" type="button" aria-pressed="false">Children</button>
-            <button class="btn stories__filter" type="button" aria-pressed="false">Family</button>
-            <button class="btn stories__filter" type="button" aria-pressed="false">Recovery</button>
-            <button class="btn stories__filter" type="button" aria-pressed="false">Community</button>
-          </div>
-
-          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 stories__grid" id="stories-grid">
-            <div class="col">
-              <article class="card stories-card position-relative h-100">
-                <div class="position-relative overflow-hidden">
-                  <img
-                    class="card-img-top stories-card__image"
-                    src="/assets/images/design/sections/stories-card.webp"
-                    alt="A family walking together through a wooded park"
-                    loading="lazy"
-                  />
-                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
-                    <strong>04</strong>
-                    <span>June 2025</span>
-                  </time>
-                </div>
-                <div class="card-body stories-card__content">
-                  <div class="stories-card__body">
-                    <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
-                      <span>6 min read</span>
-                    </div>
-                    <h3>Event title heading</h3>
-                    <p>Location</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                  </div>
-                  <a
-                    class="stories-card__link stretched-link"
-                    href="/event-single.html"
-                    aria-label="View event: Event title heading"
-                  >
-                    <span class="stories-card__link-label">
-                      View event
-                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col">
-              <article class="card stories-card position-relative h-100">
-                <div class="position-relative overflow-hidden">
-                  <img
-                    class="card-img-top stories-card__image"
-                    src="/assets/images/design/sections/stories-card.webp"
-                    alt="A family walking together through a wooded park"
-                    loading="lazy"
-                  />
-                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
-                    <strong>04</strong>
-                    <span>June 2025</span>
-                  </time>
-                </div>
-                <div class="card-body stories-card__content">
-                  <div class="stories-card__body">
-                    <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
-                      <span>6 min read</span>
-                    </div>
-                    <h3>Event title heading</h3>
-                    <p>Location</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                  </div>
-                  <a
-                    class="stories-card__link stretched-link"
-                    href="/event-single.html"
-                    aria-label="View event: Event title heading"
-                  >
-                    <span class="stories-card__link-label">
-                      View event
-                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col">
-              <article class="card stories-card position-relative h-100">
-                <div class="position-relative overflow-hidden">
-                  <img
-                    class="card-img-top stories-card__image"
-                    src="/assets/images/design/sections/stories-card.webp"
-                    alt="A family walking together through a wooded park"
-                    loading="lazy"
-                  />
-                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
-                    <strong>04</strong>
-                    <span>June 2025</span>
-                  </time>
-                </div>
-                <div class="card-body stories-card__content">
-                  <div class="stories-card__body">
-                    <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
-                      <span>6 min read</span>
-                    </div>
-                    <h3>Event title heading</h3>
-                    <p>Location</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                  </div>
-                  <a
-                    class="stories-card__link stretched-link"
-                    href="/event-single.html"
-                    aria-label="View event: Event title heading"
-                  >
-                    <span class="stories-card__link-label">
-                      View event
-                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col">
-              <article class="card stories-card position-relative h-100">
-                <div class="position-relative overflow-hidden">
-                  <img
-                    class="card-img-top stories-card__image"
-                    src="/assets/images/design/sections/stories-card.webp"
-                    alt="A family walking together through a wooded park"
-                    loading="lazy"
-                  />
-                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
-                    <strong>04</strong>
-                    <span>June 2025</span>
-                  </time>
-                </div>
-                <div class="card-body stories-card__content">
-                  <div class="stories-card__body">
-                    <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
-                      <span>6 min read</span>
-                    </div>
-                    <h3>Event title heading</h3>
-                    <p>Location</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                  </div>
-                  <a
-                    class="stories-card__link stretched-link"
-                    href="/event-single.html"
-                    aria-label="View event: Event title heading"
-                  >
-                    <span class="stories-card__link-label">
-                      View event
-                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col">
-              <article class="card stories-card position-relative h-100">
-                <div class="position-relative overflow-hidden">
-                  <img
-                    class="card-img-top stories-card__image"
-                    src="/assets/images/design/sections/stories-card.webp"
-                    alt="A family walking together through a wooded park"
-                    loading="lazy"
-                  />
-                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
-                    <strong>04</strong>
-                    <span>June 2025</span>
-                  </time>
-                </div>
-                <div class="card-body stories-card__content">
-                  <div class="stories-card__body">
-                    <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
-                      <span>6 min read</span>
-                    </div>
-                    <h3>Event title heading</h3>
-                    <p>Location</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                  </div>
-                  <a
-                    class="stories-card__link stretched-link"
-                    href="/event-single.html"
-                    aria-label="View event: Event title heading"
-                  >
-                    <span class="stories-card__link-label">
-                      View event
-                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col">
-              <article class="card stories-card position-relative h-100">
-                <div class="position-relative overflow-hidden">
-                  <img
-                    class="card-img-top stories-card__image"
-                    src="/assets/images/design/sections/stories-card.webp"
-                    alt="A family walking together through a wooded park"
-                    loading="lazy"
-                  />
-                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
-                    <strong>04</strong>
-                    <span>June 2025</span>
-                  </time>
-                </div>
-                <div class="card-body stories-card__content">
-                  <div class="stories-card__body">
-                    <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
-                      <span>6 min read</span>
-                    </div>
-                    <h3>Event title heading</h3>
-                    <p>Location</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                  </div>
-                  <a
-                    class="stories-card__link stretched-link"
-                    href="/event-single.html"
-                    aria-label="View event: Event title heading"
-                  >
-                    <span class="stories-card__link-label">
-                      View event
-                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col">
-              <article class="card stories-card position-relative h-100">
-                <div class="position-relative overflow-hidden">
-                  <img
-                    class="card-img-top stories-card__image"
-                    src="/assets/images/design/sections/stories-card.webp"
-                    alt="A family walking together through a wooded park"
-                    loading="lazy"
-                  />
-                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
-                    <strong>04</strong>
-                    <span>June 2025</span>
-                  </time>
-                </div>
-                <div class="card-body stories-card__content">
-                  <div class="stories-card__body">
-                    <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
-                      <span>6 min read</span>
-                    </div>
-                    <h3>Event title heading</h3>
-                    <p>Location</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                  </div>
-                  <a
-                    class="stories-card__link stretched-link"
-                    href="/event-single.html"
-                    aria-label="View event: Event title heading"
-                  >
-                    <span class="stories-card__link-label">
-                      View event
-                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col">
-              <article class="card stories-card position-relative h-100">
-                <div class="position-relative overflow-hidden">
-                  <img
-                    class="card-img-top stories-card__image"
-                    src="/assets/images/design/sections/stories-card.webp"
-                    alt="A family walking together through a wooded park"
-                    loading="lazy"
-                  />
-                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
-                    <strong>04</strong>
-                    <span>June 2025</span>
-                  </time>
-                </div>
-                <div class="card-body stories-card__content">
-                  <div class="stories-card__body">
-                    <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
-                      <span>6 min read</span>
-                    </div>
-                    <h3>Event title heading</h3>
-                    <p>Location</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                  </div>
-                  <a
-                    class="stories-card__link stretched-link"
-                    href="/event-single.html"
-                    aria-label="View event: Event title heading"
-                  >
-                    <span class="stories-card__link-label">
-                      View event
-                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col">
-              <article class="card stories-card position-relative h-100">
-                <div class="position-relative overflow-hidden">
-                  <img
-                    class="card-img-top stories-card__image"
-                    src="/assets/images/design/sections/stories-card.webp"
-                    alt="A family walking together through a wooded park"
-                    loading="lazy"
-                  />
-                  <time class="event-card__date position-absolute top-0 end-0 m-3" datetime="2025-06-04">
-                    <strong>04</strong>
-                    <span>June 2025</span>
-                  </time>
-                </div>
-                <div class="card-body stories-card__content">
-                  <div class="stories-card__body">
-                    <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
-                      <span>6 min read</span>
-                    </div>
-                    <h3>Event title heading</h3>
-                    <p>Location</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                  </div>
-                  <a
-                    class="stories-card__link stretched-link"
-                    href="/event-single.html"
-                    aria-label="View event: Event title heading"
-                  >
-                    <span class="stories-card__link-label">
-                      View event
-                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                    </span>
-                  </a>
-                </div>
-              </article>
             </div>
           </div>
 
-          <nav class="stories__pagination-wrap" aria-label="Stories pagination">
-            <ul class="pagination stories__pagination justify-content-center align-items-center mb-0">
-              <li class="page-item stories__pagination-arrow">
-                <a class="page-link" href="#stories-grid" aria-label="Previous page">
-                  <img src="/assets/images/design/icons/stories-pagination-arrow.svg" alt="" aria-hidden="true" />
-                </a>
-              </li>
-              <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
-              <li class="page-item"><a class="page-link" href="#stories-grid">2</a></li>
-              <li class="page-item"><a class="page-link" href="#stories-grid">3</a></li>
-              <li class="page-item"><span class="page-link">…</span></li>
-              <li class="page-item"><a class="page-link" href="#stories-grid">25</a></li>
-              <li class="page-item stories__pagination-arrow stories__pagination-arrow--next">
-                <a class="page-link" href="#stories-grid" aria-label="Next page">
-                  <img src="/assets/images/design/icons/stories-pagination-arrow.svg" alt="" aria-hidden="true" />
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <div class="story-header__media story-header__media--parallax">
+            <img
+              src="/assets/images/design/sections/story-header.webp"
+              alt="A family walking together through a sunlit wooded park"
+            />
+          </div>
         </div>
       </section>
-      <!-- /.stories ends -->
+      <!-- /.story-header ends -->
+
+      <!-- .story starts -->
+      <section class="story section-space" aria-labelledby="story-introduction">
+        <div class="container-fluid site-container">
+          <div class="row g-0 justify-content-center">
+            <article class="story__content col-12 col-lg-8">
+              <h2 id="story-introduction">Introduction</h2>
+
+              <p>
+                Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget
+                vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate
+                arcu amet, vitae nisi, tellus tincidunt. At feugiat sapien varius id.
+              </p>
+
+              <p>
+                Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed
+                auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus,
+                at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.
+              </p>
+
+              <figure>
+                <div class="story__image">
+                  <img
+                    src="/assets/images/design/sections/story-body.webp"
+                    alt="A father kissing his smiling child"
+                  />
+                </div>
+                <figcaption>Image caption goes here</figcaption>
+              </figure>
+
+              <h3>
+                Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet
+                pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada
+                fringilla.
+              </h3>
+
+              <p>
+                Elit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus.
+                Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor
+                aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat
+                donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem id. Dolor lacus, eget
+                nunc lectus in tellus, pharetra, porttitor.
+              </p>
+
+              <blockquote>
+                <p>
+                  "Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget
+                  consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus."
+                </p>
+              </blockquote>
+
+              <p>
+                Tristique odio senectus nam posuere ornare leo metus, ultricies. Blandit duis ultricies vulputate morbi
+                feugiat cras placerat elit. Aliquam tellus lorem sed ac. Montes, sed mattis pellentesque suscipit
+                accumsan. Cursus viverra aenean magna risus elementum faucibus molestie pellentesque. Arcu ultricies sed
+                mauris vestibulum.
+              </p>
+
+              <h2>Conclusion</h2>
+
+              <p>
+                Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies.
+                Duis est sit sed leo nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at
+                scelerisque amet nulla purus habitasse.
+              </p>
+
+              <p>
+                Nunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas condimentum mi massa. In tincidunt
+                pharetra consectetur sed duis facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum
+                eget nibh tortor commodo cursus.
+              </p>
+
+              <p>
+                Odio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet
+                erat dolor enim. Ornare id morbi eget ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec
+                posuere pharetra odio consequat scelerisque et, nunc tortor.Nulla adipiscing erat a erat. Condimentum
+                lorem posuere gravida enim posuere cursus diam.
+              </p>
+
+              <footer class="story__footer d-flex flex-column flex-md-row align-items-md-end justify-content-between">
+                <div class="story__share">
+                  <h3>Share this post</h3>
+                  <div class="d-flex align-items-center" role="group" aria-label="Share this post">
+                    <a
+                      class="story-header__share-button"
+                      href="mailto:share@story.com"
+                    >
+                      <img src="/assets/images/design/icons/story-share-link.svg" alt="" aria-hidden="true" />
+                    </a>
+                    <a
+                      class="story-header__share-button"
+                      href="https://www.linkedin.com/sharing/share-offsite/"
+                      data-story-share="linkedin"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Share this post on LinkedIn"
+                    >
+                      <img src="/assets/images/design/icons/story-share-linkedin.svg" alt="" aria-hidden="true" />
+                    </a>
+                    <a
+                      class="story-header__share-button"
+                      href="https://twitter.com/intent/tweet"
+                      data-story-share="x"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Share this post on X"
+                    >
+                      <img src="/assets/images/design/icons/story-share-x.svg" alt="" aria-hidden="true" />
+                    </a>
+                    <a
+                      class="story-header__share-button"
+                      href="https://www.facebook.com/sharer/sharer.php"
+                      data-story-share="facebook"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Share this post on Facebook"
+                    >
+                      <img src="/assets/images/design/icons/story-share-facebook.svg" alt="" aria-hidden="true" />
+                    </a>
+                  </div>
+                </div>
+
+                <div class="story__tags d-flex flex-wrap" aria-label="Story tags">
+                  <a class="badge line-link" href="/stories.html?tag=tag-one">Tag one</a>
+                  <a class="badge line-link" href="/stories.html?tag=tag-two">Tag two</a>
+                  <a class="badge line-link" href="/stories.html?tag=tag-three">Tag three</a>
+                  <a class="badge line-link" href="/stories.html?tag=tag-four">Tag four</a>
+                </div>
+                
+              </footer>
+
+              <div class="story-header__details my-5 d-flex flex-wrap align-items-center justify-content-center border-top py-5">
+                  <div class="story-header__author d-flex align-items-center">
+                    <img
+                      class="story-header__author-image"
+                      src="/assets/images/design/sections/story-author-placeholder.webp"
+                      alt=""
+                    />
+                    <div class="story-header__author-content">
+                      <p class="story-header__author-name">Full name</p>
+                      <div class="story-header__time d-flex align-items-center">
+                        Job title, Company name
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- /.story ends -->
+
+      <!-- .dual-cta starts -->
+
+      <section class="dual-cta" id="referral" aria-label="Support and referrals">
+        <div class="container-fluid site-container">
+          <div class="dual-cta__panel">
+            <div class="row dual-cta__row">
+              <div class="col-lg-6">
+                <article class="dual-cta__item">
+                  <div class="dual-cta__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                      <path d="M7.10767 42.2994C6.18767 42.2994 5.39001 41.9616 4.71467 41.286C4.03901 40.6106 3.70117 39.813 3.70117 38.893V9.10795C3.70117 8.18462 4.03901 7.38412 4.71467 6.70645C5.39001 6.02845 6.18767 5.68945 7.10767 5.68945H18.7732C19.6845 5.68945 20.4802 6.02845 21.1602 6.70645C21.8398 7.38412 22.1797 8.18462 22.1797 9.10795V38.893C22.1797 39.813 21.8398 40.6106 21.1602 41.286C20.4802 41.9616 19.6845 42.2994 18.7732 42.2994H7.10767ZM29.2392 42.2994C28.3162 42.2994 27.5157 41.9616 26.8377 41.286C26.1597 40.6106 25.8207 39.813 25.8207 38.893V9.10795C25.8207 8.18462 26.1597 7.38412 26.8377 6.70645C27.5157 6.02845 28.3162 5.68945 29.2392 5.68945H40.8927C41.816 5.68945 42.6165 6.02845 43.2942 6.70645C43.9722 7.38412 44.3112 8.18462 44.3112 9.10795V38.893C44.3112 39.813 43.9722 40.6106 43.2942 41.286C42.6165 41.9616 41.816 42.2994 40.8927 42.2994H29.2392ZM7.02417 38.9765H18.8567V9.01245H7.02417V38.9765ZM29.1437 38.9765H40.9882V9.01245H29.1437V38.9765ZM15.8807 28.558C15.8807 28.1 15.7228 27.7175 15.4072 27.4105C15.0915 27.1031 14.7055 26.9495 14.2492 26.9495H11.6077C11.1523 26.9495 10.7705 27.1068 10.4622 27.4215C10.1542 27.7361 10.0002 28.1223 10.0002 28.58C10.0002 29.038 10.1542 29.4205 10.4622 29.7275C10.7705 30.0348 11.1523 30.1885 11.6077 30.1885H14.2492C14.7055 30.1885 15.0915 30.0311 15.4072 29.7165C15.7228 29.4018 15.8807 29.0156 15.8807 28.558ZM38.0002 28.558C38.0002 28.1 37.845 27.7175 37.5347 27.4105C37.224 27.1031 36.8393 26.9495 36.3807 26.9495H33.7392C33.2838 26.9495 32.902 27.1068 32.5937 27.4215C32.2857 27.7361 32.1317 28.1223 32.1317 28.58C32.1317 29.038 32.2857 29.4205 32.5937 29.7275C32.902 30.0348 33.2838 30.1885 33.7392 30.1885H36.3807C36.8393 30.1885 37.224 30.0311 37.5347 29.7165C37.845 29.4018 38.0002 29.0156 38.0002 28.558ZM15.8807 22.151C15.8807 21.6933 15.7228 21.3075 15.4072 20.9935C15.0915 20.6791 14.7055 20.522 14.2492 20.522H11.6077C11.1523 20.522 10.7705 20.6825 10.4622 21.0035C10.1542 21.3245 10.0002 21.7168 10.0002 22.1805C10.0002 22.6298 10.1542 23.0036 10.4622 23.302C10.7705 23.6003 11.1523 23.7495 11.6077 23.7495H14.2492C14.7038 23.7495 15.0893 23.5983 15.4057 23.296C15.7223 22.9936 15.8807 22.612 15.8807 22.151ZM38.0002 22.151C38.0002 21.6933 37.845 21.3075 37.5347 20.9935C37.224 20.6791 36.8393 20.522 36.3807 20.522H33.7392C33.2838 20.522 32.902 20.6825 32.5937 21.0035C32.2857 21.3245 32.1317 21.7168 32.1317 22.1805C32.1317 22.6298 32.2857 23.0036 32.5937 23.302C32.902 23.6003 33.2838 23.7495 33.7392 23.7495H36.3807C36.832 23.7495 37.2147 23.5983 37.5287 23.296C37.843 22.9936 38.0002 22.612 38.0002 22.151ZM15.8807 15.712C15.8807 15.254 15.7228 14.868 15.4072 14.554C15.0915 14.24 14.7055 14.083 14.2492 14.083H11.6077C11.1523 14.083 10.7705 14.243 10.4622 14.563C10.1542 14.8826 10.0002 15.2735 10.0002 15.7355C10.0002 16.1968 10.1542 16.5766 10.4622 16.875C10.7705 17.173 11.1523 17.322 11.6077 17.322H14.2492C14.7038 17.322 15.0893 17.1698 15.4057 16.8655C15.7223 16.5608 15.8807 16.1763 15.8807 15.712ZM38.0002 15.712C38.0002 15.254 37.845 14.868 37.5347 14.554C37.224 14.24 36.8393 14.083 36.3807 14.083H33.7392C33.2838 14.083 32.902 14.243 32.5937 14.563C32.2857 14.8826 32.1317 15.2735 32.1317 15.7355C32.1317 16.1968 32.2857 16.5766 32.5937 16.875C32.902 17.173 33.2838 17.322 33.7392 17.322H36.3807C36.832 17.322 37.2147 17.1698 37.5287 16.8655C37.843 16.5608 38.0002 16.1763 38.0002 15.712Z" fill="#000069"/>
+                    </svg>
+                  </div>
+
+                  <div class="dual-cta__content">
+                    <h2>Host your own</h2>
+                    <p>
+                      A bake sale, a quiz night or a sponsored walk. Your idea can power real change for families.
+                    </p>
+                  </div>
+
+                  <div class="dual-cta__actions">
+                    <a class="btn btn-primary" href="/fundraise.html">
+                      Fundraise
+                    </a>
+                    <a class="btn btn-outline-primary" href="/contact.html">Get In Touch</a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-lg-6">
+                <article class="dual-cta__item">
+                  <div class="dual-cta__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="41" viewBox="0 0 33 41" fill="none">
+                      <path d="M16.2975 24.1795C17.4385 24.1795 18.4125 23.772 19.2195 22.957C20.0268 22.1423 20.4305 21.1663 20.4305 20.029C20.4305 18.8917 20.0273 17.918 19.221 17.108C18.415 16.2977 17.4415 15.8925 16.3005 15.8925C15.1595 15.8925 14.1855 16.298 13.3785 17.109C12.5712 17.9203 12.1675 18.8955 12.1675 20.0345C12.1675 21.1702 12.5707 22.1448 13.377 22.9585C14.183 23.7725 15.1565 24.1795 16.2975 24.1795ZM8.1675 32.4425H24.4305V31.161C24.4305 30.338 24.2058 29.579 23.7565 28.884C23.3072 28.189 22.6913 27.6708 21.909 27.3295C21.0343 26.9628 20.1322 26.6795 19.2025 26.4795C18.2728 26.2795 17.305 26.1795 16.299 26.1795C15.293 26.1795 14.3252 26.2795 13.3955 26.4795C12.4658 26.6795 11.5677 26.9628 10.701 27.3295C9.91067 27.6708 9.29083 28.189 8.8415 28.884C8.39217 29.579 8.1675 30.338 8.1675 31.161V32.4425ZM29.1915 40.61H3.4065C2.4865 40.61 1.68883 40.2722 1.0135 39.5965C0.337833 38.9212 0 38.1235 0 37.2035V3.4185C0 2.49517 0.337833 1.69466 1.0135 1.017C1.68883 0.338998 2.4865 0 3.4065 0H19.051C19.5227 0 19.9722 0.0953319 20.3995 0.285999C20.8268 0.476665 21.1937 0.725164 21.5 1.0315L31.5785 11.11C31.8848 11.4163 32.1333 11.7832 32.324 12.2105C32.5147 12.6378 32.61 13.0873 32.61 13.559V37.2035C32.61 38.1235 32.271 38.9212 31.593 39.5965C30.9153 40.2722 30.1148 40.61 29.1915 40.61ZM29.1915 37.2035V13.6565L18.946 3.4185H3.4065V37.2035H29.1915Z" fill="#000069"/>
+                    </svg>
+                  </div>
+
+                  <div class="dual-cta__content">
+                    <h2>Volunteer with us</h2>
+                    <p>
+                      Give your time at an event and see the difference a single afternoon can make to someone.
+                    </p>
+                  </div>
+
+                  <div class="dual-cta__actions">
+                    <a class="btn btn-primary" href="/volunteer.html">Volunteer</a>
+                    <a class="btn btn-outline-primary" href="/contact.html">Get In Touch</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- /.dual-cta ends -->
 
 
 

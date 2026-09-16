@@ -612,7 +612,9 @@ const initialiseScrollAnimations = () => {
     );
   });
 
-  const pageHeaderParallaxImages = document.querySelectorAll(".page-header__image--parallax");
+  const pageHeaderParallaxImages = document.querySelectorAll(
+    ".page-header__image--parallax, .story-header__media--parallax"
+  );
 
   pageHeaderParallaxImages.forEach((imageWrap) => {
     const image = imageWrap.querySelector("img");
