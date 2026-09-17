@@ -320,6 +320,35 @@ if (testimonialVideoModal && testimonialVideoIframe) {
   });
 }
 
+const teamBioModal = document.querySelector("#team-bio-modal");
+
+if (teamBioModal) {
+  const teamBioName = teamBioModal.querySelector("#team-bio-modal-title");
+  const teamBioRole = teamBioModal.querySelector(".team-bio-modal__role");
+  const teamBioCopy = teamBioModal.querySelector(".team-bio-modal__bio");
+
+  teamBioModal.addEventListener("show.bs.modal", (event) => {
+    const card = event.relatedTarget?.closest(".our-team-card");
+
+    if (!card) return;
+
+    const fullBio = card.querySelector(".our-team-card__bio");
+    const summary = card.querySelector(".our-team-card__summary")?.textContent.trim() || "";
+
+    teamBioName.textContent = card.querySelector(".our-team-card__title h3")?.textContent.trim() || "";
+    teamBioRole.textContent = card.querySelector(".our-team-card__title p")?.textContent.trim() || "";
+
+    if (fullBio) {
+      const bioContent = [...fullBio.children].map((element) => element.cloneNode(true));
+      teamBioCopy.replaceChildren(...bioContent);
+    } else {
+      const paragraph = document.createElement("p");
+      paragraph.textContent = summary;
+      teamBioCopy.replaceChildren(paragraph);
+    }
+  });
+}
+
 const commonEffectsStacks = [...document.querySelectorAll(".common-effects__cards")];
 
 const syncCommonEffectsStacks = () => {

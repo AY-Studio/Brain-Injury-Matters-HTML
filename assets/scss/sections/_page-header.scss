@@ -6,7 +6,7 @@
   min-height: 500px;
   align-items: flex-start;
   justify-content: center;
-  padding: 112px 1.25rem 80px;
+  padding: 112px 1.25rem 112px;
   overflow: hidden;
   background: var(--bim-cream);
   text-align: center;
@@ -43,7 +43,7 @@
     width: 100%;
     margin: 24px 0 0;
     font-size: 1.25rem;
-    font-weight: 500;
+    // font-weight: 500;
     line-height: 1.5;
   }
 
