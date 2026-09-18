@@ -34,7 +34,6 @@
     <script src="/assets/js/vendor/gsap.min.js" defer></script>
     <script src="/assets/js/vendor/SplitText.min.js" defer></script>
     <script src="/assets/js/vendor/ScrollTrigger.min.js" defer></script>
-    <script src="/assets/js/vendor/countUp.umd.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
   </head>
   <body>
@@ -582,542 +581,185 @@
     <main id="main-content">
 
       <!-- .page-header starts -->
-      <section
-        class="page-header page-header--outlined-shapes align-items-center"
-        aria-labelledby="page-header-title"
-      >
+      <section class="page-header" aria-labelledby="page-header-title">
         <img
-          class="page-header__shape page-header__shape--green-left"
-          src="/assets/images/design/sections/page-header-shape-green-left.svg"
+          class="page-header__shape page-header__shape--yellow"
+          src="/assets/images/design/sections/page-header-shape-yellow.svg"
           alt=""
           aria-hidden="true"
         />
         <img
-          class="page-header__shape page-header__shape--pink-outline-left"
-          src="/assets/images/design/sections/page-header-shape-pink-outline-left.svg"
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          class="page-header__shape page-header__shape--blue-right"
-          src="/assets/images/design/sections/page-header-shape-blue-right.svg"
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          class="page-header__shape page-header__shape--yellow-outline-right"
-          src="/assets/images/design/sections/page-header-shape-yellow-outline-right.svg"
+          class="page-header__shape page-header__shape--pink"
+          src="/assets/images/design/sections/page-header-shape-pink.svg"
           alt=""
           aria-hidden="true"
         />
 
         <div class="page-header__inner">
-          <!-- <p class="eyebrow page-header__eyebrow"></p> -->
-          <h1 id="page-header-title">Our funders and partners</h1>
+          <!-- <p class="eyebrow page-header__eyebrow">Who We Help</p> -->
+          <h1 id="page-header-title">Get involved</h1>
           <p class="page-header__intro">
-           Their generosity builds the foundation for every life we touch. We could not do this work alone.
+            A single act of generosity can alter a life's course. Join a community that rebuilds futures every day.
           </p>
+          <div class="page-header__actions">
+            <a class="btn btn-primary" href="/donate.html">
+              Donate
+            </a>
+            <a class="btn btn-outline-primary" href="/fundraise.html">
+              Fundraise
+            </a>
+          </div>
         </div>
       </section>
       <!-- .page-header ends -->
 
-      <section class="who-we-are feature-section section-space" id="services">
-        <div class="container-fluid site-container">
-          <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
-            <div class="col-lg-6 feature-section__copy">
-              <p class="eyebrow">Funding</p>
-              <h2>Your funding builds the ground beneath their feet</h2>
-              <p>
-                Every pound given directly fuels specialist support for children finding their way back to play and
-                adults reclaiming their independence. You make the quiet miracles possible.
-              </p>
-
-               <div class="button-row">
-                  <a class="btn btn-primary" href="/impact.html">Impact</a>
-                  <a class="btn btn-outline-primary" href="/funders.html">
-                    Become a Partner
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M9.38672 6.67285C9.48754 6.67285 9.56452 6.70326 9.64258 6.78125L14.5869 11.7256C14.6408 11.7795 14.666 11.8215 14.6777 11.8496V11.8506C14.6925 11.8861 14.7012 11.9259 14.7012 11.9746C14.7012 12.0233 14.6925 12.0631 14.6777 12.0986V12.0996C14.666 12.1277 14.6408 12.1697 14.5869 12.2236L9.61816 17.1924C9.54039 17.2702 9.47325 17.292 9.39258 17.2891C9.29855 17.2856 9.21769 17.2537 9.13184 17.168C9.05371 17.0898 9.02246 17.013 9.02246 16.9121C9.02246 16.8112 9.05371 16.7344 9.13184 16.6562L13.8135 11.9746L9.10645 7.26758C9.02878 7.18988 9.00684 7.12357 9.00977 7.04297C9.01321 6.9487 9.04578 6.86731 9.13184 6.78125C9.20976 6.70344 9.28613 6.67293 9.38672 6.67285Z" fill="#013D9E" stroke="#013D9E"></path>
-                  </svg>
-                  </a>
-                </div>
-
-            </div>
-
-            <div class="col-lg-5 offset-lg-1 feature-section__visual">
-              <span aria-hidden="true"></span>
-              <img
-                src="/assets/images/design/sections/funders-funding.webp"
-                alt="Two children wearing capes running together outdoors"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      
-      <!-- .current-funders starts -->
-
-      <section class="support current-funders section-space" aria-labelledby="current-funders-heading">
-        <div class="container-fluid site-container">
-          <div class="section-intro current-funders__intro text-center mx-auto">
-            <p class="eyebrow">Funding</p>
-            <h2 id="current-funders-heading">Current funders who make our work possible</h2>
-            <p>
-              We are proud to partner with trusts, foundations, and businesses who share our commitment to rebuilding
-              lives.
-            </p>
-          </div>
-
-          <svg class="position-absolute" width="0" height="0" aria-hidden="true">
-            <symbol id="current-funders-linkedin-icon" viewBox="0 0 24 24">
-              <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M4.5 3.24268C3.67157 3.24268 3 3.91425 3 4.74268V19.7427C3 20.5711 3.67157 21.2427 4.5 21.2427H19.5C20.3284 21.2427 21 20.5711 21 19.7427V4.74268C21 3.91425 20.3284 3.24268 19.5 3.24268H4.5ZM8.52076 7.2454C8.52639 8.20165 7.81061 8.79087 6.96123 8.78665C6.16107 8.78243 5.46357 8.1454 5.46779 7.24681C5.47201 6.40165 6.13998 5.72243 7.00764 5.74212C7.88795 5.76181 8.52639 6.40728 8.52076 7.2454ZM12.2797 10.0044H9.75971H9.7583V18.5643H12.4217V18.3646C12.4217 17.9847 12.4214 17.6047 12.4211 17.2246C12.4203 16.2108 12.4194 15.1959 12.4246 14.1824C12.426 13.9363 12.4372 13.6804 12.5005 13.4455C12.7381 12.568 13.5271 12.0013 14.4074 12.1406C14.9727 12.2291 15.3467 12.5568 15.5042 13.0898C15.6013 13.423 15.6449 13.7816 15.6491 14.129C15.6605 15.1766 15.6589 16.2242 15.6573 17.2719C15.6567 17.6417 15.6561 18.0117 15.6561 18.3815V18.5629H18.328V18.3576C18.328 17.9056 18.3278 17.4537 18.3275 17.0018C18.327 15.8723 18.3264 14.7428 18.3294 13.6129C18.3308 13.1024 18.276 12.599 18.1508 12.1054C17.9638 11.3713 17.5771 10.7638 16.9485 10.3251C16.5027 10.0129 16.0133 9.81178 15.4663 9.78928C15.404 9.78669 15.3412 9.7833 15.2781 9.77989C14.9984 9.76477 14.7141 9.74941 14.4467 9.80334C13.6817 9.95662 13.0096 10.3068 12.5019 10.9241C12.4429 10.9949 12.3852 11.0668 12.2991 11.1741L12.2797 11.1984V10.0044ZM5.68164 18.5671H8.33242V10.01H5.68164V18.5671Z" />
-            </symbol>
-            <symbol id="current-funders-x-icon" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M17.1761 4.24268H19.9362L13.9061 11.0201L21 20.2427H15.4456L11.0951 14.6493L6.11723 20.2427H3.35544L9.80517 12.9935L3 4.24268H8.69545L12.6279 9.3553L17.1761 4.24268ZM16.2073 18.6181H17.7368L7.86441 5.78196H6.2232L16.2073 18.6181Z" />
-            </symbol>
-            <symbol id="current-funders-dribbble-icon" viewBox="0 0 24 24">
-              <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M12 3C7.03145 3 3 7.03145 3 12C3 16.9686 7.03145 21 12 21C16.9588 21 21 16.9686 21 12C21 7.03145 16.9588 3 12 3ZM17.9447 7.14859C19.0184 8.45662 19.6627 10.1258 19.6822 11.9317C19.4284 11.8829 16.8904 11.3655 14.333 11.6876C14.2744 11.5607 14.2256 11.4241 14.167 11.2874C14.0108 10.9165 13.8352 10.5358 13.6594 10.1746C16.4902 9.0228 17.7787 7.36334 17.9447 7.14859ZM12 4.32755C13.9523 4.32755 15.7386 5.05966 17.0955 6.26031C16.9588 6.45553 15.7972 8.00759 13.064 9.03253C11.8048 6.71909 10.4089 4.82538 10.1942 4.53254C10.77 4.39588 11.3753 4.32755 12 4.32755ZM8.72996 5.04989C8.93494 5.32321 10.3015 7.22668 11.5803 9.49131C7.98807 10.448 4.81562 10.4284 4.47397 10.4284C4.9718 8.04664 6.58243 6.06507 8.72996 5.04989ZM4.30803 12.0098V11.7755C4.63991 11.7852 8.36876 11.8341 12.205 10.6822C12.4295 11.1117 12.6345 11.551 12.8297 11.9902C12.7321 12.0195 12.6247 12.0488 12.5271 12.0781C8.56399 13.3568 6.45553 16.8514 6.27983 17.1442C5.05965 15.7874 4.30803 13.9816 4.30803 12.0098ZM12 19.692C10.2234 19.692 8.58352 19.0868 7.28525 18.0716C7.42191 17.7885 8.98371 14.782 13.3178 13.269L13.3666 13.2495C14.4501 16.051 14.8894 18.4034 15.0065 19.077C14.0792 19.4772 13.064 19.692 12 19.692ZM16.2852 18.3742C16.2072 17.9056 15.7972 15.6605 14.7917 12.898C17.2028 12.5173 19.3113 13.1421 19.5749 13.23C19.243 15.3677 18.013 17.2126 16.2852 18.3742Z" />
-            </symbol>
-          </svg>
-
-          <div class="row g-5 justify-content-center">
-            <div class="col-md-6 col-lg-4">
-              <article class="card h-100 border-0 bg-transparent support-card support-card--funder">
-                <div class="current-funders__logo ratio ratio-1x1">
-                  <img src="/assets/images/design/partners/ulster-hockey.jpeg" alt="Ulster Hockey" />
-                </div>
-                <div class="card-body">
-                  <h3 class="card-title">Ulster Hockey</h3>
-                  <p class="card-text">
-                    Ulster Hockey supports Brain Injury Matters (NI) through a three-year partnership, naming it as its
-                    Primary Charity Partner. The partnership helps raise awareness of acquired brain injury and supports
-                    the charity's work with children, adults and families across Northern Ireland. Through its sporting
-                    community, Ulster Hockey helps promote inclusion, wellbeing and greater understanding of brain injury.
-                  </p>
-                  <a class="btn current-funders__link" href="#">
-                    Read More
-                    <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                  </a>
-                </div>
-                <div class="current-funders__socials" aria-label="Ulster Hockey social media links">
-                  <a href="#" aria-label="Ulster Hockey on LinkedIn">
-                    <svg aria-hidden="true"><use href="#current-funders-linkedin-icon"></use></svg>
-                  </a>
-                  <a href="#" aria-label="Ulster Hockey on X">
-                    <svg aria-hidden="true"><use href="#current-funders-x-icon"></use></svg>
-                  </a>
-                  <a href="#" aria-label="Ulster Hockey on Dribbble">
-                    <svg aria-hidden="true"><use href="#current-funders-dribbble-icon"></use></svg>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <article class="card h-100 border-0 bg-transparent support-card support-card--funder">
-                <div class="current-funders__logo ratio ratio-1x1">
-                  <img src="/assets/images/design/partners/ulster-hockey.jpeg" alt="Ulster Hockey" />
-                </div>
-                <div class="card-body">
-                  <h3 class="card-title">Ulster Hockey</h3>
-                  <p class="card-text">
-                    Ulster Hockey supports Brain Injury Matters (NI) through a three-year partnership, naming it as its
-                    Primary Charity Partner. The partnership helps raise awareness of acquired brain injury and supports
-                    the charity's work with children, adults and families across Northern Ireland. Through its sporting
-                    community, Ulster Hockey helps promote inclusion, wellbeing and greater understanding of brain injury.
-                  </p>
-                  <a class="btn current-funders__link" href="#">
-                    Read More
-                    <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                  </a>
-                </div>
-                <div class="current-funders__socials" aria-label="Ulster Hockey social media links">
-                  <a href="#" aria-label="Ulster Hockey on LinkedIn"><svg aria-hidden="true"><use href="#current-funders-linkedin-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on X"><svg aria-hidden="true"><use href="#current-funders-x-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on Dribbble"><svg aria-hidden="true"><use href="#current-funders-dribbble-icon"></use></svg></a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <article class="card h-100 border-0 bg-transparent support-card support-card--funder">
-                <div class="current-funders__logo ratio ratio-1x1"><img src="/assets/images/design/partners/ulster-hockey.jpeg" alt="Ulster Hockey" /></div>
-                <div class="card-body">
-                  <h3 class="card-title">Ulster Hockey</h3>
-                  <p class="card-text">Ulster Hockey supports Brain Injury Matters (NI) through a three-year partnership, naming it as its Primary Charity Partner. The partnership helps raise awareness of acquired brain injury and supports the charity's work with children, adults and families across Northern Ireland. Through its sporting community, Ulster Hockey helps promote inclusion, wellbeing and greater understanding of brain injury.</p>
-                  <a class="btn current-funders__link" href="#">Read More <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" /></a>
-                </div>
-                <div class="current-funders__socials" aria-label="Ulster Hockey social media links">
-                  <a href="#" aria-label="Ulster Hockey on LinkedIn"><svg aria-hidden="true"><use href="#current-funders-linkedin-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on X"><svg aria-hidden="true"><use href="#current-funders-x-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on Dribbble"><svg aria-hidden="true"><use href="#current-funders-dribbble-icon"></use></svg></a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <article class="card h-100 border-0 bg-transparent support-card support-card--funder">
-                <div class="current-funders__logo ratio ratio-1x1"><img src="/assets/images/design/partners/ulster-hockey.jpeg" alt="Ulster Hockey" /></div>
-                <div class="card-body">
-                  <h3 class="card-title">Ulster Hockey</h3>
-                  <p class="card-text">Ulster Hockey supports Brain Injury Matters (NI) through a three-year partnership, naming it as its Primary Charity Partner. The partnership helps raise awareness of acquired brain injury and supports the charity's work with children, adults and families across Northern Ireland. Through its sporting community, Ulster Hockey helps promote inclusion, wellbeing and greater understanding of brain injury.</p>
-                  <a class="btn current-funders__link" href="#">Read More <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" /></a>
-                </div>
-                <div class="current-funders__socials" aria-label="Ulster Hockey social media links">
-                  <a href="#" aria-label="Ulster Hockey on LinkedIn"><svg aria-hidden="true"><use href="#current-funders-linkedin-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on X"><svg aria-hidden="true"><use href="#current-funders-x-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on Dribbble"><svg aria-hidden="true"><use href="#current-funders-dribbble-icon"></use></svg></a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <article class="card h-100 border-0 bg-transparent support-card support-card--funder">
-                <div class="current-funders__logo ratio ratio-1x1"><img src="/assets/images/design/partners/ulster-hockey.jpeg" alt="Ulster Hockey" /></div>
-                <div class="card-body">
-                  <h3 class="card-title">Ulster Hockey</h3>
-                  <p class="card-text">Ulster Hockey supports Brain Injury Matters (NI) through a three-year partnership, naming it as its Primary Charity Partner. The partnership helps raise awareness of acquired brain injury and supports the charity's work with children, adults and families across Northern Ireland. Through its sporting community, Ulster Hockey helps promote inclusion, wellbeing and greater understanding of brain injury.</p>
-                  <a class="btn current-funders__link" href="#">Read More <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" /></a>
-                </div>
-                <div class="current-funders__socials" aria-label="Ulster Hockey social media links">
-                  <a href="#" aria-label="Ulster Hockey on LinkedIn"><svg aria-hidden="true"><use href="#current-funders-linkedin-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on X"><svg aria-hidden="true"><use href="#current-funders-x-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on Dribbble"><svg aria-hidden="true"><use href="#current-funders-dribbble-icon"></use></svg></a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <article class="card h-100 border-0 bg-transparent support-card support-card--funder">
-                <div class="current-funders__logo ratio ratio-1x1"><img src="/assets/images/design/partners/ulster-hockey.jpeg" alt="Ulster Hockey" /></div>
-                <div class="card-body">
-                  <h3 class="card-title">Ulster Hockey</h3>
-                  <p class="card-text">Ulster Hockey supports Brain Injury Matters (NI) through a three-year partnership, naming it as its Primary Charity Partner. The partnership helps raise awareness of acquired brain injury and supports the charity's work with children, adults and families across Northern Ireland. Through its sporting community, Ulster Hockey helps promote inclusion, wellbeing and greater understanding of brain injury.</p>
-                  <a class="btn current-funders__link" href="#">Read More <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" /></a>
-                </div>
-                <div class="current-funders__socials" aria-label="Ulster Hockey social media links">
-                  <a href="#" aria-label="Ulster Hockey on LinkedIn"><svg aria-hidden="true"><use href="#current-funders-linkedin-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on X"><svg aria-hidden="true"><use href="#current-funders-x-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on Dribbble"><svg aria-hidden="true"><use href="#current-funders-dribbble-icon"></use></svg></a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <article class="card h-100 border-0 bg-transparent support-card support-card--funder">
-                <div class="current-funders__logo ratio ratio-1x1"><img src="/assets/images/design/partners/ulster-hockey.jpeg" alt="Ulster Hockey" /></div>
-                <div class="card-body">
-                  <h3 class="card-title">Ulster Hockey</h3>
-                  <p class="card-text">Ulster Hockey supports Brain Injury Matters (NI) through a three-year partnership, naming it as its Primary Charity Partner. The partnership helps raise awareness of acquired brain injury and supports the charity's work with children, adults and families across Northern Ireland. Through its sporting community, Ulster Hockey helps promote inclusion, wellbeing and greater understanding of brain injury.</p>
-                  <a class="btn current-funders__link" href="#">Read More <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" /></a>
-                </div>
-                <div class="current-funders__socials" aria-label="Ulster Hockey social media links">
-                  <a href="#" aria-label="Ulster Hockey on LinkedIn"><svg aria-hidden="true"><use href="#current-funders-linkedin-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on X"><svg aria-hidden="true"><use href="#current-funders-x-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on Dribbble"><svg aria-hidden="true"><use href="#current-funders-dribbble-icon"></use></svg></a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <article class="card h-100 border-0 bg-transparent support-card support-card--funder">
-                <div class="current-funders__logo ratio ratio-1x1"><img src="/assets/images/design/partners/ulster-hockey.jpeg" alt="Ulster Hockey" /></div>
-                <div class="card-body">
-                  <h3 class="card-title">Ulster Hockey</h3>
-                  <p class="card-text">Ulster Hockey supports Brain Injury Matters (NI) through a three-year partnership, naming it as its Primary Charity Partner. The partnership helps raise awareness of acquired brain injury and supports the charity's work with children, adults and families across Northern Ireland. Through its sporting community, Ulster Hockey helps promote inclusion, wellbeing and greater understanding of brain injury.</p>
-                  <a class="btn current-funders__link" href="#">Read More <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" /></a>
-                </div>
-                <div class="current-funders__socials" aria-label="Ulster Hockey social media links">
-                  <a href="#" aria-label="Ulster Hockey on LinkedIn"><svg aria-hidden="true"><use href="#current-funders-linkedin-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on X"><svg aria-hidden="true"><use href="#current-funders-x-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on Dribbble"><svg aria-hidden="true"><use href="#current-funders-dribbble-icon"></use></svg></a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <article class="card h-100 border-0 bg-transparent support-card support-card--funder">
-                <div class="current-funders__logo ratio ratio-1x1"><img src="/assets/images/design/partners/ulster-hockey.jpeg" alt="Ulster Hockey" /></div>
-                <div class="card-body">
-                  <h3 class="card-title">Ulster Hockey</h3>
-                  <p class="card-text">Ulster Hockey supports Brain Injury Matters (NI) through a three-year partnership, naming it as its Primary Charity Partner. The partnership helps raise awareness of acquired brain injury and supports the charity's work with children, adults and families across Northern Ireland. Through its sporting community, Ulster Hockey helps promote inclusion, wellbeing and greater understanding of brain injury.</p>
-                  <a class="btn current-funders__link" href="#">Read More <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" /></a>
-                </div>
-                <div class="current-funders__socials" aria-label="Ulster Hockey social media links">
-                  <a href="#" aria-label="Ulster Hockey on LinkedIn"><svg aria-hidden="true"><use href="#current-funders-linkedin-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on X"><svg aria-hidden="true"><use href="#current-funders-x-icon"></use></svg></a>
-                  <a href="#" aria-label="Ulster Hockey on Dribbble"><svg aria-hidden="true"><use href="#current-funders-dribbble-icon"></use></svg></a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- .current-funders ends -->
-
-      
-      <section class="testimonial section-space">
-        <img class="testimonial__background" src="/assets/images/design/sections/testimonial-bg.jpeg" alt="" />
-        <div class="container-fluid site-container">
-          <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
-            <div class="col-lg-6">
-              <button
-                class="video-card"
-                type="button"
-                aria-label="Play Sarah Mitchell's story"
-                data-bs-toggle="modal"
-                data-bs-target="#testimonial-video-modal"
-              >
-                <span class="video-card__background" aria-hidden="true"></span>
-                <img src="/assets/images/design/sections/testimonial-video.png" alt="Sarah Mitchell and her child" />
-                <span class="video-card__play" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M5.33301 31.9997C5.33301 17.2721 17.2721 5.33301 31.9997 5.33301C39.0721 5.33301 45.8549 8.14253 50.8559 13.1435C55.8568 18.1445 58.6663 24.9273 58.6663 31.9997C58.6663 46.7273 46.7273 58.6664 31.9997 58.6664C17.2721 58.6664 5.33301 46.7273 5.33301 31.9997ZM27.1198 43.4131L42.6664 33.7064C43.2482 33.3338 43.6001 32.6906 43.6001 31.9997C43.6001 31.3089 43.2482 30.6656 42.6664 30.2931L27.0664 20.5864C26.452 20.199 25.6758 20.1752 25.0388 20.5241C24.4018 20.8731 24.004 21.54 23.9998 22.2664V41.7331C23.9912 42.4771 24.3963 43.1644 25.0514 43.5171C25.7065 43.8699 26.5033 43.8298 27.1198 43.4131Z"
-                      fill="white"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </div>
-
-            <div class="col-lg-6 testimonial__copy">
-              <blockquote>
-                “They didn't just give us a service. They gave us back a future we thought was gone.”
-              </blockquote>
-              <p class="testimonial__name">Sarah Mitchell</p>
-              <p>Parent, Belfast</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div
-        class="modal fade video-modal"
-        id="testimonial-video-modal"
-        tabindex="-1"
-        aria-labelledby="testimonial-video-modal-title"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-          <div class="modal-content">
-            <h2 class="visually-hidden" id="testimonial-video-modal-title">Sarah Mitchell's story</h2>
-            <button
-              class="btn-close btn-close-white video-modal__close"
-              type="button"
-              data-bs-dismiss="modal"
-              aria-label="Close video"
-            ></button>
-
-            <div class="ratio ratio-16x9">
-              <iframe
-                class="video-modal__iframe"
-                data-src="https://www.youtube-nocookie.com/embed/Tu5KxhraAA8?autoplay=1&amp;rel=0"
-                title="Sarah Mitchell's story"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- .section-stats starts-->
-      <section
-        class="support feature-section feature-section--cream section-space section-stats mt-5"
-        aria-labelledby="impact-heading"
-      >
-        <div class="container-fluid site-container">
-          <div class="row align-items-center gy-5 section-stats__layout">
-            <div class="col-lg-5">
-              <div class="section-stats__intro">
-                <p class="eyebrow">Impact</p>
-                <h2 id="impact-heading">The return on your generosity is measured in lives rebuilt</h2>
-                <p class="section-stats__description">
-                  Every grant and donation translates into real, measurable outcomes. These numbers represent children laughing again and adults finding their footing. This is the direct result of your commitment.
-                </p>
-
-                <div class="button-row">
-                  <a class="btn btn-primary" href="/referrals.html">Referrals</a>
-                  <a class="section-stats__text-link" href="/contact.html">
-                    Get In touch
-                    <img
-                      src="/assets/images/design/icons/page-header-chevron-right.svg"
-                      alt=""
-                      aria-hidden="true"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-7">
-              <div class="row g-4 section-stats__grid" aria-label="Brain injury impact statistics">
-                <div class="col-md-6">
-                  <div class="section-stats__card section-stats__card--yellow">
-                    <p class="section-stats__value">
-                      <span
-                        class="section-stats__number"
-                        data-countup-end="92"
-                        aria-hidden="true"
-                      >92</span><span class="section-stats__suffix" aria-hidden="true">%</span>
-                      <span class="visually-hidden">92%</span>
-                    </p>
-                    <p class="section-stats__label">Families report improved wellbeing</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="section-stats__card section-stats__card--green">
-                    <p class="section-stats__value">
-                      <span class="section-stats__number" data-countup-end="600" aria-hidden="true">600</span><span
-                        class="section-stats__suffix"
-                        aria-hidden="true"
-                      >+</span>
-                      <span class="visually-hidden">600 thousand</span>
-                    </p>
-                    <p class="section-stats__label">Referrals received each year</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="section-stats__card section-stats__card--pink">
-                    <p class="section-stats__value">
-                      <span class="section-stats__number" data-countup-end="87" aria-hidden="true">87</span><span
-                        class="section-stats__suffix"
-                        aria-hidden="true"
-                      >p</span>
-                      <span class="visually-hidden">87p</span>
-                    </p>
-                    <p class="section-stats__label">Of every pound spent directly</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="section-stats__card section-stats__card--blue">
-                    <p class="section-stats__value">
-                      <span class="section-stats__number" data-countup-end="0" aria-hidden="true">0</span>
-                      <span class="visually-hidden">Zero</span>
-                    </p>
-                    <p class="section-stats__label">Families turned away</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- /.section-stats ends -->
-
-      <section class="support feature-section feature-section--green section-space" id="key-topics">
+      <!-- .section-who-we-help starts -->
+      <section class="who-we-help feature-section section-space" aria-label="Ways to help">
         <div class="container-fluid site-container">
           <div class="section-intro text-center">
-            <p class="eyebrow">Topics</p>
-            <h2>Key topics</h2>
-            <p>Explore specific areas of life after a brain injury.</p>
+            <h2>Ways To Help</h2>
           </div>
-          <div class="row g-4 justify-content-center">
-            <div class="col-md-6 col-lg-3">
-              <article class="support-card">
-                <div class="support-card__image-wrap">
+
+          <div class="row who-we-help__grid">
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="who-we-help-card" href="/fundraise.html">
+                <div class="who-we-help-card__image-wrap">
                   <img
-                    src="/assets/images/design/sections/brain-injuries-expanded-key-topics.webp"
-                    alt="A child playing in a colourful ball pool"
+                    class="who-we-help-card__image"
+                    src="/assets/images/design/sections/who-we-help-children.jpeg"
+                    alt="Children spending time together beside the water"
                   />
                 </div>
-                <div>
-                  <p class="eyebrow">Symptom</p>
-                  <h3>The heavy weight of fatigue after brain injury</h3>
-                  <p>Understanding why your body and brain need so much rest.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Read
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z" fill="#013D9E" stroke="#013D9E"></path>
-                      </svg>
-                    </span>
-                  </a>
+                <div class="who-we-help-card__content">
+                  <h2>Fundraise</h2>
+                  <p class="who-we-help-card__description">
+                    Every pound you raise powers vital support for children and adults living with acquired brain injury. Your courage inspires ours.
+                  </p>
+                  <span class="who-we-help-card__link line-link">
+                    Learn More
+                    <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
+                  </span>
                 </div>
-              </article>
+              </a>
             </div>
-            <div class="col-md-6 col-lg-3">
-              <article class="support-card">
-                <div class="support-card__image-wrap">
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="who-we-help-card" href="/volunteer.html">
+                <div class="who-we-help-card__image-wrap">
                   <img
-                    src="/assets/images/design/sections/brain-injuries-expanded-key-topics.webp"
-                    alt="A child playing in a colourful ball pool"
+                    class="who-we-help-card__image"
+                    src="/assets/images/design/sections/who-we-help-adults.jpeg"
+                    alt="Adults taking part in a classroom session"
                   />
                 </div>
-                <div>
-                  <p class="eyebrow">Symptom</p>
-                  <h3>Memory gaps and finding your way back</h3>
-                  <p>Practical strategies for living with memory problems.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Read
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z" fill="#013D9E" stroke="#013D9E"></path>
-                      </svg>
-                    </span>
-                  </a>
+                <div class="who-we-help-card__content">
+                  <h2>Volunteer your Time</h2>
+                  <p class="who-we-help-card__description">
+                    Share your skills and steady presence with people who need it
+                  </p>
+                  <span class="who-we-help-card__link line-link">
+                    Learn More
+                    <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
+                  </span>
                 </div>
-              </article>
+              </a>
             </div>
-            <div class="col-md-6 col-lg-3">
-              <article class="support-card">
-                <div class="support-card__image-wrap">
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="who-we-help-card" href="/funders.html">
+                <div class="who-we-help-card__image-wrap">
                   <img
-                    src="/assets/images/design/sections/brain-injuries-expanded-key-topics.webp"
-                    alt="A child playing in a colourful ball pool"
+                    class="who-we-help-card__image"
+                    src="/assets/images/design/sections/who-we-help-carers.jpeg"
+                    alt="A parent and child exploring outdoors together"
                   />
                 </div>
-                <div>
-                  <p class="eyebrow">Symptom</p>
-                  <h3>When your brain struggles to organise life</h3>
-                  <p>A clear look at executive functioning difficulties.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Read
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z" fill="#013D9E" stroke="#013D9E"></path>
-                      </svg>
-                    </span>
-                  </a>
+                <div class="who-we-help-card__content">
+                  <h2>Partner with us as a corporation</h2>
+                  <p class="who-we-help-card__description">
+                    Align your business with tangible, local impact that your team can see
+                  </p>
+                  <span class="who-we-help-card__link line-link">
+                    Learn More
+                    <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
+                  </span>
                 </div>
-              </article>
+              </a>
             </div>
-            <div class="col-md-6 col-lg-3">
-              <article class="support-card">
-                <div class="support-card__image-wrap">
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <a
+                class="who-we-help-card"
+                href="https://braininjurymatters.enthuse.com/cp/539aa/Donate#!/"
+                target="_blank"
+              >
+                <div class="who-we-help-card__image-wrap">
                   <img
-                    src="/assets/images/design/sections/brain-injuries-expanded-key-topics.webp"
-                    alt="A child playing in a colourful ball pool"
+                    class="who-we-help-card__image"
+                    src="/assets/images/design/sections/who-we-help-professionals.jpeg"
+                    alt="A health professional speaking with a client"
                   />
                 </div>
-                <div>
-                  <p class="eyebrow">Symptom</p>
-                  <h3>Finding words when they fail you</h3>
-                  <p>Navigating the frustration of communication difficulties.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Read
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z" fill="#013D9E" stroke="#013D9E"></path>
-                      </svg>
-                    </span>
-                  </a>
+                <div class="who-we-help-card__content">
+                  <h2>Give in memory of someone</h2>
+                  <p class="who-we-help-card__description">
+                    Honour a life with a gift that builds a lasting legacy of care
+                  </p>
+                  <span class="who-we-help-card__link line-link">
+                    Learn More
+                    <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
+                  </span>
                 </div>
-              </article>
+              </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="who-we-help-card" href="/contact.html">
+                <div class="who-we-help-card__image-wrap">
+                  <img
+                    class="who-we-help-card__image"
+                    src="/assets/images/design/sections/who-we-help-children.jpeg"
+                    alt="Children spending time together beside the water"
+                  />
+                </div>
+                <div class="who-we-help-card__content">
+                  <h2>Leave a gift in your will</h2>
+                  <p class="who-we-help-card__description">
+                    A quiet promise that sustains our work for the next generation
+                  </p>
+                  <span class="who-we-help-card__link line-link">
+                    Learn More
+                    <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="who-we-help-card" href="/contact.html">
+                <div class="who-we-help-card__image-wrap">
+                  <img
+                    class="who-we-help-card__image"
+                    src="/assets/images/design/sections/who-we-help-adults.jpeg"
+                    alt="Adults taking part in a classroom session"
+                  />
+                </div>
+                <div class="who-we-help-card__content">
+                  <h2>Careers</h2>
+                  <p class="who-we-help-card__description">
+                    Work that matters. Every day you help someone rebuild a life after brain injury.
+                  </p>
+                  <span class="who-we-help-card__link line-link">
+                    Learn More
+                    <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </section>
+      <!-- .section-who-we-help ends -->
 
       <section class="partners section-space" id="partners">
         <div class="container-fluid site-container">
