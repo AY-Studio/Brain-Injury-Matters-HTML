@@ -34,6 +34,7 @@
     <script src="/assets/js/vendor/gsap.min.js" defer></script>
     <script src="/assets/js/vendor/SplitText.min.js" defer></script>
     <script src="/assets/js/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="/assets/js/vendor/countUp.umd.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
   </head>
   <body>
@@ -581,10 +582,10 @@
     <main id="main-content">
 
       <!-- .page-header starts -->
-      <section class="page-header page-header--with-image" aria-labelledby="page-header-title">
+      <section class="page-header" aria-labelledby="page-header-title">
         <img
-          class="page-header__shape page-header__shape--green"
-          src="/assets/images/design/sections/page-header-union-green.svg"
+          class="page-header__shape page-header__shape--yellow"
+          src="/assets/images/design/sections/page-header-shape-yellow.svg"
           alt=""
           aria-hidden="true"
         />
@@ -596,187 +597,17 @@
         />
 
         <div class="page-header__inner">
-          <div class="page-header__content">
-            <p class="eyebrow page-header__eyebrow">Adults With Brain Injuries</p>
-            <h1 id="page-header-title">Life Changes in a Moment. We Stay.</h1>
-            <p class="page-header__intro">
-              You are not alone. Find the right support for your new path forward.
-            </p>
-            <div class="page-header__actions">
-              <a class="btn btn-primary" href="#support">
-                <img src="/assets/images/design/icons/care-24.svg" alt="" aria-hidden="true" />
-                Get Support
-              </a>
-              <a class="btn btn-outline-primary" href="/referrals.html">
-                Referrals
-                <img src="/assets/images/design/icons/events-chevron-right.svg" alt="" aria-hidden="true" />
-              </a>
-            </div>
-          </div>
-
-          <div class="page-header__visual">
-            <span aria-hidden="true"></span>
-            <img
-              src="/assets/images/design/sections/adults-life-changes.webp"
-              alt="Adults and support workers taking part in a creative group activity"
-            />
-          </div>
+          <!-- <p class="eyebrow page-header__eyebrow"></p> -->
+          <h1 id="page-header-title">Our Story</h1>
+          <p class="page-header__intro">
+            It began with a simple belief that no one should face brain injury alone.
+          </p>
         </div>
       </section>
       <!-- .page-header ends -->
 
-      <!-- .section-left-right.blue starts -->
-      <section
-        class="support-finder support-finder--split section-left-right section-left-right--blue"
-        aria-labelledby="different-world-title"
-      >
-        <span class="support-finder__wave support-finder__wave--blue-top" aria-hidden="true"></span>
-        <span class="support-finder__wave support-finder__wave--pink" aria-hidden="true"></span>
 
-        <div class="container-fluid  support-finder__inner support-finder__inner--split">
-          <div class="site-container mx-auto">
-            <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
-              <div class="col-lg-5 feature-section__visual support-finder__visual">
-                <span aria-hidden="true"></span>
-                <img
-                  src="/assets/images/design/sections/adults-life-changes.webp"
-                  alt="Adults and support workers taking part in a creative group activity"
-                />
-              </div>
-
-              <div class="col-lg-6 offset-lg-1 feature-section__copy support-finder__copy">
-                <h2 id="different-world-title">The World Looks Different Now. We Understand That.</h2>
-                <p>
-                  An acquired brain injury can make you feel like a stranger in your own life. Memory, mood, and
-                  movement might not obey you the way they used to. We are here to help you navigate the new terrain
-                  with practical support and steady hope.
-                </p>
-
-                <div class="button-row">
-                  <a class="btn btn-secondary" href="#support">Get Support</a>
-                  <a class="support-finder__stories-link line-link" href="/stories.html">
-                    Stories
-                    <img
-                      src="/assets/images/design/icons/chevron-right-pale-pink.svg"
-                      alt=""
-                      aria-hidden="true"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <span class="support-finder__wave support-finder__wave--blue-bottom" aria-hidden="true"></span>
-        <span class="support-finder__wave support-finder__wave--yellow" aria-hidden="true"></span>
-      </section>
-      <!-- /.section-left-right.blue  ends -->
-
-      <!-- .support starts -->
-
-      <section class="support section-space" id="support">
-        <div class="container-fluid site-container">
-          <div class="section-intro text-center">
-            <p class="eyebrow">Support</p>
-            <h2>Steady Ground to Stand On</h2>
-            <p>Practical help that meets you where you are right now.</p>
-          </div>
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <article class="support-card">
-                <div class="support-card__image-wrap">
-                  <img
-                    src="/assets/images/design/sections/adults-one-to-one.webp"
-                    alt="A child enjoying a colourful ball pool"
-                  />
-                </div>
-                <div>
-                  <p class="eyebrow">One-to-one</p>
-                  <h3>A steady hand for the road ahead</h3>
-                  <p>Work with a key worker who understands your specific injury.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Learn more
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z"
-                          fill="#013D9E"
-                          stroke="#013D9E"
-                        />
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <article class="support-card">
-                <div class="support-card__image-wrap">
-                  <img
-                    src="/assets/images/design/sections/adults-peer-groups.webp"
-                    alt="A family enjoying time together at home"
-                  />
-                </div>
-                <div>
-                  <p class="eyebrow">Peer groups</p>
-                  <h3>People who get it</h3>
-                  <p>Meet others rebuilding their lives. No explanations needed here.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Learn more
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z"
-                          fill="#013D9E"
-                          stroke="#013D9E"
-                        />
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <article class="support-card">
-                <div class="support-card__image-wrap">
-                  <img
-                    src="/assets/images/design/sections/adults-community.webp"
-                    alt="Older adults laughing together at home"
-                  />
-                </div>
-                <div>
-                  <p class="eyebrow">Community</p>
-                  <h3>Back in the world</h3>
-                  <p>Rediscover old interests or find new ones alongside others.</p>
-                  <a class="line-link stretched-link" href="#">
-                    Learn more
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M15.6634 11.6023C15.8831 11.822 15.8831 12.1781 15.6634 12.3978L9.92853 18.1326C9.70886 18.3523 9.35276 18.3523 9.13308 18.1326L8.86788 17.8674C8.64821 17.6478 8.64821 17.2916 8.86788 17.0719L13.9398 12L8.86788 6.92808C8.64821 6.7084 8.64821 6.3523 8.86788 6.13263L9.13308 5.86743C9.35276 5.64775 9.70886 5.64775 9.92853 5.86743L15.6634 11.6023Z"
-                          fill="#013D9E"
-                          stroke="#013D9E"
-                        />
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- .support ends -->
-
-      <!-- .who-we-are starts -->
+       <!-- .who-we-are starts -->
       <section class="who-we-are section-space" id="who-we-are">
         <div class="container-fluid site-container">
           <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0">
@@ -784,33 +615,25 @@
             <div class="col-lg-5 feature-section__visual">
               <span aria-hidden="true"></span>
               <img
-                src="/assets/images/design/sections/adults-family.webp"
-                alt="A mother and her young children looking at a tablet together"
+                src="/assets/images/design/sections/who-we-are.jpeg"
+                alt="Brain Injury Matters members in a group activity"
               />
             </div>
 
             <div class="col-lg-6 offset-lg-1 feature-section__copy">
-              <p class="eyebrow">Family</p>
-              <h2>The People Beside You Need a Map Too</h2>
+              <p class="eyebrow">Origin</p>
+              <h2>A belief that no one should face brain injury alone</h2>
               <p>
-                A brain injury reshapes the lives of everyone who loves you. We offer separate, dedicated support for
-                partners, family, and friends so they can find their own footing while supporting yours.
+                It started in a small community hall with a kettle and a fierce refusal to let families struggle in silence. The need was vast and the system was complex so we built a simpler way forward.
               </p>
               <div class="button-row">
-                <a class="btn btn-primary" href="/brain-injury-parents-and-carers.html">
-                  <img src="/assets/images/design/icons/bike.svg" alt="" aria-hidden="true" />
-                  Parents
-                </a>
-                <a class="btn btn-outline-primary" href="/contact.html">
-                  Get In Touch
+                <a class="btn btn-outline-primary" href="/strategy.html" target="_blank">Strategy</a>
+                <a class="line-link" href="/team.html" target="_blank">Team
 
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M9.38672 6.67285C9.48754 6.67285 9.56452 6.70326 9.64258 6.78125L14.5869 11.7256C14.6408 11.7795 14.666 11.8215 14.6777 11.8496V11.8506C14.6925 11.8861 14.7012 11.9259 14.7012 11.9746C14.7012 12.0233 14.6925 12.0631 14.6777 12.0986V12.0996C14.666 12.1277 14.6408 12.1697 14.5869 12.2236L9.61816 17.1924C9.54039 17.2702 9.47325 17.292 9.39258 17.2891C9.29855 17.2856 9.21769 17.2537 9.13184 17.168C9.05371 17.0898 9.02246 17.013 9.02246 16.9121C9.02246 16.8112 9.05371 16.7344 9.13184 16.6562L13.8135 11.9746L9.10645 7.26758C9.02878 7.18988 9.00684 7.12357 9.00977 7.04297C9.01321 6.9487 9.04578 6.86731 9.13184 6.78125C9.20976 6.70344 9.28613 6.67293 9.38672 6.67285Z"
-                      fill="#013D9E"
-                      stroke="#013D9E"
-                    />
-                  </svg>
+                  <path d="M9.38672 6.67285C9.48754 6.67285 9.56452 6.70326 9.64258 6.78125L14.5869 11.7256C14.6408 11.7795 14.666 11.8215 14.6777 11.8496V11.8506C14.6925 11.8861 14.7012 11.9259 14.7012 11.9746C14.7012 12.0233 14.6925 12.0631 14.6777 12.0986V12.0996C14.666 12.1277 14.6408 12.1697 14.5869 12.2236L9.61816 17.1924C9.54039 17.2702 9.47325 17.292 9.39258 17.2891C9.29855 17.2856 9.21769 17.2537 9.13184 17.168C9.05371 17.0898 9.02246 17.013 9.02246 16.9121C9.02246 16.8112 9.05371 16.7344 9.13184 16.6562L13.8135 11.9746L9.10645 7.26758C9.02878 7.18988 9.00684 7.12357 9.00977 7.04297C9.01321 6.9487 9.04578 6.86731 9.13184 6.78125C9.20976 6.70344 9.28613 6.67293 9.38672 6.67285Z" fill="#000069" stroke="#000069"/>
+                </svg>
+
                 </a>
               </div>
             </div>
@@ -821,171 +644,302 @@
       </section>
       <!-- /.who-we-are ends -->
 
-      <!-- .section-faqs -->
-      <section class="faq-section" id="faqs" aria-labelledby="faqs-title">
+      <section class="who-we-are feature-section pink section-space" id="services">
         <div class="container-fluid site-container">
-          <div class="faq-section__inner">
-            <div class="faq-section__intro">
-              <h2 id="faqs-title">FAQs</h2>
-              <p>The questions come hard and fast after an injury. We have some answers to start with.</p>
-            </div>
+          <div class="row align-items-center gx-0 gx-lg-5 gy-5 gy-lg-0 justify-content-center">
+            <div class="col-lg-10 feature-section__copy text-center">
+              <p class="eyebrow">Purpose</p>
+              <h2>We started small, in a room with a kettle and a fierce belief that no one should walk this road alone. That belief is now a charity built on the strength of ordinary people finding their way forward.</h2>
+              
+              
 
-            <div class="accordion faq-section__accordion" id="adults-faq-accordion">
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="adults-faq-heading-one">
-                  <button
-                    class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#adults-faq-one"
-                    aria-expanded="true"
-                    aria-controls="adults-faq-one"
-                  >
-                    How do I start?
-                  </button>
-                </h3>
-                <div
-                  class="accordion-collapse collapse show"
-                  id="adults-faq-one"
-                  aria-labelledby="adults-faq-heading-one"
-                  data-bs-parent="#adults-faq-accordion"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      You can refer yourself directly through our website or ask a GP to do it. A member of our team
-                      will then call you for a quiet, honest chat about what you need. There is no wrong way to begin.
-                    </p>
-                  </div>
+               <div class="button-row justify-content-center">
+                  <a class="btn btn-outline-primary" href="/impact.html">Our Impact</a>
+                  
                 </div>
-              </div>
 
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="adults-faq-heading-two">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#adults-faq-two"
-                    aria-expanded="false"
-                    aria-controls="adults-faq-two"
-                  >
-                    What will it cost?
-                  </button>
-                </h3>
-                <div
-                  class="accordion-collapse collapse"
-                  id="adults-faq-two"
-                  aria-labelledby="adults-faq-heading-two"
-                  data-bs-parent="#adults-faq-accordion"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      Many of our core services are free at the point of use thanks to our funders. Where there is a
-                      cost, we will discuss it openly with you beforehand. Money should never be the barrier to getting
-                      steady on your feet again.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="adults-faq-heading-three">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#adults-faq-three"
-                    aria-expanded="false"
-                    aria-controls="adults-faq-three"
-                  >
-                    Can I work again?
-                  </button>
-                </h3>
-                <div
-                  class="accordion-collapse collapse"
-                  id="adults-faq-three"
-                  aria-labelledby="adults-faq-heading-three"
-                  data-bs-parent="#adults-faq-accordion"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      The path back to work looks different for everyone. We can help you explore vocational
-                      rehabilitation and volunteering to rebuild confidence at your own pace. The goal is a life with
-                      purpose, whatever shape that takes.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="adults-faq-heading-four">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#adults-faq-four"
-                    aria-expanded="false"
-                    aria-controls="adults-faq-four"
-                  >
-                    Is it confidential?
-                  </button>
-                </h3>
-                <div
-                  class="accordion-collapse collapse"
-                  id="adults-faq-four"
-                  aria-labelledby="adults-faq-heading-four"
-                  data-bs-parent="#adults-faq-accordion"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      Yes. Your story belongs to you. We listen with respect and keep your information safe, sharing it
-                      only with your consent. You can speak freely here.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="adults-faq-heading-five">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#adults-faq-five"
-                    aria-expanded="false"
-                    aria-controls="adults-faq-five"
-                  >
-                    What about my family?
-                  </button>
-                </h3>
-                <div
-                  class="accordion-collapse collapse"
-                  id="adults-faq-five"
-                  aria-labelledby="adults-faq-heading-five"
-                  data-bs-parent="#adults-faq-accordion"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      A brain injury changes the lives of everyone close to you. We offer separate support for
-                      partners, parents, and children because they are walking their own hard road. You can all find
-                      help here.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="faq-section__cta">
-              <h3>Still have questions?</h3>
-              <p>We are here to listen. Get in touch with our team.</p>
-              <a class="btn btn-primary" href="/contact.html">Get In Touch</a>
             </div>
           </div>
         </div>
       </section>
-      <!-- /.section-faqs -->
 
+      <!-- .stories-featured starts -->
+      <section class="stories-featured feature-section feature-section--green section-space" aria-labelledby="featured-story-title">
+        <div class="container-fluid site-container">
 
+          <div class="section-intro text-center col-lg-8 mx-auto">
+            <p class="eyebrow">Purpose</p>
+            <h2 style="">What we stand for</h2>
+            <p>Our mission is simple and our values are the bones of it..</p>
+          </div>
+
+          <article class="stories-featured__card row g-0 align-items-stretch overflow-hidden">
+            <div class="col-lg-6">
+              <div class="stories-featured__media">
+                <img
+                  src="/assets/images/design/sections/stories-featured.webp"
+                  alt="Two children dressed as superheroes running outdoors"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-6 align-self-center">
+              <div class="stories-featured__content">
+                <div>
+                  <div class="stories-featured__meta d-flex align-items-center">
+                    <span class="stories-featured__tag">Mission</span>
+                    <!-- <span>4 min read</span> -->
+                  </div>
+
+                  <h2 id="featured-story-title">To ensure no one faces the aftermath of brain injury alone</h2>
+                  <p>We build community around the people the system forgets. We listen first, act with honesty, and never give up on a family.</p>
+                </div>
+               
+                <div class="button-row">
+                  <a class="btn btn-outline-primary" href="/donate.html">Donate</a>
+                  <a class="support-finder__stories-link line-link" href="/stories.html">
+                    Volunteer
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M9.38867 6.67285C9.4895 6.67285 9.56647 6.70326 9.64453 6.78125L14.5889 11.7256C14.6428 11.7795 14.6679 11.8215 14.6797 11.8496V11.8506C14.6945 11.8861 14.7031 11.9259 14.7031 11.9746C14.7031 12.0233 14.6945 12.0631 14.6797 12.0986V12.0996C14.6679 12.1277 14.6428 12.1697 14.5889 12.2236L9.62012 17.1924C9.54235 17.2702 9.47521 17.292 9.39453 17.2891C9.3005 17.2856 9.21964 17.2537 9.13379 17.168C9.05567 17.0898 9.02442 17.013 9.02441 16.9121C9.02441 16.8112 9.05566 16.7344 9.13379 16.6562L13.8154 11.9746L9.1084 7.26758C9.03073 7.18988 9.00879 7.12357 9.01172 7.04297C9.01517 6.9487 9.04773 6.86731 9.13379 6.78125C9.21171 6.70344 9.28808 6.67293 9.38867 6.67285Z" fill="#000069" stroke="#000069"/>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- /.stories-featured ends -->
+
+      <!-- .timeline starts -->
+      <section class="timeline section-space" aria-labelledby="timeline-title">
+        <div class="container-fluid site-container">
+          <div class="timeline__inner">
+            <div class="section-intro timeline__intro text-center mx-auto">
+              <div class="timeline__heading">
+                <p class="eyebrow">Milestones</p>
+                <div class="timeline__heading-copy">
+                  <h2 id="timeline-title">The Road We Have Travelled So Far</h2>
+                  <p>
+                    A journey from a single kettle in a community hall to a lifeline for thousands. Every step was
+                    hard-won and every life changed made it worth the fight.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__actions">
+                <a
+                  class="btn btn-primary"
+                  href="https://braininjurymatters.enthuse.com/cp/539aa/Donate#!/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Donate</a>
+                <a class="line-link" href="/volunteer.html">
+                  Volunteer
+                  <img src="/assets/images/design/icons/timeline-chevron-right.svg" alt="" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper timeline__swiper" aria-label="Brain Injury Matters milestones">
+              <div class="swiper-wrapper">
+                <article class="swiper-slide timeline-card">
+                  <div class="timeline-card__image-wrap">
+                    <img
+                      class="timeline-card__image"
+                      src="/assets/images/design/sections/timeline-milestone.jpeg"
+                      alt="People taking part in a Brain Injury Matters group activity"
+                    />
+                  </div>
+                  <div class="timeline-card__progress" aria-hidden="true">
+                    <svg class="timeline-card__dot" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="7.5" cy="7.5" r="7.5" fill="currentColor" />
+                    </svg>
+                  </div>
+                  <div class="timeline-card__content">
+                    <h3>2005</h3>
+                    <p>
+                      Sarah Jenkins gathered three families in a rented room. The kettle boiled and the first support
+                      group began.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="swiper-slide timeline-card">
+                  <div class="timeline-card__image-wrap">
+                    <img
+                      class="timeline-card__image"
+                      src="/assets/images/design/sections/timeline-milestone.jpeg"
+                      alt="People taking part in a Brain Injury Matters group activity"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="timeline-card__progress" aria-hidden="true">
+                    <svg class="timeline-card__dot" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="7.5" cy="7.5" r="7.5" fill="currentColor" />
+                    </svg>
+                  </div>
+                  <div class="timeline-card__content">
+                    <h3>2009</h3>
+                    <p>We secured our first grant and opened a small office with a proper door and a sign outside.</p>
+                  </div>
+                </article>
+
+                <article class="swiper-slide timeline-card">
+                  <div class="timeline-card__image-wrap">
+                    <img
+                      class="timeline-card__image"
+                      src="/assets/images/design/sections/timeline-milestone.jpeg"
+                      alt="People taking part in a Brain Injury Matters group activity"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="timeline-card__progress" aria-hidden="true">
+                    <svg class="timeline-card__dot" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="7.5" cy="7.5" r="7.5" fill="currentColor" />
+                    </svg>
+                  </div>
+                  <div class="timeline-card__content">
+                    <h3>2014</h3>
+                    <p>The children's service launched with a dedicated team and a room full of colour and courage.</p>
+                  </div>
+                </article>
+
+                <article class="swiper-slide timeline-card">
+                  <div class="timeline-card__image-wrap">
+                    <img
+                      class="timeline-card__image"
+                      src="/assets/images/design/sections/timeline-milestone.jpeg"
+                      alt="People taking part in a Brain Injury Matters group activity"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="timeline-card__progress" aria-hidden="true">
+                    <svg class="timeline-card__dot" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="7.5" cy="7.5" r="7.5" fill="currentColor" />
+                    </svg>
+                  </div>
+                  <div class="timeline-card__content">
+                    <h3>2019</h3>
+                    <p>
+                      We moved into our current home, a building with space to breathe, create, and welcome more people
+                      in.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="swiper-slide timeline-card">
+                  <div class="timeline-card__image-wrap">
+                    <img
+                      class="timeline-card__image"
+                      src="/assets/images/design/sections/timeline-milestone.jpeg"
+                      alt="People taking part in a Brain Injury Matters group activity"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="timeline-card__progress" aria-hidden="true">
+                    <svg class="timeline-card__dot" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="7.5" cy="7.5" r="7.5" fill="currentColor" />
+                    </svg>
+                  </div>
+                  <div class="timeline-card__content">
+                    <h3>2024</h3>
+                    <p>
+                      We now walk alongside over a thousand families every year. The work continues and the need still
+                      calls.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.timeline ends-->
+       
+      <!-- .section-stats starts-->
+      <section
+        class="support feature-section section-space section-stats mt-5"
+        aria-labelledby="impact-heading"
+      >
+        <div class="container-fluid site-container">
+          <div class="row align-items-center gy-5 section-stats__layout">
+            <div class="col-lg-5">
+              <div class="section-stats__intro">
+                <p class="eyebrow">Impact</p>
+                <h2 id="impact-heading">The difference we make together</h2>
+                <p class="section-stats__description">
+                  Numbers tell a clean story but the real truth is in the lives rebuilt. Here is the measure of our work so far.
+                </p>
+
+                <div class="button-row">
+
+                  <a class="btn btn-outline-primary" href="/impact.html">Impoact</a>
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="row g-4 section-stats__grid" aria-label="Brain injury impact statistics">
+                <div class="col-md-6">
+                  <div class="section-stats__card section-stats__card--yellow">
+                    <p class="section-stats__value">
+                      <span
+                        class="section-stats__number"
+                        data-countup-end="1200"
+                        aria-hidden="true"
+                      >1,200</span><span class="section-stats__suffix" aria-hidden="true">+</span>
+                      <span class="visually-hidden">1,200+</span>
+                    </p>
+                    <p class="section-stats__label">Families supported annually</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="section-stats__card section-stats__card--green">
+                    <p class="section-stats__value">
+                      <span class="section-stats__number" data-countup-end="19" aria-hidden="true">19</span>
+                      <span class="visually-hidden">19</span>
+                    </p>
+                    <p class="section-stats__label">Years of service</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="section-stats__card section-stats__card--pink">
+                    <p class="section-stats__value">
+                      <span class="section-stats__number" data-countup-end="85" aria-hidden="true">85</span><span
+                        class="section-stats__suffix"
+                        aria-hidden="true"
+                      >%</span>
+                      <span class="visually-hidden">85</span>
+                    </p>
+                    <p class="section-stats__label">Report improved wellbeing</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="section-stats__card section-stats__card--blue">
+                    <p class="section-stats__value">
+                      <span class="section-stats__number" data-countup-end="50" aria-hidden="true">50</span><span
+                        class="section-stats__suffix"
+                        aria-hidden="true"
+                      >+</span>
+                      <span class="visually-hidden">50</span>
+                    </p>
+                    <p class="section-stats__label">Dedicated staff and volunteers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- /.section-stats ends -->      
+      
 
       <section class="partners section-space" id="partners">
         <div class="container-fluid site-container">
