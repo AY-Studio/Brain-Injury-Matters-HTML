@@ -581,99 +581,261 @@
 
     <main id="main-content">
 
-      <!-- .page-header starts -->
-      <section
-        class="page-header page-header--outlined-shapes align-items-center"
-        aria-labelledby="page-header-title"
-      >
-        <img
-          class="page-header__shape page-header__shape--green-left"
-          src="/assets/images/design/sections/page-header-shape-green-left.svg"
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          class="page-header__shape page-header__shape--pink-outline-left"
-          src="/assets/images/design/sections/page-header-shape-pink-outline-left.svg"
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          class="page-header__shape page-header__shape--blue-right"
-          src="/assets/images/design/sections/page-header-shape-blue-right.svg"
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          class="page-header__shape page-header__shape--yellow-outline-right"
-          src="/assets/images/design/sections/page-header-shape-yellow-outline-right.svg"
-          alt=""
-          aria-hidden="true"
-        />
-
-        <div class="page-header__inner">
-          <!-- <p class="eyebrow page-header__eyebrow"></p> -->
-          <h1 id="page-header-title">Stories from our community</h1>
-          <p class="page-header__intro">
-           Every story shared is a light for someone still in the dark. These are the true accounts of courage, recovery, and the quiet triumphs that follow a brain injury.
-          </p>
-        </div>
-      </section>
-      <!-- .page-header ends -->
-
-      
-
-      <!-- .stories-featured starts -->
-      <section class="stories-featured section-space" aria-labelledby="featured-story-title">
+      <!-- .story-header starts -->
+      <section class="story-header section-space" aria-labelledby="story-title">
         <div class="container-fluid site-container">
-          <article class="stories-featured__card row g-0 align-items-stretch overflow-hidden">
-            <div class="col-lg-6">
-              <div class="stories-featured__media">
-                <img
-                  src="/assets/images/design/sections/stories-featured.webp"
-                  alt="Two children dressed as superheroes running outdoors"
-                />
-              </div>
-            </div>
+          <div class="row g-0 justify-content-center">
+            <div class="col-lg-7">
+              <div class="story-header__intro">
+                <div class="story-header__heading">
+                  <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb story-header__breadcrumbs align-items-center mb-0">
+                      <li class="breadcrumb-item"><a href="/news.html">News & Insights</a></li>
+                      <li class="story-header__breadcrumb-divider" aria-hidden="true">
+                        <img src="/assets/images/design/icons/story-header-chevron.svg" alt="" />
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">Category</li>
+                    </ol>
+                  </nav>
 
-            <div class="col-lg-6">
-              <div class="stories-featured__content">
-                <div>
-                  <div class="stories-featured__meta d-flex align-items-center">
-                    <span class="stories-featured__tag">Story</span>
-                    <span>4 min read</span>
-                  </div>
-
-                  <h2 id="featured-story-title">Finding the words again after everything went quiet</h2>
-                  <p>Groundbreaking research from our partners reveals the critical window for support after a brain injury.</p>
+                  <h1 id="story-title">News title heading will go here</h1>
                 </div>
 
-                <a class="stories-featured__link line-link" href="/story-single.html">
-                  Read more
-                  <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                </a>
+                <div class="story-header__details d-flex flex-wrap align-items-center justify-content-between">
+                  <div class="story-header__author d-flex align-items-center">
+                    <img
+                      class="story-header__author-image"
+                      src="/assets/images/design/sections/story-author-placeholder.webp"
+                      alt=""
+                    />
+                    <div class="story-header__author-content">
+                      <p class="story-header__author-name">Full name</p>
+                      <div class="story-header__time d-flex align-items-center">
+                        <time datetime="2022-01-11">11 Jan 2022</time>
+                        <span aria-hidden="true">•</span>
+                        <span>5 min read</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="story-header__share d-flex align-items-center" role="group" aria-label="Share this story">
+                    <a
+                      class="story-header__share-button"
+                      href="mailto:share@story.com"
+                    >
+                      <img src="/assets/images/design/icons/story-share-link.svg" alt="" aria-hidden="true" />
+                    </a>
+                    <a
+                      class="story-header__share-button"
+                      href="https://www.linkedin.com/sharing/share-offsite/"
+                      data-story-share="linkedin"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Share this story on LinkedIn"
+                    >
+                      <img src="/assets/images/design/icons/story-share-linkedin.svg" alt="" aria-hidden="true" />
+                    </a>
+                    <a
+                      class="story-header__share-button"
+                      href="https://twitter.com/intent/tweet"
+                      data-story-share="x"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Share this story on X"
+                    >
+                      <img src="/assets/images/design/icons/story-share-x.svg" alt="" aria-hidden="true" />
+                    </a>
+                    <a
+                      class="story-header__share-button"
+                      href="https://www.facebook.com/sharer/sharer.php"
+                      data-story-share="facebook"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Share this story on Facebook"
+                    >
+                      <img src="/assets/images/design/icons/story-share-facebook.svg" alt="" aria-hidden="true" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-          </article>
-        </div>
-      </section>
-      <!-- /.stories-featured ends -->
-
-      <!-- .stories starts -->
-      <section class="stories section-space pt-0" aria-label="Community stories">
-        <div class="container-fluid site-container">
-          <div class="stories__filters d-flex flex-wrap align-items-center justify-content-center" aria-label="Filter stories">
-            <button class="btn stories__filter active" type="button" aria-pressed="true">View all</button>
-            <button class="btn stories__filter" type="button" aria-pressed="false">Children</button>
-            <button class="btn stories__filter" type="button" aria-pressed="false">Family</button>
-            <button class="btn stories__filter" type="button" aria-pressed="false">Recovery</button>
-            <button class="btn stories__filter" type="button" aria-pressed="false">Community</button>
           </div>
 
-          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 stories__grid" id="stories-grid">
+          <div class="story-header__media story-header__media--parallax">
+            <img
+              src="/assets/images/design/sections/story-header.webp"
+              alt="A family walking together through a sunlit wooded park"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- /.story-header ends -->
+
+      <!-- .story starts -->
+      <section class="story section-space" aria-labelledby="story-introduction">
+        <div class="container-fluid site-container">
+          <div class="row g-0 justify-content-center">
+            <article class="story__content col-12 col-lg-8">
+              <h2 id="story-introduction">Introduction</h2>
+
+              <p>
+                Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget
+                vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate
+                arcu amet, vitae nisi, tellus tincidunt. At feugiat sapien varius id.
+              </p>
+
+              <p>
+                Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed
+                auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus,
+                at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.
+              </p>
+
+              <figure>
+                <div class="story__image">
+                  <img
+                    src="/assets/images/design/sections/story-body.webp"
+                    alt="A father kissing his smiling child"
+                  />
+                </div>
+                <figcaption>Image caption goes here</figcaption>
+              </figure>
+
+              <h3>
+                Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet
+                pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada
+                fringilla.
+              </h3>
+
+              <p>
+                Elit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus.
+                Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor
+                aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat
+                donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem id. Dolor lacus, eget
+                nunc lectus in tellus, pharetra, porttitor.
+              </p>
+
+              <blockquote>
+                <p>
+                  "Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget
+                  consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus."
+                </p>
+              </blockquote>
+
+              <p>
+                Tristique odio senectus nam posuere ornare leo metus, ultricies. Blandit duis ultricies vulputate morbi
+                feugiat cras placerat elit. Aliquam tellus lorem sed ac. Montes, sed mattis pellentesque suscipit
+                accumsan. Cursus viverra aenean magna risus elementum faucibus molestie pellentesque. Arcu ultricies sed
+                mauris vestibulum.
+              </p>
+
+              <h2>Conclusion</h2>
+
+              <p>
+                Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies.
+                Duis est sit sed leo nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at
+                scelerisque amet nulla purus habitasse.
+              </p>
+
+              <p>
+                Nunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas condimentum mi massa. In tincidunt
+                pharetra consectetur sed duis facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum
+                eget nibh tortor commodo cursus.
+              </p>
+
+              <p>
+                Odio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet
+                erat dolor enim. Ornare id morbi eget ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec
+                posuere pharetra odio consequat scelerisque et, nunc tortor.Nulla adipiscing erat a erat. Condimentum
+                lorem posuere gravida enim posuere cursus diam.
+              </p>
+
+              <footer class="story__footer d-flex flex-column flex-md-row align-items-md-end justify-content-between">
+                <div class="story__share">
+                  <h3>Share this post</h3>
+                  <div class="d-flex align-items-center" role="group" aria-label="Share this post">
+                    <a
+                      class="story-header__share-button"
+                      href="mailto:share@story.com"
+                    >
+                      <img src="/assets/images/design/icons/story-share-link.svg" alt="" aria-hidden="true" />
+                    </a>
+                    <a
+                      class="story-header__share-button"
+                      href="https://www.linkedin.com/sharing/share-offsite/"
+                      data-story-share="linkedin"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Share this post on LinkedIn"
+                    >
+                      <img src="/assets/images/design/icons/story-share-linkedin.svg" alt="" aria-hidden="true" />
+                    </a>
+                    <a
+                      class="story-header__share-button"
+                      href="https://twitter.com/intent/tweet"
+                      data-story-share="x"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Share this post on X"
+                    >
+                      <img src="/assets/images/design/icons/story-share-x.svg" alt="" aria-hidden="true" />
+                    </a>
+                    <a
+                      class="story-header__share-button"
+                      href="https://www.facebook.com/sharer/sharer.php"
+                      data-story-share="facebook"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Share this post on Facebook"
+                    >
+                      <img src="/assets/images/design/icons/story-share-facebook.svg" alt="" aria-hidden="true" />
+                    </a>
+                  </div>
+                </div>
+
+                <div class="story__tags d-flex flex-wrap" aria-label="Story tags">
+                  <a class="badge line-link" href="/stories.html?tag=tag-one">Tag one</a>
+                  <a class="badge line-link" href="/stories.html?tag=tag-two">Tag two</a>
+                  <a class="badge line-link" href="/stories.html?tag=tag-three">Tag three</a>
+                  <a class="badge line-link" href="/stories.html?tag=tag-four">Tag four</a>
+                </div>
+              </footer>
+
+              <div class="story-header__details my-5 d-flex flex-wrap align-items-center justify-content-center border-top py-5">
+                  <div class="story-header__author d-flex align-items-center">
+                    <img
+                      class="story-header__author-image"
+                      src="/assets/images/design/sections/story-author-placeholder.webp"
+                      alt=""
+                    />
+                    <div class="story-header__author-content">
+                      <p class="story-header__author-name">Full name</p>
+                      <div class="story-header__time d-flex align-items-center">
+                        Job title, Company name
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- /.story ends -->
+
+
+      <!-- .related-stories starts -->
+      <section class="related-stories section-space" aria-labelledby="related-stories-title">
+        <div class="container-fluid site-container">
+          <div class="section-intro related-stories__intro mx-auto text-center">
+            <p class="eyebrow">Blog</p>
+            <h2 id="related-stories-title">Related posts</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 related-stories__grid">
             <div class="col">
               <article class="card stories-card position-relative h-100">
-                <div class="overflow-hidden"> 
+                <div class="overflow-hidden">
                   <img
                     class="card-img-top stories-card__image"
                     src="/assets/images/design/sections/stories-card.webp"
@@ -684,16 +846,16 @@
                 <div class="card-body stories-card__content">
                   <div class="stories-card__body">
                     <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
+                      <span class="stories-card__tag">Category</span>
                       <span>6 min read</span>
                     </div>
-                    <h3>A brother's promise kept on the football pitch</h3>
-                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
+                    <h3>Blog title heading will go here</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
                   </div>
                   <a
                     class="stories-card__link stretched-link"
-                    href="/story-single.html"
-                    aria-label="Read more: A brother's promise kept on the football pitch"
+                    href="/news-single.html"
+                    aria-label="Read more: Blog title heading will go here"
                   >
                     <span class="stories-card__link-label">
                       Read more
@@ -706,7 +868,7 @@
 
             <div class="col">
               <article class="card stories-card position-relative h-100">
-                <div class="overflow-hidden"> 
+                <div class="overflow-hidden">
                   <img
                     class="card-img-top stories-card__image"
                     src="/assets/images/design/sections/stories-card.webp"
@@ -717,16 +879,16 @@
                 <div class="card-body stories-card__content">
                   <div class="stories-card__body">
                     <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
+                      <span class="stories-card__tag">Category</span>
                       <span>6 min read</span>
                     </div>
-                    <h3>A brother's promise kept on the football pitch</h3>
-                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
+                    <h3>Blog title heading will go here</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
                   </div>
                   <a
                     class="stories-card__link stretched-link"
-                    href="/story-single.html"
-                    aria-label="Read more: A brother's promise kept on the football pitch"
+                    href="/news-single.html"
+                    aria-label="Read more: Blog title heading will go here"
                   >
                     <span class="stories-card__link-label">
                       Read more
@@ -739,7 +901,7 @@
 
             <div class="col">
               <article class="card stories-card position-relative h-100">
-                <div class="overflow-hidden"> 
+                <div class="overflow-hidden">
                   <img
                     class="card-img-top stories-card__image"
                     src="/assets/images/design/sections/stories-card.webp"
@@ -750,214 +912,16 @@
                 <div class="card-body stories-card__content">
                   <div class="stories-card__body">
                     <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
+                      <span class="stories-card__tag">Category</span>
                       <span>6 min read</span>
                     </div>
-                    <h3>A brother's promise kept on the football pitch</h3>
-                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
+                    <h3>Blog title heading will go here</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
                   </div>
                   <a
                     class="stories-card__link stretched-link"
-                    href="/story-single.html"
-                    aria-label="Read more: A brother's promise kept on the football pitch"
-                  >
-                    <span class="stories-card__link-label">
-                      Read more
-                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col">
-              <article class="card stories-card position-relative h-100">
-                <div class="overflow-hidden"> 
-                  <img
-                    class="card-img-top stories-card__image"
-                    src="/assets/images/design/sections/stories-card.webp"
-                    alt="A family walking together through a wooded park"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="card-body stories-card__content">
-                  <div class="stories-card__body">
-                    <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
-                      <span>6 min read</span>
-                    </div>
-                    <h3>A brother's promise kept on the football pitch</h3>
-                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
-                  </div>
-                  <a
-                    class="stories-card__link stretched-link"
-                    href="/story-single.html"
-                    aria-label="Read more: A brother's promise kept on the football pitch"
-                  >
-                    <span class="stories-card__link-label">
-                      Read more
-                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col">
-              <article class="card stories-card position-relative h-100">
-                <div class="overflow-hidden"> 
-                  <img
-                    class="card-img-top stories-card__image"
-                    src="/assets/images/design/sections/stories-card.webp"
-                    alt="A family walking together through a wooded park"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="card-body stories-card__content">
-                  <div class="stories-card__body">
-                    <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
-                      <span>6 min read</span>
-                    </div>
-                    <h3>A brother's promise kept on the football pitch</h3>
-                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
-                  </div>
-                  <a
-                    class="stories-card__link stretched-link"
-                    href="/story-single.html"
-                    aria-label="Read more: A brother's promise kept on the football pitch"
-                  >
-                    <span class="stories-card__link-label">
-                      Read more
-                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col">
-              <article class="card stories-card position-relative h-100">
-                <div class="overflow-hidden"> 
-                  <img
-                    class="card-img-top stories-card__image"
-                    src="/assets/images/design/sections/stories-card.webp"
-                    alt="A family walking together through a wooded park"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="card-body stories-card__content">
-                  <div class="stories-card__body">
-                    <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
-                      <span>6 min read</span>
-                    </div>
-                    <h3>A brother's promise kept on the football pitch</h3>
-                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
-                  </div>
-                  <a
-                    class="stories-card__link stretched-link"
-                    href="/story-single.html"
-                    aria-label="Read more: A brother's promise kept on the football pitch"
-                  >
-                    <span class="stories-card__link-label">
-                      Read more
-                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col">
-              <article class="card stories-card position-relative h-100">
-                <div class="overflow-hidden"> 
-                  <img
-                    class="card-img-top stories-card__image"
-                    src="/assets/images/design/sections/stories-card.webp"
-                    alt="A family walking together through a wooded park"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="card-body stories-card__content">
-                  <div class="stories-card__body">
-                    <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
-                      <span>6 min read</span>
-                    </div>
-                    <h3>A brother's promise kept on the football pitch</h3>
-                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
-                  </div>
-                  <a
-                    class="stories-card__link stretched-link"
-                    href="/story-single.html"
-                    aria-label="Read more: A brother's promise kept on the football pitch"
-                  >
-                    <span class="stories-card__link-label">
-                      Read more
-                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col">
-              <article class="card stories-card position-relative h-100">
-                <div class="overflow-hidden"> 
-                  <img
-                    class="card-img-top stories-card__image"
-                    src="/assets/images/design/sections/stories-card.webp"
-                    alt="A family walking together through a wooded park"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="card-body stories-card__content">
-                  <div class="stories-card__body">
-                    <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
-                      <span>6 min read</span>
-                    </div>
-                    <h3>A brother's promise kept on the football pitch</h3>
-                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
-                  </div>
-                  <a
-                    class="stories-card__link stretched-link"
-                    href="/story-single.html"
-                    aria-label="Read more: A brother's promise kept on the football pitch"
-                  >
-                    <span class="stories-card__link-label">
-                      Read more
-                      <img src="/assets/images/design/icons/page-header-chevron-right.svg" alt="" aria-hidden="true" />
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col">
-              <article class="card stories-card position-relative h-100">
-                <div class="overflow-hidden"> 
-                  <img
-                    class="card-img-top stories-card__image"
-                    src="/assets/images/design/sections/stories-card.webp"
-                    alt="A family walking together through a wooded park"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="card-body stories-card__content">
-                  <div class="stories-card__body">
-                    <div class="stories-card__meta d-flex align-items-center">
-                      <span class="stories-card__tag">Story</span>
-                      <span>6 min read</span>
-                    </div>
-                    <h3>A brother's promise kept on the football pitch</h3>
-                    <p>A powerful story of determination and the support that made the impossible feel within reach.</p>
-                  </div>
-                  <a
-                    class="stories-card__link stretched-link"
-                    href="/story-single.html"
-                    aria-label="Read more: A brother's promise kept on the football pitch"
+                    href="/news-single.html"
+                    aria-label="Read more: Blog title heading will go here"
                   >
                     <span class="stories-card__link-label">
                       Read more
@@ -969,28 +933,12 @@
             </div>
           </div>
 
-          <nav class="stories__pagination-wrap" aria-label="Stories pagination">
-            <ul class="pagination stories__pagination justify-content-center align-items-center mb-0">
-              <li class="page-item stories__pagination-arrow">
-                <a class="page-link" href="#stories-grid" aria-label="Previous page">
-                  <img src="/assets/images/design/icons/stories-pagination-arrow.svg" alt="" aria-hidden="true" />
-                </a>
-              </li>
-              <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
-              <li class="page-item"><a class="page-link" href="#stories-grid">2</a></li>
-              <li class="page-item"><a class="page-link" href="#stories-grid">3</a></li>
-              <li class="page-item"><span class="page-link">…</span></li>
-              <li class="page-item"><a class="page-link" href="#stories-grid">25</a></li>
-              <li class="page-item stories__pagination-arrow stories__pagination-arrow--next">
-                <a class="page-link" href="#stories-grid" aria-label="Next page">
-                  <img src="/assets/images/design/icons/stories-pagination-arrow.svg" alt="" aria-hidden="true" />
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <div class="related-stories__actions d-flex justify-content-center">
+            <a class="btn btn-outline-primary" href="/news.html">View all</a>
+          </div>
         </div>
       </section>
-      <!-- /.stories ends -->
+      <!-- .related-stories ends -->
 
 
 
