@@ -107,7 +107,8 @@
   flex-wrap: wrap;
   gap: 15px;
 
-  button {
+  > button,
+  > .dropdown > button {
     padding: 8px 16px;
     border: 1px solid transparent;
     color: var(--bim-blue);
@@ -120,12 +121,64 @@
     border-radius: 0 4px;
 
     &:hover,
+    &:focus-visible,
+    &.show,
     &.active {
       color: var(--bim-blue);
       border-color: var(--bim-blue);
       background: var(--bim-pale-blue);
       
     }
+  }
+
+  > .dropdown > .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.9rem;
+
+    &::before {
+      width: 0.6rem;
+      height: 0.6rem;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      content: "";
+      flex: 0 0 auto;
+      order: 1;
+      transform: translateY(-0.2rem) rotate(45deg);
+      transition: transform 0.25s ease;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &[aria-expanded="true"]::before {
+      transform: translateY(0.2rem) rotate(225deg);
+    }
+  }
+
+  .dropdown-menu {
+    padding: 0.5rem;
+    border: 1px solid var(--bim-blue);
+    background: var(--bim-white);
+    border-radius: 0 4px;
+  }
+
+  .dropdown-item {
+    color: var(--bim-blue);
+    border-radius: 0 4px;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--bim-blue);
+      background: var(--bim-pale-blue);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-filters > .dropdown > .dropdown-toggle::before {
+    transition: none;
   }
 }
 
@@ -166,6 +219,30 @@
       font-weight: 700;
       letter-spacing: 0;
       line-height: 1.3;
+    }
+
+    &--range {
+      gap: 3px;
+
+      time {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .event-card__date-separator {
+        width: 24px;
+        height: 1px;
+        background: currentColor;
+        opacity: 0.4;
+      }
+
+      .event-card__date-year {
+        // font-size: 0.75rem;
+        // font-weight: 600;
+        // letter-spacing: 0.08em;
+        line-height: 1.2;
+      }
     }
   }
 
@@ -257,8 +334,16 @@
     padding-inline: 1.25rem;
     overflow-x: auto;
 
-    button {
+    > button,
+    > .dropdown > button {
       flex: 0 0 auto;
+    }
+
+    &--with-more {
+      flex-wrap: wrap;
+      margin-inline: 0;
+      padding-inline: 0;
+      overflow: visible;
     }
   }
 

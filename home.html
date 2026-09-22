@@ -1050,12 +1050,22 @@
           </div>
 
           <div class="events__content">
-            <div class="event-filters" role="group" aria-label="Filter events">
+            <div class="event-filters event-filters--with-more" role="group" aria-label="Filter events">
               <button class="active" type="button">View All</button>
               <button type="button">Category one</button>
               <button type="button">Category two</button>
               <button type="button">Category three</button>
               <button type="button">Category four</button>
+              <div class="dropdown">
+                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More + 3
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" type="button">Category 5</button></li>
+                  <li><button class="dropdown-item" type="button">Category 6</button></li>
+                  <li><button class="dropdown-item" type="button">Category 7</button></li>
+                </ul>
+              </div>
             </div>
 
             <div class="events__list">
@@ -1087,6 +1097,29 @@
                 >
                   View Event
                 </a>
+              </article>
+
+              <article class="event-card">
+                <div class="event-card__date event-card__date--range">
+                  <time datetime="2026-10-30">30 Oct</time>
+                  <span class="event-card__date-separator"><span class="visually-hidden">to</span></span>
+                  <time datetime="2026-11-01">01 Nov</time>
+                  <span class="event-card__date-year">2026</span>
+                </div>
+                <img
+                  class="event-card__divider"
+                  src="/assets/images/design/icons/event-divider.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div class="event-card__content">
+                  <div>
+                    <h3>Autumn Arts &amp; Wellbeing Weekend</h3>
+                    <p class="event-card__meta">Fri 30 Oct – Sun 1 Nov | Daily from 10am | The Studio, Belfast</p>
+                  </div>
+                  <p>Three days of creative sessions, drop-in workshops and peer support.</p>
+                </div>
+                <a class="btn btn-outline-primary event-card__button" href="/event-single.html">View Event</a>
               </article>
 
               <article class="event-card">

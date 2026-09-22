@@ -19,6 +19,11 @@
     border-radius: 3px 12px;
   }
 
+  &__card:hover &__media img,
+  &__card:focus-within &__media img {
+    transform: scale(1.15);
+  }
+
   &__media {
     height: 100%;
     aspect-ratio: 4 / 3;
@@ -28,6 +33,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 0.45s ease;
     }
   }
 
@@ -81,11 +87,17 @@
   }
 
   &__link {
-    gap: 8px;
+    display: inline-flex;
+    align-items: center;
     color: var(--bim-blue);
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.5;
+    text-decoration: none;
+
+    .line-link {
+      gap: 8px;
+    }
 
     img {
       width: 24px;
@@ -98,10 +110,21 @@
     &:focus-visible {
       color: var(--bim-blue);
 
+      .line-link::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
       img {
         transform: translateX(3px);
       }
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stories-featured__media img {
+    transition: none;
   }
 }
 
