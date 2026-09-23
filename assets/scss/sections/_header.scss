@@ -29,6 +29,7 @@
   color: var(--bim-navy);
   font-size: 0.85rem;
   font-weight: 600;
+  background: var(--bim-cream);
 
   &--wrap {
     
@@ -362,28 +363,31 @@
 }
 
 .mega-menu {
+  --mega-menu-transition-duration: 0.3s;
+
   position: absolute;
-  z-index: 99;
-  top: 100%;
+  z-index: -1;
+  top: -1000px;
   left: 0;
   width: 100%;
-  max-height: 0;
   overflow: hidden;
   // border-bottom: 0 solid var(--bim-blue);
   visibility: hidden;
-  opacity: 0;
-  background: var(--bim-cream);
-  transition: max-height 0.45s ease, opacity 0.25s ease, visibility 0.25s, border-width 0.1s;
+  pointer-events: none;
+  background: var(--mega-menu-background);
+  // box-shadow: 0 18px 30px rgba(0, 0, 50, 0.15);
+  transition: top var(--mega-menu-transition-duration) cubic-bezier(.51, .18, 0, .88),
+    visibility 0s linear var(--mega-menu-transition-duration);
   border-radius: 16px;
+  will-change: top;
 
   &.is-open {
-    max-height: 650px;
+    top: 100%;
     border-bottom-width: 5px;
     visibility: visible;
-    opacity: 1;
-    box-shadow: 0 18px 30px rgba(0, 0, 50, 0.15);
+    pointer-events: auto;
+    transition-delay: 0s;
     // background: var(--bim-white);
-    background: var(--mega-menu-background);
   }
 
   &__inner {
@@ -531,6 +535,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .navbar .mega-trigger::before,
+  .mega-menu,
   .mega-card__image-wrap::after {
     transition: none;
   }

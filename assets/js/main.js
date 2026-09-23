@@ -172,6 +172,8 @@ if (timelineSwipers.length && typeof window.Swiper === "function") {
 }
 
 const megaTriggers = [...document.querySelectorAll(".mega-trigger")];
+let megaMenuRequestId = 0;
+let pendingMegaMenuClose = Promise.resolve();
 
 const updateMegaPointer = (trigger, open) => {
   const navbar = trigger.closest(".navbar");
@@ -190,26 +192,81 @@ const updateMegaPointer = (trigger, open) => {
   navbar.classList.add("has-open-mega");
 };
 
+const getTransitionTime = (element) => {
+  const styles = window.getComputedStyle(element);
+  const durations = styles.transitionDuration.split(",").map((value) => value.trim());
+  const delays = styles.transitionDelay.split(",").map((value) => value.trim());
+  const toMilliseconds = (value) => (value.endsWith("ms") ? Number.parseFloat(value) : Number.parseFloat(value) * 1000);
+
+  return Math.max(
+    ...durations.map((duration, index) => {
+      const delay = delays[index % delays.length] || "0s";
+      return toMilliseconds(duration) + toMilliseconds(delay);
+    })
+  );
+};
+
+const waitForMegaMenuClose = (menu) => {
+  const transitionTime = getTransitionTime(menu);
+  if (!transitionTime) return Promise.resolve();
+
+  return new Promise((resolve) => {
+    let timeout;
+    const finish = () => {
+      window.clearTimeout(timeout);
+      menu.removeEventListener("transitionend", handleTransitionEnd);
+      resolve();
+    };
+    const handleTransitionEnd = (event) => {
+      if (event.target === menu && event.propertyName === "top") finish();
+    };
+
+    menu.addEventListener("transitionend", handleTransitionEnd);
+    timeout = window.setTimeout(finish, transitionTime + 100);
+  });
+};
+
 const closeMegaMenus = (except) => {
+  const closingMenus = [];
+
   megaTriggers.forEach((trigger) => {
     if (trigger === except) return;
-    trigger.setAttribute("aria-expanded", "false");
     const menu = document.getElementById(trigger.getAttribute("aria-controls"));
+
+    if (menu?.classList.contains("is-open")) closingMenus.push(waitForMegaMenuClose(menu));
+
+    trigger.setAttribute("aria-expanded", "false");
     menu?.classList.remove("is-open");
     menu?.setAttribute("aria-hidden", "true");
     updateMegaPointer(trigger, false);
   });
+
+  if (closingMenus.length) pendingMegaMenuClose = Promise.all(closingMenus);
+
+  return pendingMegaMenuClose;
+};
+
+const dismissMegaMenus = () => {
+  megaMenuRequestId += 1;
+  closeMegaMenus();
 };
 
 megaTriggers.forEach((trigger) => {
   const menu = document.getElementById(trigger.getAttribute("aria-controls"));
-  trigger.addEventListener("click", () => {
-    const open = trigger.getAttribute("aria-expanded") === "true";
-    closeMegaMenus(trigger);
-    trigger.setAttribute("aria-expanded", String(!open));
-    menu?.classList.toggle("is-open", !open);
-    menu?.setAttribute("aria-hidden", String(open));
-    updateMegaPointer(trigger, !open);
+  trigger.addEventListener("click", async () => {
+    const wasOpen = trigger.getAttribute("aria-expanded") === "true";
+    const requestId = ++megaMenuRequestId;
+    const closePromise = closeMegaMenus();
+
+    if (wasOpen) return;
+
+    await closePromise;
+    if (requestId !== megaMenuRequestId) return;
+
+    trigger.setAttribute("aria-expanded", "true");
+    menu?.classList.add("is-open");
+    menu?.setAttribute("aria-hidden", "false");
+    updateMegaPointer(trigger, true);
   });
 });
 
@@ -299,7 +356,7 @@ if (searchTriggers.length && window.bootstrap?.Modal) {
 
     trigger.addEventListener("click", (event) => {
       event.preventDefault();
-      closeMegaMenus();
+      dismissMegaMenus();
       activeSearchTrigger = trigger;
       trigger.setAttribute("aria-expanded", "true");
       updateSearchModalPosition();
@@ -325,11 +382,11 @@ if (searchTriggers.length && window.bootstrap?.Modal) {
 }
 
 document.addEventListener("click", (event) => {
-  if (!event.target.closest(".mega-nav-item")) closeMegaMenus();
+  if (!event.target.closest(".mega-nav-item")) dismissMegaMenus();
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeMegaMenus();
+  if (event.key === "Escape") dismissMegaMenus();
 });
 
 document.querySelector(".support-finder__form")?.addEventListener("submit", (event) => event.preventDefault());
