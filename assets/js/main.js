@@ -732,12 +732,51 @@ const initialiseScrollAnimations = () => {
     );
   });
 
+  const layeredForegroundImages = new Set();
+  const layeredVisuals = document.querySelectorAll(
+    ".hero-slide__image, .page-header__visual, .feature-section__visual, .video-card"
+  );
+
+  layeredVisuals.forEach((visual) => {
+    const accent = visual.matches(".video-card")
+      ? visual.querySelector(".video-card__background")
+      : visual.querySelector(":scope > span");
+    const image = visual.querySelector(":scope > img");
+
+    if (!accent) return;
+
+    const fadeTimeline = window.gsap.timeline({
+      scrollTrigger: {
+        trigger: visual,
+        start: "top 90%",
+        once: true
+      }
+    });
+
+    fadeTimeline.fromTo(
+      accent,
+      { autoAlpha: 0 },
+      { autoAlpha: 1, duration: 1, ease: "power2.out", clearProps: "opacity,visibility" },
+      0
+    );
+
+    if (image) {
+      layeredForegroundImages.add(image);
+      fadeTimeline.fromTo(
+        image,
+        { autoAlpha: 0 },
+        { autoAlpha: 1, duration: 1, ease: "power2.out", clearProps: "opacity,visibility" },
+        0.3
+      );
+    }
+  });
+
   const fadeElements = document.querySelectorAll(
     'main section img:not([alt=""]):not([aria-hidden="true"]), main section .page-header__image--parallax img, main section .event-card__date, main section .pricing-card'
   );
 
   fadeElements.forEach((element) => {
-    if (element.closest(".story__content")) return;
+    if (element.closest(".story__content") || layeredForegroundImages.has(element)) return;
 
     window.gsap.fromTo(
       element,

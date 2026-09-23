@@ -372,28 +372,54 @@
 
     &::after {
       position: absolute;
-      top: 50%;
-      left: -5%;
-      width: 110%;
+      width: 46.5%;
       aspect-ratio: 1;
-      background-image:
-        url("/assets/images/design/header/logo-mark-pink.svg"),
-        url("/assets/images/design/header/logo-mark-green.svg"),
-        url("/assets/images/design/header/logo-mark-blue.svg"),
-        url("/assets/images/design/header/logo-mark-yellow.svg");
-      background-position: -100% -100%, 200% -100%, -100% 200%, 200% 200%;
+      background-image: var(--mega-card-piece);
+      background-position: center;
       background-repeat: no-repeat;
-      background-size:
-        calc(50% - 2px) calc(50% - 2px),
-        calc(50% - 2px) calc(50% - 2px),
-        calc(50% - 2px) calc(50% - 2px),
-        calc(50% - 2px) calc(50% - 2px);
+      background-size: contain;
       content: "";
-      opacity: 0.6;
+      opacity: 0.8;
       pointer-events: none;
-      transform: translateY(-50%);
-      transition: background-position 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+      transform: translate(var(--mega-card-piece-x), var(--mega-card-piece-y));
+      transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
     }
+  }
+
+  &:nth-child(4n + 1) .mega-card__image-wrap::after {
+    --mega-card-piece: url("/assets/images/design/header/logo-mark-pink.svg");
+    --mega-card-piece-x: -120%;
+    --mega-card-piece-y: -120%;
+
+    top: -10%;
+    left: -6%;
+  }
+
+  &:nth-child(4n + 2) .mega-card__image-wrap::after {
+    --mega-card-piece: url("/assets/images/design/header/logo-mark-green.svg");
+    --mega-card-piece-x: 120%;
+    --mega-card-piece-y: -120%;
+
+    top: -10%;
+    right: -6%;
+  }
+
+  &:nth-child(4n + 3) .mega-card__image-wrap::after {
+    --mega-card-piece: url("/assets/images/design/header/logo-mark-blue.svg");
+    --mega-card-piece-x: -120%;
+    --mega-card-piece-y: 120%;
+
+    bottom: -11%;
+    left: -7%;
+  }
+
+  &:nth-child(4n + 4) .mega-card__image-wrap::after {
+    --mega-card-piece: url("/assets/images/design/header/logo-mark-yellow.svg");
+    --mega-card-piece-x: 120%;
+    --mega-card-piece-y: 120%;
+
+    right: -7%;
+    bottom: -11%;
   }
 
   &:hover,
@@ -401,7 +427,7 @@
     color: var(--bim-green);
 
     .mega-card__image-wrap::after {
-      background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%;
+      transform: translate(0, 0);
     }
   }
 
