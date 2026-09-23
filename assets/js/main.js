@@ -218,6 +218,112 @@ window.addEventListener("resize", () => {
   if (openTrigger) updateMegaPointer(openTrigger, true);
 });
 
+const searchTriggers = [...document.querySelectorAll("a.openSearch")];
+
+if (searchTriggers.length && window.bootstrap?.Modal) {
+  document.body.insertAdjacentHTML(
+    "beforeend",
+    `
+      <div
+        class="modal fade search-modal"
+        id="site-search-modal"
+        tabindex="-1"
+        aria-labelledby="site-search-modal-title"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <img
+            class="search-modal__pointer"
+            src="/assets/images/design/search-modal/pointer.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="modal-content">
+            <div class="search-modal__header">
+              <h2 class="search-modal__title" id="site-search-modal-title">Search The Site</h2>
+              <button class="search-modal__close line-link" type="button" data-bs-dismiss="modal" aria-label="Close search">
+                <img src="/assets/images/design/search-modal/close.svg" alt="" aria-hidden="true" />
+                <span>Close</span>
+              </button>
+            </div>
+            <form class="search-modal__form" action="/" method="get" role="search">
+              <label class="visually-hidden" for="site-search-input">Search pages, events, resources and more</label>
+              <div class="search-modal__field">
+                <img
+                  class="search-modal__field-icon"
+                  src="/assets/images/design/search-modal/search-navy.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <input
+                  class="search-modal__input"
+                  id="site-search-input"
+                  name="s"
+                  type="search"
+                  placeholder="Search pages, events, resources and more"
+                  autocomplete="off"
+                />
+              </div>
+              <button class="btn btn-primary search-modal__submit" type="submit">
+                <img src="/assets/images/design/search-modal/search-white.svg" alt="" aria-hidden="true" />
+                <span>Search</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    `
+  );
+
+  const searchModalElement = document.querySelector("#site-search-modal");
+  const searchModalInput = searchModalElement.querySelector("#site-search-input");
+  const searchModal = window.bootstrap.Modal.getOrCreateInstance(searchModalElement);
+  let activeSearchTrigger;
+
+  const updateSearchModalPosition = () => {
+    const siteHeader = document.querySelector(".site-header");
+    const navbar = siteHeader?.querySelector(".navbar");
+    const headerBottom = siteHeader?.getBoundingClientRect().bottom || 0;
+    const stickyNavbarBottom = navbar?.classList.contains("is-sticky") ? navbar.getBoundingClientRect().bottom : 0;
+    const modalTop = Math.max(headerBottom, stickyNavbarBottom, 0) + 18.75;
+
+    searchModalElement.style.setProperty("--search-modal-top", `${modalTop}px`);
+  };
+
+  searchTriggers.forEach((trigger) => {
+    trigger.href = "#site-search-modal";
+    trigger.setAttribute("aria-label", "Search the site");
+    trigger.setAttribute("aria-controls", "site-search-modal");
+    trigger.setAttribute("aria-expanded", "false");
+    trigger.setAttribute("aria-haspopup", "dialog");
+
+    trigger.addEventListener("click", (event) => {
+      event.preventDefault();
+      closeMegaMenus();
+      activeSearchTrigger = trigger;
+      trigger.setAttribute("aria-expanded", "true");
+      updateSearchModalPosition();
+      searchModal.show(trigger);
+    });
+  });
+
+  searchModalElement.addEventListener("show.bs.modal", () => {
+    updateSearchModalPosition();
+    document.body.classList.add("search-modal-open");
+  });
+  searchModalElement.addEventListener("shown.bs.modal", () => searchModalInput.focus());
+  searchModalElement.addEventListener("hidden.bs.modal", () => {
+    document.body.classList.remove("search-modal-open");
+    searchTriggers.forEach((trigger) => trigger.setAttribute("aria-expanded", "false"));
+    activeSearchTrigger?.focus();
+    activeSearchTrigger = null;
+  });
+
+  window.addEventListener("resize", () => {
+    if (searchModalElement.classList.contains("show")) updateSearchModalPosition();
+  });
+}
+
 document.addEventListener("click", (event) => {
   if (!event.target.closest(".mega-nav-item")) closeMegaMenus();
 });
