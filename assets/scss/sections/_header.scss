@@ -85,7 +85,32 @@
 
        background: #fff;
        border-radius: 50px;
-       padding: 4px 8px;
+       padding: 8px;
+       transition: .3s;
+
+       svg {
+
+        path {
+
+          transition: .3s;
+
+        }
+
+       }
+
+       &:hover {
+
+        background: var(--bim-pink);
+
+        svg {
+          path {
+
+            stroke: #fff;
+
+          }
+        }
+
+       }
 
     }
 
