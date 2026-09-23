@@ -6,7 +6,12 @@
   color: var(--bim-navy);
   background: url("/assets/images/design/sections/newsletter.png");
   border-radius: 4px 16px 0 16px;
-  max-width: 1312px;
+  // max-width: 1312px;
+
+  @include lg {
+    border-radius: 0;
+
+  }
 
   &__background {
     position: absolute;
