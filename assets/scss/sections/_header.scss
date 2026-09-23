@@ -162,10 +162,34 @@
 }
 
 .navbar {
+  --mega-menu-background: linear-gradient(0deg, rgba(255, 182, 0, 0.16) 0%, rgba(255, 182, 0, 0.16) 100%), #F7F9ED;
+  --mega-pointer-x: 50%;
+
   min-height: 98px;
   padding-block: 0;
   background: var(--bim-cream);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  &::after {
+    position: absolute;
+    z-index: 100;
+    top: calc(100% - 14px);
+    left: var(--mega-pointer-x);
+    width: 28px;
+    height: 14px;
+    background: var(--mega-menu-background);
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  &.has-open-mega::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 
   .container {
     max-width: 1440px;
@@ -267,6 +291,7 @@
   &[aria-expanded="true"]::before {
     transform: translateY(0.2rem) rotate(225deg);
   }
+
 }
 
 @media (min-width: 1200px) and (max-width: 1399.98px) {
@@ -349,7 +374,7 @@
   opacity: 0;
   background: var(--bim-cream);
   transition: max-height 0.45s ease, opacity 0.25s ease, visibility 0.25s, border-width 0.1s;
-  border-radius: 0 16px 0 16px;
+  border-radius: 16px;
 
   &.is-open {
     max-height: 650px;
@@ -358,7 +383,7 @@
     opacity: 1;
     box-shadow: 0 18px 30px rgba(0, 0, 50, 0.15);
     // background: var(--bim-white);
-    background: linear-gradient(0deg, rgba(255, 182, 0, 0.16) 0%, rgba(255, 182, 0, 0.16) 100%), #F7F9ED;
+    background: var(--mega-menu-background);
   }
 
   &__inner {

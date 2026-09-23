@@ -173,6 +173,23 @@ if (timelineSwipers.length && typeof window.Swiper === "function") {
 
 const megaTriggers = [...document.querySelectorAll(".mega-trigger")];
 
+const updateMegaPointer = (trigger, open) => {
+  const navbar = trigger.closest(".navbar");
+  if (!navbar) return;
+
+  if (!open) {
+    navbar.classList.remove("has-open-mega");
+    return;
+  }
+
+  const navbarRect = navbar.getBoundingClientRect();
+  const triggerRect = trigger.getBoundingClientRect();
+  const pointerPosition = triggerRect.left + (triggerRect.width / 2) - navbarRect.left;
+
+  navbar.style.setProperty("--mega-pointer-x", `${pointerPosition}px`);
+  navbar.classList.add("has-open-mega");
+};
+
 const closeMegaMenus = (except) => {
   megaTriggers.forEach((trigger) => {
     if (trigger === except) return;
@@ -180,6 +197,7 @@ const closeMegaMenus = (except) => {
     const menu = document.getElementById(trigger.getAttribute("aria-controls"));
     menu?.classList.remove("is-open");
     menu?.setAttribute("aria-hidden", "true");
+    updateMegaPointer(trigger, false);
   });
 };
 
@@ -191,7 +209,13 @@ megaTriggers.forEach((trigger) => {
     trigger.setAttribute("aria-expanded", String(!open));
     menu?.classList.toggle("is-open", !open);
     menu?.setAttribute("aria-hidden", String(open));
+    updateMegaPointer(trigger, !open);
   });
+});
+
+window.addEventListener("resize", () => {
+  const openTrigger = megaTriggers.find((trigger) => trigger.getAttribute("aria-expanded") === "true");
+  if (openTrigger) updateMegaPointer(openTrigger, true);
 });
 
 document.addEventListener("click", (event) => {
