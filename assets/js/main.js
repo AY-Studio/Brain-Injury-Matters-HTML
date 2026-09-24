@@ -461,7 +461,8 @@ const initialiseStickyNavbar = () => {
     const scrollPosition = Math.max(window.scrollY, 0);
     const isScrollingUp = scrollPosition < lastScrollPosition;
     const shouldStick = scrollPosition > navbarTop;
-    const shouldHide = shouldStick && scrollPosition > 200 && !isScrollingUp;
+    const hasOpenMegaMenu = Boolean(navbar.querySelector(".mega-menu.is-open"));
+    const shouldHide = shouldStick && scrollPosition > 200 && !isScrollingUp && !hasOpenMegaMenu;
 
     siteHeader.classList.toggle("has-sticky-navbar", shouldStick);
     navbar.classList.toggle("is-sticky", shouldStick);
