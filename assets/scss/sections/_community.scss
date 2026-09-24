@@ -65,6 +65,12 @@
   }
 }
 
+a.community-card:hover .line-link::after,
+a.community-card:focus-visible .line-link::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 @include lg-down {
   .community {
     &__grid {
